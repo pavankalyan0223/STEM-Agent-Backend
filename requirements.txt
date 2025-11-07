@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+httpx
+pydantic>=2
+chromadb
+sentence-transformers
+sympy
+pint
+PyPDF2
+langchain
+requests
+python-multipart
+numpy
+tqdm
+scikit-learn
