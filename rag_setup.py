@@ -67,18 +67,21 @@ def index_pdfs():
     print(f"Database stored at: {DB_DIR}")
 
 
-def query_rag(question, top_k=3):
-    """Search for relevant text chunks."""
+def query_rag(question, top_k=5):
+    """Search for relevant text chunks with improved retrieval."""
     q_emb = embedder.encode(question).tolist()
     results = collection.query(query_embeddings=[q_emb], n_results=top_k)
 
     print("\n🔍 Retrieved context:")
-    for doc, meta in zip(results["documents"][0], results["metadatas"][0]):
+    formatted_contexts = []
+    for i, (doc, meta) in enumerate(zip(results["documents"][0], results["metadatas"][0]), 1):
         print(f" - Source: {meta['source']}")
         print(f"   Snippet: {doc[:150]}...\n")
+        # Format context with source information for better traceability
+        formatted_contexts.append(f"[Source: {meta['source']}]\n{doc}")
 
-    # Return concatenated text context for your model prompt
-    return "\n\n".join(results["documents"][0])
+    # Return formatted context with source attribution
+    return "\n\n---\n\n".join(formatted_contexts)
 
 
 if __name__ == "__main__":
