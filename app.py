@@ -1,22 +1,50 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File
 from pydantic import BaseModel, Field
-import requests
-from config import OLLAMA_URL, MODEL_NAME, HTTP_TIMEOUT
-from rag_setup import query_rag
 from fastapi.middleware.cors import CORSMiddleware
+from contextlib import asynccontextmanager
+import requests
+import glob
+import json
+import os
+from typing import List, Optional, Dict
+
+from config import OLLAMA_URL, MODEL_NAME, HTTP_TIMEOUT
 from session_manager import load_sessions, save_sessions, list_sessions, get_session, delete_session
-
-from summarizer import summarize_all_pdfs, summarize_pdf, SUMMARY_DIR
-import glob, json, os
-from fastapi import UploadFile, File
-from typing import List
+from summarizer import summarize_all_pdfs, SUMMARY_DIR
 from rag_setup import index_pdfs
-from pydantic import BaseModel
-import re
+from mcp_client import initialize_mcp_client, get_mcp_client
 
-app = FastAPI(title="STEM Tutor — Math & Physics (Hybrid Chat)")
+# Agentic architecture imports
+from agentic_core import CentralAgent, PlanningMode
+from specialized_agents import AgentOrchestrator
+from generation import Generator
+
+# Global orchestrator and generator
+orchestrator = AgentOrchestrator()
+generator = Generator()
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Handle application lifespan events."""
+    # Startup
+    print("🤖 Agentic RAG System Initialized")
+    print("   - Central Agent with Memory & Planning")
+    print("   - Local Data Agent (RAG + MCP)")
+    print("   - Search Engine Agent (Web Search + MCP)")
+    print("   - Generation Component")
+    yield
+    # Shutdown (cleanup if needed)
+    pass
+
+app = FastAPI(
+    title="Agentic STEM Tutor — Math & Physics (RAG with MCP)",
+    lifespan=lifespan
+)
 
 session_store = load_sessions()
+
+# Agent store: session_id -> CentralAgent
+agent_store: Dict[str, CentralAgent] = {}
 
 origins = [
     "http://localhost:5173",  
@@ -37,89 +65,127 @@ class AskPayload(BaseModel):
     mode: str = Field(pattern="^(math|physics)$")
     question: str
     session_id: str = "default"
-    use_rag: bool = True
+    planning_mode: Optional[str] = Field(default="react", pattern="^(react|cot)$")  # ReACT or CoT
 
 class AskDocPayload(BaseModel):
     pdf_name: str
     question: str
 
-def is_technical_question(question: str) -> bool:
-    """Detect if a question is technical and needs RAG context."""
+def is_casual_greeting(question: str) -> bool:
+    """Detect if a question is a casual greeting that doesn't need agent processing."""
     question_lower = question.lower().strip()
     
-    # Casual greetings and non-technical phrases
     casual_phrases = [
         "hi", "hello", "hey", "good morning", "good afternoon", "good evening",
         "thanks", "thank you", "bye", "goodbye", "see you", "how are you",
-        "what's up", "how's it going"
+        "what's up", "how's it going", "greetings", "hi there", "hello there"
     ]
     
-    # Check if it's a casual greeting
-    if any(question_lower.startswith(phrase) or question_lower == phrase for phrase in casual_phrases):
-        return False
-    
-    # Check for technical keywords (math/physics terms)
-    technical_keywords = [
-        "solve", "calculate", "find", "derive", "prove", "equation", "formula",
-        "theorem", "law", "force", "energy", "velocity", "acceleration", "integral",
-        "derivative", "vector", "function", "graph", "plot", "physics",
-        "mathematics", "math", "algebra", "calculus", "geometry", "trigonometry"
-    ]
-    
-    return any(keyword in question_lower for keyword in technical_keywords)
-
-
-def ask_mistral(session_id: str, mode: str, question: str, use_rag: bool):
-    """Ask Mistral with optional RAG textbook context."""
-    # Store the original question before any modifications
-    original_question = question
-    
-    if session_id not in session_store:
-        system_prompt = (
-            f"You are a friendly and highly knowledgeable {mode} tutor. "
-            "You can solve numerical or conceptual problems, explain theories, "
-            "and also chat casually when the question is not technical. "
-            "IMPORTANT: If the user greets you or asks a casual question, respond naturally and conversationally. "
-            f"Only provide technical explanations when asked about {mode} topics. "
-            "Keep answers accurate, patient, and conversational when appropriate."
-        )
-        session_store[session_id] = [{"role": "system", "content": system_prompt}]
-        save_sessions(session_store)
-
-    # Ask the question directly to the model
-    session_store[session_id].append({"role": "user", "content": original_question})
-
-    payload = {
-        "model": MODEL_NAME,
-        "messages": session_store[session_id],
-        "stream": False
-    }
-
-    try:
-        res = requests.post(OLLAMA_URL, json=payload, timeout=HTTP_TIMEOUT)
-        res.raise_for_status()
-        reply = res.json()["message"]["content"]
-    except Exception as e:
-        reply = f"Error contacting model: {e}"
-
-    session_store[session_id].append({"role": "assistant", "content": reply})
-    return reply
-
+    # Check if it's exactly a casual greeting or starts with one
+    return any(
+        question_lower == phrase or 
+        question_lower.startswith(phrase + " ") or 
+        question_lower.startswith(phrase + "!")
+        for phrase in casual_phrases
+    )
 
 @app.post("/ask")
-def ask(payload: AskPayload):
-    """Main endpoint for hybrid math/physics + general chat."""
-    answer = ask_mistral(
-        session_id=payload.session_id,
+async def ask(payload: AskPayload):
+    """
+    Main agentic endpoint: Processes query through agentic system.
+    Flow: Query → Central Agent (Planning) → Specialized Agents → Generation → Answer
+    """
+    session_id = payload.session_id
+    
+    # Check if it's a casual greeting - skip agent processing
+    if is_casual_greeting(payload.question):
+        # Simple friendly response for greetings
+        greeting_responses = {
+            "math": "Hello! I'm your friendly math tutor. I'm here to help you with mathematics - whether it's algebra, calculus, geometry, or any other math topic. What would you like to learn today?",
+            "physics": "Hello! I'm your friendly physics tutor. I'm here to help you understand physics concepts - from mechanics and thermodynamics to electromagnetism and quantum physics. What would you like to explore?"
+        }
+        answer = greeting_responses.get(payload.mode, greeting_responses["math"])
+        
+        # Update session store
+        if session_id not in session_store:
+            system_prompt = (
+                f"You are a friendly and highly knowledgeable {payload.mode} tutor. "
+                "You use an agentic system with memory, planning, and specialized agents."
+            )
+            session_store[session_id] = [{"role": "system", "content": system_prompt}]
+        
+        session_store[session_id].append({"role": "user", "content": payload.question})
+        session_store[session_id].append({"role": "assistant", "content": answer})
+        save_sessions(session_store)
+        
+        return {
+            "session_id": session_id,
+            "mode": payload.mode,
+            "question": payload.question,
+            "tutor_reply": answer,
+            "agentic_metadata": {
+                "casual_greeting": True,
+                "agents_skipped": True
+            }
+        }
+    
+    # Get or create central agent for this session
+    if session_id not in agent_store:
+        planning_mode = PlanningMode.REACT if payload.planning_mode == "react" else PlanningMode.COT
+        agent_store[session_id] = CentralAgent(session_id, planning_mode)
+    
+    central_agent = agent_store[session_id]
+    
+    # Step 1: Central Agent processes query and creates plan
+    agent_result = central_agent.process_query(payload.question, payload.mode)
+    plan = agent_result["plan"]
+    memory_context = agent_result["memory_context"]
+    
+    # Step 2: Execute plan using specialized agents
+    execution_results = await orchestrator.execute_plan(plan, payload.question)
+    agent_results = execution_results["agent_results"]
+    
+    # Step 3: Generate final answer using Generation component
+    conversation_history = get_session(session_store, session_id)
+    generation_result = generator.generate_answer(
+        query=payload.question,
+        agent_results=agent_results,
+        memory_context=memory_context,
         mode=payload.mode,
-        question=payload.question,
-        use_rag=payload.use_rag,
+        conversation_history=conversation_history
     )
+    
+    # Step 4: Add answer to memory and session
+    answer = generation_result.get("answer", "No answer generated")
+    central_agent.add_to_memory(
+        f"Q: {payload.question}\nA: {answer}",
+        is_important=generation_result.get("status") == "success"
+    )
+    
+    # Update session store
+    if session_id not in session_store:
+        system_prompt = (
+            f"You are a friendly and highly knowledgeable {payload.mode} tutor. "
+            "You use an agentic system with memory, planning, and specialized agents."
+        )
+        session_store[session_id] = [{"role": "system", "content": system_prompt}]
+    
+    session_store[session_id].append({"role": "user", "content": payload.question})
+    session_store[session_id].append({"role": "assistant", "content": answer})
+    save_sessions(session_store)
+    
     return {
-        "session_id": payload.session_id,
+        "session_id": session_id,
         "mode": payload.mode,
         "question": payload.question,
-        "tutor_reply": answer
+        "tutor_reply": answer,
+        "agentic_metadata": {
+            "plan": plan,
+            "execution_summary": execution_results["execution_summary"],
+            "generation_status": generation_result.get("status"),
+            "context_used": generation_result.get("context_used", {}),
+            "sources": generation_result.get("sources", {})
+        }
     }
 
 @app.get("/sessions")
@@ -141,8 +207,11 @@ def remove_session(session_id: str):
 
 @app.post("/reset_session")
 def reset_session(session_id: str):
+    """Reset both session store and agent store for a session."""
     if session_id in session_store:
         del session_store[session_id]
+    if session_id in agent_store:
+        del agent_store[session_id]
     return {"message": f"Session '{session_id}' cleared."}
 
 @app.post("/summarize_all")
@@ -234,35 +303,146 @@ def ask_doc(payload: AskDocPayload):
     return {"document": payload.pdf_name, "question": payload.question, "answer": answer}
 
 @app.post("/hybrid_search")
-def hybrid_search(payload: dict):
-    """Search both local PDFs (RAG) and the web."""
+async def hybrid_search(payload: dict):
+    """
+    Agentic hybrid search: Uses Local Data Agent and Search Engine Agent via MCP.
+    """
     query = payload.get("query", "")
     if not query.strip():
         return {"error": "Empty query."}
 
-    from rag_setup import query_rag
-    local_context = query_rag(query, top_k=3)
-
-    try:
-        import requests
-        web_results = []
-        res = requests.get(f"https://api.duckduckgo.com/?q={query}&format=json")
-        data = res.json()
-        for topic in data.get("RelatedTopics", [])[:3]:
-            if "Text" in topic and "FirstURL" in topic:
-                web_results.append({
-                    "title": topic["Text"],
-                    "url": topic["FirstURL"]
-                })
-    except Exception as e:
-        web_results = [{"title": f"Web search failed: {e}", "url": ""}]
+    # Use specialized agents directly
+    local_data_result = await orchestrator.local_data_agent.retrieve_local_context(query, top_k=3)
+    search_result = await orchestrator.search_engine_agent.search_web(query, max_results=3)
 
     return {
         "query": query,
-        "local_context": local_context,
-        "web_results": web_results
+        "local_data_agent": local_data_result,
+        "search_engine_agent": search_result,
+        "mcp_enhanced": local_data_result.get("mcp_enhanced", False) or search_result.get("processed_summary") is not None
+    }
+
+@app.post("/configure_mcp")
+async def configure_mcp(payload: dict):
+    """Configure the MCP server connection."""
+    server_command = payload.get("server_command")
+    server_args = payload.get("server_args", [])
+    
+    if not server_command:
+        return {"error": "server_command is required"}
+    
+    initialize_mcp_client(server_command, server_args)
+    client = get_mcp_client()
+    
+    if client:
+        connected = await client.connect()
+        return {
+            "status": "configured",
+            "connected": connected,
+            "server_command": server_command,
+            "server_args": server_args
+        }
+    else:
+        return {"error": "Failed to initialize MCP client"}
+
+@app.get("/mcp_status")
+async def mcp_status():
+    """Get the current MCP client status."""
+    client = get_mcp_client()
+    if not client:
+        return {
+            "available": False,
+            "status": "not_configured",
+            "message": "MCP client not initialized. Use /configure_mcp to set it up."
+        }
+    
+    return {
+        "available": client.available,
+        "connected": client.session is not None,
+        "server_command": client.server_command,
+        "server_args": client.server_args
+    }
+
+@app.get("/agent/{session_id}/memory")
+async def get_agent_memory(session_id: str):
+    """Get memory state for a specific agent session."""
+    if session_id not in agent_store:
+        return {"error": f"Agent for session {session_id} not found"}
+    
+    agent = agent_store[session_id]
+    memory_summary = agent.get_memory_summary()
+    
+    return {
+        "session_id": session_id,
+        "memory": memory_summary
+    }
+
+@app.get("/agent/{session_id}/status")
+async def get_agent_status(session_id: str):
+    """Get status of agent for a session."""
+    if session_id not in agent_store:
+        return {
+            "session_id": session_id,
+            "status": "not_found",
+            "message": "Agent not initialized for this session"
+        }
+    
+    agent = agent_store[session_id]
+    return {
+        "session_id": session_id,
+        "status": "active",
+        "planning_mode": agent.planning.mode.value,
+        "available_agents": agent.available_agents,
+        "memory": agent.get_memory_summary()
+    }
+
+@app.post("/agent/{session_id}/clear_memory")
+async def clear_agent_memory(session_id: str, memory_type: str = "short_term"):
+    """Clear agent memory (short_term or long_term)."""
+    if session_id not in agent_store:
+        return {"error": f"Agent for session {session_id} not found"}
+    
+    agent = agent_store[session_id]
+    if memory_type == "short_term":
+        agent.memory.clear_short_term()
+        return {"message": "Short-term memory cleared"}
+    elif memory_type == "long_term":
+        agent.memory.long_term = []
+        agent.memory._save_long_term()
+        return {"message": "Long-term memory cleared"}
+    else:
+        return {"error": "memory_type must be 'short_term' or 'long_term'"}
+
+@app.get("/agents")
+async def list_all_agents():
+    """List all active agents."""
+    return {
+        "active_agents": list(agent_store.keys()),
+        "total_count": len(agent_store),
+        "orchestrator_agents": list(orchestrator.agents.keys())
     }
 
 @app.get("/")
 def root():
-    return {"message": "Hybrid Math/Physics Tutor — Ask /ask with mode='math' or 'physics'."}
+    return {
+        "message": "Agentic STEM Tutor — Math & Physics (RAG with MCP)",
+        "architecture": {
+            "central_agent": "Memory (Short/Long-term) + Planning (ReACT/CoT)",
+            "specialized_agents": [
+                "Local Data Agent (RAG + MCP)",
+                "Search Engine Agent (Web Search + MCP)"
+            ],
+            "generation": "Synthesis of all agent results",
+            "endpoints": {
+                "/ask": "Main agentic query endpoint (always uses both local documents and MCP for web search)",
+                "/hybrid_search": "Agentic search using specialized agents",
+                "/agent/{session_id}/memory": "View agent memory",
+                "/agent/{session_id}/status": "View agent status",
+                "/agents": "List all active agents"
+            },
+            "search_strategy": {
+                "local_documents": "Always used via Local Data Agent",
+                "web_search": "Handled by MCP server (falls back to DuckDuckGo if MCP not configured)"
+            }
+        }
+    }
