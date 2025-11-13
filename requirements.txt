@@ -13,3 +13,5 @@ python-multipart
 numpy
 tqdm
 scikit-learn
+mcp
+ddgs

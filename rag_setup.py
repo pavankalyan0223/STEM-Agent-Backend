@@ -67,7 +67,7 @@ def index_pdfs():
     print(f"Database stored at: {DB_DIR}")
 
 
-def query_rag(question, top_k=5):
+def query_rag(question, top_k=3):
     """Search for relevant text chunks with improved retrieval."""
     q_emb = embedder.encode(question).tolist()
     results = collection.query(query_embeddings=[q_emb], n_results=top_k)
