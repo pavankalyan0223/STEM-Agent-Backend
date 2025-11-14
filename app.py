@@ -13,6 +13,7 @@ from session_manager import load_sessions, save_sessions, list_sessions, get_ses
 from summarizer import summarize_all_pdfs, SUMMARY_DIR
 from rag_setup import index_pdfs
 from mcp_client import initialize_mcp_client, get_mcp_client
+from research_graph import build_research_graph, get_research_graph
 
 # Agentic architecture imports
 from agentic_core import CentralAgent, PlanningMode
@@ -421,6 +422,140 @@ async def list_all_agents():
         "total_count": len(agent_store),
         "orchestrator_agents": list(orchestrator.agents.keys())
     }
+
+class ResearchQuery(BaseModel):
+    query: str
+    max_results: Optional[int] = Field(default=20, ge=1, le=100)
+    category: Optional[str] = Field(default=None)  # e.g., "math", "physics", "cs", etc.
+
+@app.post("/research")
+async def fetch_research_papers(payload: ResearchQuery):
+    """
+    Fetch research papers from arXiv API based on query.
+    Returns papers with titles, authors, abstracts, and links.
+    Note: arXiv API uses HTTP (not HTTPS) and has rate limits.
+    """
+    try:
+        query = payload.query
+        max_results = payload.max_results
+        category = payload.category
+        
+        # Build arXiv API query
+        # arXiv API documentation: https://arxiv.org/help/api/user-manual
+        # IMPORTANT: arXiv API uses HTTP, not HTTPS
+        base_url = "http://export.arxiv.org/api/query"
+        
+        # Map category to arXiv categories
+        category_map = {
+            "math": "math",
+            "physics": "physics",
+            "cs": "cs",
+            "quantum": "quant-ph",
+            "ai": "cs.AI",
+            "ml": "cs.LG"
+        }
+        
+        # Build search query - use proper arXiv search syntax
+        # For text search, use all: prefix or ti: for title, au: for author, etc.
+        search_query = f"all:{query}"
+        if category and category.lower() in category_map:
+            search_query = f"cat:{category_map[category.lower()]} AND all:{query}"
+        
+        params = {
+            "search_query": search_query,
+            "start": 0,
+            "max_results": max_results,
+            "sortBy": "submittedDate",
+            "sortOrder": "descending"
+        }
+        
+        # Add headers to identify the client (arXiv API best practice)
+        headers = {
+            "User-Agent": "STEM-Tutor-Research/1.0 (contact: your-email@example.com)"
+        }
+        
+        response = requests.get(base_url, params=params, headers=headers, timeout=HTTP_TIMEOUT)
+        
+        # Handle rate limiting
+        if response.status_code == 429:
+            return {
+                "error": "Rate limit exceeded. Please wait a moment and try again. arXiv API allows 1 request per 3 seconds.",
+                "papers": []
+            }
+        
+        response.raise_for_status()
+        
+        # Parse XML response
+        import xml.etree.ElementTree as ET
+        root = ET.fromstring(response.content)
+        
+        # Namespace for arXiv XML
+        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        
+        papers = []
+        for entry in root.findall('atom:entry', ns):
+            paper = {
+                "id": entry.find('atom:id', ns).text if entry.find('atom:id', ns) is not None else "",
+                "title": entry.find('atom:title', ns).text.strip() if entry.find('atom:title', ns) is not None else "No title",
+                "summary": entry.find('atom:summary', ns).text.strip() if entry.find('atom:summary', ns) is not None else "No abstract",
+                "published": entry.find('atom:published', ns).text if entry.find('atom:published', ns) is not None else "",
+                "updated": entry.find('atom:updated', ns).text if entry.find('atom:updated', ns) is not None else "",
+                "authors": [author.find('atom:name', ns).text for author in entry.findall('atom:author', ns) if author.find('atom:name', ns) is not None],
+                "link": entry.find('atom:id', ns).text if entry.find('atom:id', ns) is not None else "",
+                "pdf_link": ""
+            }
+            
+            # Get PDF link
+            for link in entry.findall('atom:link', ns):
+                if link.get('type') == 'application/pdf':
+                    paper["pdf_link"] = link.get('href', '')
+                    break
+            
+            # If no PDF link found, construct it from ID
+            if not paper["pdf_link"] and paper["id"]:
+                arxiv_id = paper["id"].split('/')[-1]
+                paper["pdf_link"] = f"https://arxiv.org/pdf/{arxiv_id}.pdf"
+            
+            papers.append(paper)
+        
+        return {
+            "papers": papers,
+            "total": len(papers),
+            "query": query,
+            "category": category
+        }
+        
+    except requests.exceptions.Timeout:
+        return {"error": "Request timed out. Please try again with a simpler query.", "papers": []}
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 429:
+            return {"error": "Rate limit exceeded. Please wait a few seconds and try again.", "papers": []}
+        return {"error": f"HTTP error: {str(e)}", "papers": []}
+    except requests.exceptions.RequestException as e:
+        return {"error": f"Failed to fetch research papers: {str(e)}", "papers": []}
+    except Exception as e:
+        return {"error": f"Error processing research papers: {str(e)}", "papers": []}
+
+@app.post("/research-graph/build")
+async def build_graph():
+    """
+    Build a knowledge graph from all research papers in the data folder.
+    Creates nodes for papers and topics, and edges showing relationships.
+    """
+    try:
+        graph = build_research_graph("data/")
+        return graph
+    except Exception as e:
+        return {"error": f"Error building research graph: {str(e)}"}
+
+@app.get("/research-graph")
+async def get_graph():
+    """Get the current research graph."""
+    try:
+        graph = get_research_graph()
+        return graph
+    except Exception as e:
+        return {"error": f"Error loading research graph: {str(e)}"}
 
 @app.get("/")
 def root():

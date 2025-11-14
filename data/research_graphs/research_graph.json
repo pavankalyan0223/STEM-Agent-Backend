@@ -1,0 +1,3632 @@
+{
+  "nodes": [
+    {
+      "id": "paper_0",
+      "type": "paper",
+      "label": "re6",
+      "title": "re6",
+      "abstract": "Most atomic nuclei exhibit ellipsoidal shapes characterized by quadrupole deformation β2and triaxiality γ, and sometimes even a pear-like octupole deformation β3. The STAR experiment introduced a new ‘imaging-by-smashing’ technique ((STAR Collaboration) 2024 Nature 635 67; Jia 2025 Rep. Prog. Phys. 88092301) to image the nuclear global shape by colliding nuclei at ultra-relativistic speeds and analyzing outgoing debris. Features of nuclear shape manifest in collective observables like anisotropi",
+      "filename": "re6.pdf",
+      "topics_count": 60,
+      "keywords": [
+        "chalcogenide films",
+        "imaging nuclear",
+        "ternary geinsb",
+        "matter undergoes",
+        "optoelectronic applications",
+        "energy deposition",
+        "hadronic transport",
+        "cosmic web",
+        "star measurements",
+        "regular conductivities",
+        "gap dependence",
+        "average transverse",
+        "jia 2025",
+        "shaded boxes",
+        "valuable insights"
+      ]
+    },
+    {
+      "id": "paper_1",
+      "type": "paper",
+      "label": "re7",
+      "title": "re7",
+      "abstract": "No abstract found.",
+      "filename": "re7.pdf",
+      "topics_count": 70,
+      "keywords": [
+        "ion collisions",
+        "nuclear shapes",
+        "low energies",
+        "nucleus potential",
+        "optical potential",
+        "quasielastic scattering",
+        "heavyion fusion",
+        "coulomb barrier",
+        "proton inelastic",
+        "2πσ2 λe",
+        "discussed relativistic",
+        "jsps kakenhi",
+        "emulating multichannel",
+        "processes interfere"
+      ]
+    },
+    {
+      "id": "topic_0_chalcogenide_films",
+      "type": "topic",
+      "label": "chalcogenide films",
+      "name": "chalcogenide films",
+      "description": "Extracted from section 1",
+      "score": 0.4511,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_1_imaging_nuclear",
+      "type": "topic",
+      "label": "imaging nuclear",
+      "name": "imaging nuclear",
+      "description": "Extracted from section 1",
+      "score": 0.4046,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_2_optoelectronic_applications",
+      "type": "topic",
+      "label": "optoelectronic applications",
+      "name": "optoelectronic applications",
+      "description": "Extracted from section 1",
+      "score": 0.3326,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_3_geinsb",
+      "type": "topic",
+      "label": "geinsb",
+      "name": "geinsb",
+      "description": "Extracted from section 1",
+      "score": 0.3232,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_4_ion_collisions",
+      "type": "topic",
+      "label": "ion collisions",
+      "name": "ion collisions",
+      "description": "Extracted from section 1",
+      "score": 0.3133,
+      "papers": [
+        "paper_0",
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_5_uranium_deformation",
+      "type": "topic",
+      "label": "uranium deformation",
+      "name": "uranium deformation",
+      "description": "Extracted from section 2",
+      "score": 0.6036,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_6_flow_correlations",
+      "type": "topic",
+      "label": "flow correlations",
+      "name": "flow correlations",
+      "description": "Extracted from section 2",
+      "score": 0.3564,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_7_ptcorrelations_12",
+      "type": "topic",
+      "label": "ptcorrelations 12",
+      "name": "ptcorrelations 12",
+      "description": "Extracted from section 2",
+      "score": 0.3509,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_8_relativistic_heavy",
+      "type": "topic",
+      "label": "relativistic heavy",
+      "name": "relativistic heavy",
+      "description": "Extracted from section 2",
+      "score": 0.3233,
+      "papers": [
+        "paper_0",
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_9_colliding_nuclei",
+      "type": "topic",
+      "label": "colliding nuclei",
+      "name": "colliding nuclei",
+      "description": "Extracted from section 3",
+      "score": 0.6313,
+      "papers": [
+        "paper_0",
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_10_nuclear_shape",
+      "type": "topic",
+      "label": "nuclear shape",
+      "name": "nuclear shape",
+      "description": "Extracted from section 3",
+      "score": 0.4947,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_11_hydrodynamic_models",
+      "type": "topic",
+      "label": "hydrodynamic models",
+      "name": "hydrodynamic models",
+      "description": "Extracted from section 3",
+      "score": 0.3716,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_12_deposition_mechanisms",
+      "type": "topic",
+      "label": "deposition mechanisms",
+      "name": "deposition mechanisms",
+      "description": "Extracted from section 3",
+      "score": 0.2616,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_13_event_average",
+      "type": "topic",
+      "label": "event average",
+      "name": "event average",
+      "description": "Extracted from section 3",
+      "score": 0.1994,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_14_nuclear_shapes",
+      "type": "topic",
+      "label": "nuclear shapes",
+      "name": "nuclear shapes",
+      "description": "Extracted from section 4",
+      "score": 0.5459,
+      "papers": [
+        "paper_0",
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_15_nuclear_wavefunction",
+      "type": "topic",
+      "label": "nuclear wavefunction",
+      "name": "nuclear wavefunction",
+      "description": "Extracted from section 4",
+      "score": 0.4418,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_16_beam_energies",
+      "type": "topic",
+      "label": "beam energies",
+      "name": "beam energies",
+      "description": "Extracted from section 4",
+      "score": 0.4017,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_17_quadrupole_transition",
+      "type": "topic",
+      "label": "quadrupole transition",
+      "name": "quadrupole transition",
+      "description": "Extracted from section 4",
+      "score": 0.3344,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_18_rotational_spectrum",
+      "type": "topic",
+      "label": "rotational spectrum",
+      "name": "rotational spectrum",
+      "description": "Extracted from section 4",
+      "score": 0.3068,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_19_nuclear_deformation",
+      "type": "topic",
+      "label": "nuclear deformation",
+      "name": "nuclear deformation",
+      "description": "Extracted from section 5",
+      "score": 0.4865,
+      "papers": [
+        "paper_0",
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_20_event_fluctuations",
+      "type": "topic",
+      "label": "event fluctuations",
+      "name": "event fluctuations",
+      "description": "Extracted from section 5",
+      "score": 0.482,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_21_correlators_involving",
+      "type": "topic",
+      "label": "correlators involving",
+      "name": "correlators involving",
+      "description": "Extracted from section 5",
+      "score": 0.246,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_22_central_collisions",
+      "type": "topic",
+      "label": "central collisions",
+      "name": "central collisions",
+      "description": "Extracted from section 6",
+      "score": 0.4442,
+      "papers": [
+        "paper_0",
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_23_nuclear_structure",
+      "type": "topic",
+      "label": "nuclear structure",
+      "name": "nuclear structure",
+      "description": "Extracted from section 6",
+      "score": 0.3803,
+      "papers": [
+        "paper_0",
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_24_star_detector",
+      "type": "topic",
+      "label": "star detector",
+      "name": "star detector",
+      "description": "Extracted from section 7",
+      "score": 0.4772,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_25_energy_collisions",
+      "type": "topic",
+      "label": "energy collisions",
+      "name": "energy collisions",
+      "description": "Extracted from section 7",
+      "score": 0.3983,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_26_au_events",
+      "type": "topic",
+      "label": "au events",
+      "name": "au events",
+      "description": "Extracted from section 7",
+      "score": 0.3,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_27_total_nucleus",
+      "type": "topic",
+      "label": "total nucleus",
+      "name": "total nucleus",
+      "description": "Extracted from section 8",
+      "score": 0.5245,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_28_centrality_range",
+      "type": "topic",
+      "label": "centrality range",
+      "name": "centrality range",
+      "description": "Extracted from section 8",
+      "score": 0.3635,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_29_luminosity_dependence",
+      "type": "topic",
+      "label": "luminosity dependence",
+      "name": "luminosity dependence",
+      "description": "Extracted from section 8",
+      "score": 0.3603,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_30_au_collisions",
+      "type": "topic",
+      "label": "au collisions",
+      "name": "au collisions",
+      "description": "Extracted from section 8",
+      "score": 0.3268,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_31_track_weights",
+      "type": "topic",
+      "label": "track weights",
+      "name": "track weights",
+      "description": "Extracted from section 8",
+      "score": 0.1453,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_32_subevent_method",
+      "type": "topic",
+      "label": "subevent method",
+      "name": "subevent method",
+      "description": "Extracted from section 9",
+      "score": 0.2456,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_33_observables_measured",
+      "type": "topic",
+      "label": "observables measured",
+      "name": "observables measured",
+      "description": "Extracted from section 9",
+      "score": 0.2378,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_34_dijet_fragmentation",
+      "type": "topic",
+      "label": "dijet fragmentation",
+      "name": "dijet fragmentation",
+      "description": "Extracted from section 10",
+      "score": 0.3669,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_35_gap_dependence",
+      "type": "topic",
+      "label": "gap dependence",
+      "name": "gap dependence",
+      "description": "Extracted from section 10",
+      "score": 0.3561,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_36_redistribute_nonflow",
+      "type": "topic",
+      "label": "redistribute nonflow",
+      "name": "redistribute nonflow",
+      "description": "Extracted from section 10",
+      "score": 0.2889,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_37_flow_physics",
+      "type": "topic",
+      "label": "flow physics",
+      "name": "flow physics",
+      "description": "Extracted from section 11",
+      "score": 0.3521,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_38_collision_zvtxrange",
+      "type": "topic",
+      "label": "collision zvtxrange",
+      "name": "collision zvtxrange",
+      "description": "Extracted from section 11",
+      "score": 0.2844,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_39_resonance_decays",
+      "type": "topic",
+      "label": "resonance decays",
+      "name": "resonance decays",
+      "description": "Extracted from section 11",
+      "score": 0.1941,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_40_momentum_resolution",
+      "type": "topic",
+      "label": "momentum resolution",
+      "name": "momentum resolution",
+      "description": "Extracted from section 12",
+      "score": 0.404,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_41_multiphase_transport",
+      "type": "topic",
+      "label": "multiphase transport",
+      "name": "multiphase transport",
+      "description": "Extracted from section 12",
+      "score": 0.3396,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_42_efficiency_resulted",
+      "type": "topic",
+      "label": "efficiency resulted",
+      "name": "efficiency resulted",
+      "description": "Extracted from section 12",
+      "score": 0.1575,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_43_generally_smaller",
+      "type": "topic",
+      "label": "generally smaller",
+      "name": "generally smaller",
+      "description": "Extracted from section 12",
+      "score": 0.084,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_44_charged_hadrons",
+      "type": "topic",
+      "label": "charged hadrons",
+      "name": "charged hadrons",
+      "description": "Extracted from section 13",
+      "score": 0.4546,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_45_mass_number",
+      "type": "topic",
+      "label": "mass number",
+      "name": "mass number",
+      "description": "Extracted from section 13",
+      "score": 0.3128,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_46_temperature_fluctuations",
+      "type": "topic",
+      "label": "temperature fluctuations",
+      "name": "temperature fluctuations",
+      "description": "Extracted from section 14",
+      "score": 0.2781,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_47_harmonic_flow",
+      "type": "topic",
+      "label": "harmonic flow",
+      "name": "harmonic flow",
+      "description": "Extracted from section 15",
+      "score": 0.3418,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_48_fluctuations",
+      "type": "topic",
+      "label": "fluctuations",
+      "name": "fluctuations",
+      "description": "Extracted from section 15",
+      "score": 0.2613,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_49_ternary_geinsb",
+      "type": "topic",
+      "label": "ternary geinsb",
+      "name": "ternary geinsb",
+      "description": "Main keyword from re6",
+      "score": 0.3445,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_50_matter_undergoes",
+      "type": "topic",
+      "label": "matter undergoes",
+      "name": "matter undergoes",
+      "description": "Main keyword from re6",
+      "score": 0.3389,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_51_energy_deposition",
+      "type": "topic",
+      "label": "energy deposition",
+      "name": "energy deposition",
+      "description": "Main keyword from re6",
+      "score": 0.3207,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_52_hadronic_transport",
+      "type": "topic",
+      "label": "hadronic transport",
+      "name": "hadronic transport",
+      "description": "Main keyword from re6",
+      "score": 0.29,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_53_promising_materials",
+      "type": "topic",
+      "label": "promising materials",
+      "name": "promising materials",
+      "description": "Main keyword from re6",
+      "score": 0.2762,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_54_boundary_measurements",
+      "type": "topic",
+      "label": "boundary measurements",
+      "name": "boundary measurements",
+      "description": "Main keyword from re6",
+      "score": 0.2731,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_55_cosmic_web",
+      "type": "topic",
+      "label": "cosmic web",
+      "name": "cosmic web",
+      "description": "Main keyword from re6",
+      "score": 0.2508,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_56_star_measurements",
+      "type": "topic",
+      "label": "star measurements",
+      "name": "star measurements",
+      "description": "Main keyword from re6",
+      "score": 0.2434,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_57_nonflow_effects",
+      "type": "topic",
+      "label": "nonflow effects",
+      "name": "nonflow effects",
+      "description": "Main keyword from re6",
+      "score": 0.2211,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_58_regular_conductivities",
+      "type": "topic",
+      "label": "regular conductivities",
+      "name": "regular conductivities",
+      "description": "Main keyword from re6",
+      "score": 0.2167,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_59_gold_exhibits",
+      "type": "topic",
+      "label": "gold exhibits",
+      "name": "gold exhibits",
+      "description": "Main keyword from re6",
+      "score": 0.177,
+      "papers": [
+        "paper_0"
+      ]
+    },
+    {
+      "id": "topic_60_understand_atomic",
+      "type": "topic",
+      "label": "understand atomic",
+      "name": "understand atomic",
+      "description": "Extracted from section 1",
+      "score": 0.4254,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_61_optical_potential",
+      "type": "topic",
+      "label": "optical potential",
+      "name": "optical potential",
+      "description": "Extracted from section 1",
+      "score": 0.3677,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_62_nuclear_reactions",
+      "type": "topic",
+      "label": "nuclear reactions",
+      "name": "nuclear reactions",
+      "description": "Extracted from section 2",
+      "score": 0.6005,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_63_heavyion_reactions",
+      "type": "topic",
+      "label": "heavyion reactions",
+      "name": "heavyion reactions",
+      "description": "Extracted from section 2",
+      "score": 0.3855,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_64_carbon_isotopes",
+      "type": "topic",
+      "label": "carbon isotopes",
+      "name": "carbon isotopes",
+      "description": "Extracted from section 3",
+      "score": 0.3781,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_65_resonance_regime",
+      "type": "topic",
+      "label": "resonance regime",
+      "name": "resonance regime",
+      "description": "Extracted from section 3",
+      "score": 0.3341,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_66_reaction_processes",
+      "type": "topic",
+      "label": "reaction processes",
+      "name": "reaction processes",
+      "description": "Extracted from section 3",
+      "score": 0.328,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_67_random_matrix",
+      "type": "topic",
+      "label": "random matrix",
+      "name": "random matrix",
+      "description": "Extracted from section 3",
+      "score": 0.1447,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_68_black_box",
+      "type": "topic",
+      "label": "black box",
+      "name": "black box",
+      "description": "Extracted from section 3",
+      "score": 0.0846,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_69_ion_reactions",
+      "type": "topic",
+      "label": "ion reactions",
+      "name": "ion reactions",
+      "description": "Extracted from section 4",
+      "score": 0.3341,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_70_various_quantum",
+      "type": "topic",
+      "label": "various quantum",
+      "name": "various quantum",
+      "description": "Extracted from section 4",
+      "score": 0.2992,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_71_farside_components",
+      "type": "topic",
+      "label": "farside components",
+      "name": "farside components",
+      "description": "Extracted from section 4",
+      "score": 0.2709,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_72_angular_frequencyω",
+      "type": "topic",
+      "label": "angular frequencyω",
+      "name": "angular frequencyω",
+      "description": "Extracted from section 4",
+      "score": 0.158,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_73_ion_elastic",
+      "type": "topic",
+      "label": "ion elastic",
+      "name": "ion elastic",
+      "description": "Extracted from section 5",
+      "score": 0.3268,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_74_obtained_withθ",
+      "type": "topic",
+      "label": "obtained withθ",
+      "name": "obtained withθ",
+      "description": "Extracted from section 5",
+      "score": 0.2699,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_75_differential_cross",
+      "type": "topic",
+      "label": "differential cross",
+      "name": "differential cross",
+      "description": "Extracted from section 5",
+      "score": 0.2636,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_76_model_calculation",
+      "type": "topic",
+      "label": "model calculation",
+      "name": "model calculation",
+      "description": "Extracted from section 5",
+      "score": 0.2104,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_77_coulomb_barrier",
+      "type": "topic",
+      "label": "coulomb barrier",
+      "name": "coulomb barrier",
+      "description": "Extracted from section 6",
+      "score": 0.4464,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_78_cross_sections",
+      "type": "topic",
+      "label": "cross sections",
+      "name": "cross sections",
+      "description": "Extracted from section 6",
+      "score": 0.2534,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_79_explicitly_decomposing",
+      "type": "topic",
+      "label": "explicitly decomposing",
+      "name": "explicitly decomposing",
+      "description": "Extracted from section 6",
+      "score": 0.1062,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_80_excitation_energies",
+      "type": "topic",
+      "label": "excitation energies",
+      "name": "excitation energies",
+      "description": "Extracted from section 7",
+      "score": 0.2935,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_81_hamiltonianh_rotmay",
+      "type": "topic",
+      "label": "hamiltonianh rotmay",
+      "name": "hamiltonianh rotmay",
+      "description": "Extracted from section 7",
+      "score": 0.2654,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_82_adiabatic_limit",
+      "type": "topic",
+      "label": "adiabatic limit",
+      "name": "adiabatic limit",
+      "description": "Extracted from section 7",
+      "score": 0.2639,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_83_hrot",
+      "type": "topic",
+      "label": "hrot",
+      "name": "hrot",
+      "description": "Extracted from section 7",
+      "score": 0.2608,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_84_hexadecapole_deformation",
+      "type": "topic",
+      "label": "hexadecapole deformation",
+      "name": "hexadecapole deformation",
+      "description": "Extracted from section 7",
+      "score": 0.2144,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_85_barrier_distributions",
+      "type": "topic",
+      "label": "barrier distributions",
+      "name": "barrier distributions",
+      "description": "Extracted from section 8",
+      "score": 0.5336,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_86_distributions_ofβ",
+      "type": "topic",
+      "label": "distributions ofβ",
+      "name": "distributions ofβ",
+      "description": "Extracted from section 8",
+      "score": 0.4071,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_87_channels_calculations",
+      "type": "topic",
+      "label": "channels calculations",
+      "name": "channels calculations",
+      "description": "Extracted from section 8",
+      "score": 0.2245,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_88_dimensional_twochannel",
+      "type": "topic",
+      "label": "dimensional twochannel",
+      "name": "dimensional twochannel",
+      "description": "Extracted from section 9",
+      "score": 0.4988,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_89_coupling_potential",
+      "type": "topic",
+      "label": "coupling potential",
+      "name": "coupling potential",
+      "description": "Extracted from section 9",
+      "score": 0.4223,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_90_eigenvector_continuation",
+      "type": "topic",
+      "label": "eigenvector continuation",
+      "name": "eigenvector continuation",
+      "description": "Extracted from section 9",
+      "score": 0.3519,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_91_inelastic_scattering",
+      "type": "topic",
+      "label": "inelastic scattering",
+      "name": "inelastic scattering",
+      "description": "Extracted from section 9",
+      "score": 0.3223,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_92_relative_error",
+      "type": "topic",
+      "label": "relative error",
+      "name": "relative error",
+      "description": "Extracted from section 9",
+      "score": 0.3063,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_93_relativistic_energies",
+      "type": "topic",
+      "label": "relativistic energies",
+      "name": "relativistic energies",
+      "description": "Extracted from section 10",
+      "score": 0.4858,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_94_adiabatic_approximation",
+      "type": "topic",
+      "label": "adiabatic approximation",
+      "name": "adiabatic approximation",
+      "description": "Extracted from section 10",
+      "score": 0.3492,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_95_significantly_overlap",
+      "type": "topic",
+      "label": "significantly overlap",
+      "name": "significantly overlap",
+      "description": "Extracted from section 10",
+      "score": 0.2248,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_96_radius_parameter",
+      "type": "topic",
+      "label": "radius parameter",
+      "name": "radius parameter",
+      "description": "Extracted from section 11",
+      "score": 0.3343,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_97_stiffness_parameters",
+      "type": "topic",
+      "label": "stiffness parameters",
+      "name": "stiffness parameters",
+      "description": "Extracted from section 11",
+      "score": 0.3306,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_98_saxon_density",
+      "type": "topic",
+      "label": "saxon density",
+      "name": "saxon density",
+      "description": "Extracted from section 11",
+      "score": 0.3044,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_99_volume_conservation",
+      "type": "topic",
+      "label": "volume conservation",
+      "name": "volume conservation",
+      "description": "Extracted from section 11",
+      "score": 0.2717,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_100_eccentricity_parameters",
+      "type": "topic",
+      "label": "eccentricity parameters",
+      "name": "eccentricity parameters",
+      "description": "Extracted from section 12",
+      "score": 0.4862,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_101_surface_vibration",
+      "type": "topic",
+      "label": "surface vibration",
+      "name": "surface vibration",
+      "description": "Extracted from section 12",
+      "score": 0.4035,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_102_zdω_8π2",
+      "type": "topic",
+      "label": "zdω 8π2",
+      "name": "zdω 8π2",
+      "description": "Extracted from section 12",
+      "score": 0.3708,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_103_ωis_randomly",
+      "type": "topic",
+      "label": "ωis randomly",
+      "name": "ωis randomly",
+      "description": "Extracted from section 12",
+      "score": 0.3367,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_104_subbarrier_energies",
+      "type": "topic",
+      "label": "subbarrier energies",
+      "name": "subbarrier energies",
+      "description": "Extracted from section 12",
+      "score": 0.2513,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_105_nuclear_collisions",
+      "type": "topic",
+      "label": "nuclear collisions",
+      "name": "nuclear collisions",
+      "description": "Extracted from section 13",
+      "score": 0.5667,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_106_fusion_barrier",
+      "type": "topic",
+      "label": "fusion barrier",
+      "name": "fusion barrier",
+      "description": "Extracted from section 13",
+      "score": 0.4309,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_107_channel_scattering",
+      "type": "topic",
+      "label": "channel scattering",
+      "name": "channel scattering",
+      "description": "Extracted from section 13",
+      "score": 0.3992,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_108_internalwave_interference",
+      "type": "topic",
+      "label": "internalwave interference",
+      "name": "internalwave interference",
+      "description": "Extracted from section 13",
+      "score": 0.3036,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_109_superheavy_nuclei",
+      "type": "topic",
+      "label": "superheavy nuclei",
+      "name": "superheavy nuclei",
+      "description": "Extracted from section 14",
+      "score": 0.698,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_110_heaviest_elements",
+      "type": "topic",
+      "label": "heaviest elements",
+      "name": "heaviest elements",
+      "description": "Extracted from section 14",
+      "score": 0.423,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_111_quantum_interferences",
+      "type": "topic",
+      "label": "quantum interferences",
+      "name": "quantum interferences",
+      "description": "Extracted from section 15",
+      "score": 0.5078,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_112_low_energies",
+      "type": "topic",
+      "label": "low energies",
+      "name": "low energies",
+      "description": "Main keyword from re7",
+      "score": 0.4292,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_113_nucleus_potential",
+      "type": "topic",
+      "label": "nucleus potential",
+      "name": "nucleus potential",
+      "description": "Main keyword from re7",
+      "score": 0.4253,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_114_nucleon_interaction",
+      "type": "topic",
+      "label": "nucleon interaction",
+      "name": "nucleon interaction",
+      "description": "Main keyword from re7",
+      "score": 0.3942,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_115_quasielastic_scattering",
+      "type": "topic",
+      "label": "quasielastic scattering",
+      "name": "quasielastic scattering",
+      "description": "Main keyword from re7",
+      "score": 0.365,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_116_heavyion_fusion",
+      "type": "topic",
+      "label": "heavyion fusion",
+      "name": "heavyion fusion",
+      "description": "Main keyword from re7",
+      "score": 0.3563,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_117_proton_inelastic",
+      "type": "topic",
+      "label": "proton inelastic",
+      "name": "proton inelastic",
+      "description": "Main keyword from re7",
+      "score": 0.3465,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_118_neutron_induced",
+      "type": "topic",
+      "label": "neutron induced",
+      "name": "neutron induced",
+      "description": "Main keyword from re7",
+      "score": 0.3068,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_119_2πσ2_λe",
+      "type": "topic",
+      "label": "2πσ2 λe",
+      "name": "2πσ2 λe",
+      "description": "Main keyword from re7",
+      "score": 0.3022,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_120_discussed_relativistic",
+      "type": "topic",
+      "label": "discussed relativistic",
+      "name": "discussed relativistic",
+      "description": "Main keyword from re7",
+      "score": 0.284,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_121_ekström",
+      "type": "topic",
+      "label": "ekström",
+      "name": "ekström",
+      "description": "Main keyword from re7",
+      "score": 0.2108,
+      "papers": [
+        "paper_1"
+      ]
+    },
+    {
+      "id": "topic_122_jsps_kakenhi",
+      "type": "topic",
+      "label": "jsps kakenhi",
+      "name": "jsps kakenhi",
+      "description": "Main keyword from re7",
+      "score": 0.1895,
+      "papers": [
+        "paper_1"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "paper_0",
+      "target": "topic_0_chalcogenide_films",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_1_imaging_nuclear",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_2_optoelectronic_applications",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_3_geinsb",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_4_ion_collisions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_5_uranium_deformation",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_6_flow_correlations",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_7_ptcorrelations_12",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_8_relativistic_heavy",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_9_colliding_nuclei",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_10_nuclear_shape",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_11_hydrodynamic_models",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_12_deposition_mechanisms",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_13_event_average",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_14_nuclear_shapes",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_15_nuclear_wavefunction",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_16_beam_energies",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_17_quadrupole_transition",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_18_rotational_spectrum",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_19_nuclear_deformation",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_20_event_fluctuations",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_21_correlators_involving",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_22_central_collisions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_23_nuclear_structure",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_24_star_detector",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_25_energy_collisions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_26_au_events",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_27_total_nucleus",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_28_centrality_range",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_29_luminosity_dependence",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_30_au_collisions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_31_track_weights",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_32_subevent_method",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_33_observables_measured",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_34_dijet_fragmentation",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_35_gap_dependence",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_36_redistribute_nonflow",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_37_flow_physics",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_38_collision_zvtxrange",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_39_resonance_decays",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_40_momentum_resolution",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_41_multiphase_transport",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_42_efficiency_resulted",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_43_generally_smaller",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_44_charged_hadrons",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_45_mass_number",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_46_temperature_fluctuations",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_47_harmonic_flow",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_48_fluctuations",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_49_ternary_geinsb",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_50_matter_undergoes",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_51_energy_deposition",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_52_hadronic_transport",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_53_promising_materials",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_54_boundary_measurements",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_55_cosmic_web",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_56_star_measurements",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_57_nonflow_effects",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_58_regular_conductivities",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_59_gold_exhibits",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_4_ion_collisions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_14_nuclear_shapes",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_60_understand_atomic",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_8_relativistic_heavy",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_61_optical_potential",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_9_colliding_nuclei",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_19_nuclear_deformation",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_62_nuclear_reactions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_63_heavyion_reactions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_64_carbon_isotopes",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_65_resonance_regime",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_66_reaction_processes",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_67_random_matrix",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_68_black_box",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_69_ion_reactions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_70_various_quantum",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_71_farside_components",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_72_angular_frequencyω",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_73_ion_elastic",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_74_obtained_withθ",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_75_differential_cross",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_76_model_calculation",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_77_coulomb_barrier",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_78_cross_sections",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_79_explicitly_decomposing",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_80_excitation_energies",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_81_hamiltonianh_rotmay",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_82_adiabatic_limit",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_83_hrot",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_84_hexadecapole_deformation",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_85_barrier_distributions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_86_distributions_ofβ",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_23_nuclear_structure",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_87_channels_calculations",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_88_dimensional_twochannel",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_89_coupling_potential",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_90_eigenvector_continuation",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_91_inelastic_scattering",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_92_relative_error",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_93_relativistic_energies",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_94_adiabatic_approximation",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_95_significantly_overlap",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_22_central_collisions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_96_radius_parameter",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_97_stiffness_parameters",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_98_saxon_density",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_99_volume_conservation",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_100_eccentricity_parameters",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_101_surface_vibration",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_102_zdω_8π2",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_103_ωis_randomly",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_104_subbarrier_energies",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_105_nuclear_collisions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_106_fusion_barrier",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_107_channel_scattering",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_108_internalwave_interference",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_110_heaviest_elements",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_111_quantum_interferences",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_112_low_energies",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_113_nucleus_potential",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_114_nucleon_interaction",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_115_quasielastic_scattering",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_116_heavyion_fusion",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_117_proton_inelastic",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_118_neutron_induced",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_119_2πσ2_λe",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_120_discussed_relativistic",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_121_ekström",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_122_jsps_kakenhi",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_5_uranium_deformation",
+      "type": "similar_topic",
+      "weight": 0.43202242255210876
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_9_colliding_nuclei",
+      "type": "similar_topic",
+      "weight": 0.43910571932792664
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_10_nuclear_shape",
+      "type": "similar_topic",
+      "weight": 0.6158076524734497
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_14_nuclear_shapes",
+      "type": "similar_topic",
+      "weight": 0.6157681941986084
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_15_nuclear_wavefunction",
+      "type": "similar_topic",
+      "weight": 0.5301247239112854
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_19_nuclear_deformation",
+      "type": "similar_topic",
+      "weight": 0.6138337850570679
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_23_nuclear_structure",
+      "type": "similar_topic",
+      "weight": 0.635957658290863
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_27_total_nucleus",
+      "type": "similar_topic",
+      "weight": 0.4781821370124817
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.5522437691688538
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.5154067873954773
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.4943251609802246
+    },
+    {
+      "source": "topic_1_imaging_nuclear",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.40584006905555725
+    },
+    {
+      "source": "topic_3_geinsb",
+      "target": "topic_49_ternary_geinsb",
+      "type": "similar_topic",
+      "weight": 0.6224276423454285
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_9_colliding_nuclei",
+      "type": "similar_topic",
+      "weight": 0.6063857078552246
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_22_central_collisions",
+      "type": "similar_topic",
+      "weight": 0.581272542476654
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_25_energy_collisions",
+      "type": "similar_topic",
+      "weight": 0.6959773898124695
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_30_au_collisions",
+      "type": "similar_topic",
+      "weight": 0.6032636165618896
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_38_collision_zvtxrange",
+      "type": "similar_topic",
+      "weight": 0.44833576679229736
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_44_charged_hadrons",
+      "type": "similar_topic",
+      "weight": 0.40606507658958435
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_60_understand_atomic",
+      "type": "similar_topic",
+      "weight": 0.4144251346588135
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.49905455112457275
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_63_heavyion_reactions",
+      "type": "similar_topic",
+      "weight": 0.41295215487480164
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_69_ion_reactions",
+      "type": "similar_topic",
+      "weight": 0.7353550791740417
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_73_ion_elastic",
+      "type": "similar_topic",
+      "weight": 0.5296518802642822
+    },
+    {
+      "source": "topic_4_ion_collisions",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.7109795212745667
+    },
+    {
+      "source": "topic_5_uranium_deformation",
+      "target": "topic_10_nuclear_shape",
+      "type": "similar_topic",
+      "weight": 0.5693180561065674
+    },
+    {
+      "source": "topic_5_uranium_deformation",
+      "target": "topic_14_nuclear_shapes",
+      "type": "similar_topic",
+      "weight": 0.5396026968955994
+    },
+    {
+      "source": "topic_5_uranium_deformation",
+      "target": "topic_19_nuclear_deformation",
+      "type": "similar_topic",
+      "weight": 0.7670807838439941
+    },
+    {
+      "source": "topic_5_uranium_deformation",
+      "target": "topic_23_nuclear_structure",
+      "type": "similar_topic",
+      "weight": 0.523978590965271
+    },
+    {
+      "source": "topic_5_uranium_deformation",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.4456208646297455
+    },
+    {
+      "source": "topic_5_uranium_deformation",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.4472181499004364
+    },
+    {
+      "source": "topic_6_flow_correlations",
+      "target": "topic_21_correlators_involving",
+      "type": "similar_topic",
+      "weight": 0.43201568722724915
+    },
+    {
+      "source": "topic_6_flow_correlations",
+      "target": "topic_37_flow_physics",
+      "type": "similar_topic",
+      "weight": 0.6845550537109375
+    },
+    {
+      "source": "topic_6_flow_correlations",
+      "target": "topic_47_harmonic_flow",
+      "type": "similar_topic",
+      "weight": 0.4564574062824249
+    },
+    {
+      "source": "topic_7_ptcorrelations_12",
+      "target": "topic_21_correlators_involving",
+      "type": "similar_topic",
+      "weight": 0.5068076848983765
+    },
+    {
+      "source": "topic_8_relativistic_heavy",
+      "target": "topic_52_hadronic_transport",
+      "type": "similar_topic",
+      "weight": 0.41215720772743225
+    },
+    {
+      "source": "topic_8_relativistic_heavy",
+      "target": "topic_63_heavyion_reactions",
+      "type": "similar_topic",
+      "weight": 0.44547373056411743
+    },
+    {
+      "source": "topic_8_relativistic_heavy",
+      "target": "topic_93_relativistic_energies",
+      "type": "similar_topic",
+      "weight": 0.718095064163208
+    },
+    {
+      "source": "topic_8_relativistic_heavy",
+      "target": "topic_110_heaviest_elements",
+      "type": "similar_topic",
+      "weight": 0.4651245176792145
+    },
+    {
+      "source": "topic_8_relativistic_heavy",
+      "target": "topic_116_heavyion_fusion",
+      "type": "similar_topic",
+      "weight": 0.5446099042892456
+    },
+    {
+      "source": "topic_8_relativistic_heavy",
+      "target": "topic_120_discussed_relativistic",
+      "type": "similar_topic",
+      "weight": 0.7592071294784546
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_10_nuclear_shape",
+      "type": "similar_topic",
+      "weight": 0.4695761501789093
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_14_nuclear_shapes",
+      "type": "similar_topic",
+      "weight": 0.5191285014152527
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_15_nuclear_wavefunction",
+      "type": "similar_topic",
+      "weight": 0.40501677989959717
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_19_nuclear_deformation",
+      "type": "similar_topic",
+      "weight": 0.5271077752113342
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_22_central_collisions",
+      "type": "similar_topic",
+      "weight": 0.5600989460945129
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_23_nuclear_structure",
+      "type": "similar_topic",
+      "weight": 0.5357446670532227
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_25_energy_collisions",
+      "type": "similar_topic",
+      "weight": 0.5657475590705872
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_27_total_nucleus",
+      "type": "similar_topic",
+      "weight": 0.541881263256073
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_30_au_collisions",
+      "type": "similar_topic",
+      "weight": 0.48547622561454773
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_38_collision_zvtxrange",
+      "type": "similar_topic",
+      "weight": 0.43285033106803894
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.5826089978218079
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.7680554389953613
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.710210382938385
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.48247116804122925
+    },
+    {
+      "source": "topic_9_colliding_nuclei",
+      "target": "topic_114_nucleon_interaction",
+      "type": "similar_topic",
+      "weight": 0.604957103729248
+    },
+    {
+      "source": "topic_10_nuclear_shape",
+      "target": "topic_14_nuclear_shapes",
+      "type": "similar_topic",
+      "weight": 0.9622045159339905
+    },
+    {
+      "source": "topic_10_nuclear_shape",
+      "target": "topic_15_nuclear_wavefunction",
+      "type": "similar_topic",
+      "weight": 0.5250409245491028
+    },
+    {
+      "source": "topic_10_nuclear_shape",
+      "target": "topic_19_nuclear_deformation",
+      "type": "similar_topic",
+      "weight": 0.7608441114425659
+    },
+    {
+      "source": "topic_10_nuclear_shape",
+      "target": "topic_23_nuclear_structure",
+      "type": "similar_topic",
+      "weight": 0.7933928370475769
+    },
+    {
+      "source": "topic_10_nuclear_shape",
+      "target": "topic_27_total_nucleus",
+      "type": "similar_topic",
+      "weight": 0.498524010181427
+    },
+    {
+      "source": "topic_10_nuclear_shape",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.5230541229248047
+    },
+    {
+      "source": "topic_10_nuclear_shape",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.5514882206916809
+    },
+    {
+      "source": "topic_10_nuclear_shape",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.5830150842666626
+    },
+    {
+      "source": "topic_10_nuclear_shape",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.42281803488731384
+    },
+    {
+      "source": "topic_10_nuclear_shape",
+      "target": "topic_114_nucleon_interaction",
+      "type": "similar_topic",
+      "weight": 0.43952736258506775
+    },
+    {
+      "source": "topic_10_nuclear_shape",
+      "target": "topic_117_proton_inelastic",
+      "type": "similar_topic",
+      "weight": 0.40118408203125
+    },
+    {
+      "source": "topic_11_hydrodynamic_models",
+      "target": "topic_37_flow_physics",
+      "type": "similar_topic",
+      "weight": 0.5428417921066284
+    },
+    {
+      "source": "topic_11_hydrodynamic_models",
+      "target": "topic_47_harmonic_flow",
+      "type": "similar_topic",
+      "weight": 0.4390632212162018
+    },
+    {
+      "source": "topic_12_deposition_mechanisms",
+      "target": "topic_51_energy_deposition",
+      "type": "similar_topic",
+      "weight": 0.6787086725234985
+    },
+    {
+      "source": "topic_13_event_average",
+      "target": "topic_20_event_fluctuations",
+      "type": "similar_topic",
+      "weight": 0.5157709717750549
+    },
+    {
+      "source": "topic_13_event_average",
+      "target": "topic_26_au_events",
+      "type": "similar_topic",
+      "weight": 0.43776601552963257
+    },
+    {
+      "source": "topic_14_nuclear_shapes",
+      "target": "topic_15_nuclear_wavefunction",
+      "type": "similar_topic",
+      "weight": 0.48802614212036133
+    },
+    {
+      "source": "topic_14_nuclear_shapes",
+      "target": "topic_19_nuclear_deformation",
+      "type": "similar_topic",
+      "weight": 0.7328201532363892
+    },
+    {
+      "source": "topic_14_nuclear_shapes",
+      "target": "topic_23_nuclear_structure",
+      "type": "similar_topic",
+      "weight": 0.7671101689338684
+    },
+    {
+      "source": "topic_14_nuclear_shapes",
+      "target": "topic_27_total_nucleus",
+      "type": "similar_topic",
+      "weight": 0.5152732729911804
+    },
+    {
+      "source": "topic_14_nuclear_shapes",
+      "target": "topic_50_matter_undergoes",
+      "type": "similar_topic",
+      "weight": 0.41118523478507996
+    },
+    {
+      "source": "topic_14_nuclear_shapes",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.5441699624061584
+    },
+    {
+      "source": "topic_14_nuclear_shapes",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.5971372723579407
+    },
+    {
+      "source": "topic_14_nuclear_shapes",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.6009652018547058
+    },
+    {
+      "source": "topic_14_nuclear_shapes",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.42031538486480713
+    },
+    {
+      "source": "topic_14_nuclear_shapes",
+      "target": "topic_114_nucleon_interaction",
+      "type": "similar_topic",
+      "weight": 0.45257845520973206
+    },
+    {
+      "source": "topic_15_nuclear_wavefunction",
+      "target": "topic_19_nuclear_deformation",
+      "type": "similar_topic",
+      "weight": 0.48969271779060364
+    },
+    {
+      "source": "topic_15_nuclear_wavefunction",
+      "target": "topic_23_nuclear_structure",
+      "type": "similar_topic",
+      "weight": 0.5868636965751648
+    },
+    {
+      "source": "topic_15_nuclear_wavefunction",
+      "target": "topic_27_total_nucleus",
+      "type": "similar_topic",
+      "weight": 0.4004400372505188
+    },
+    {
+      "source": "topic_15_nuclear_wavefunction",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.5841850638389587
+    },
+    {
+      "source": "topic_15_nuclear_wavefunction",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.48779574036598206
+    },
+    {
+      "source": "topic_15_nuclear_wavefunction",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.416292279958725
+    },
+    {
+      "source": "topic_15_nuclear_wavefunction",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.5378658771514893
+    },
+    {
+      "source": "topic_15_nuclear_wavefunction",
+      "target": "topic_114_nucleon_interaction",
+      "type": "similar_topic",
+      "weight": 0.4151611626148224
+    },
+    {
+      "source": "topic_16_beam_energies",
+      "target": "topic_25_energy_collisions",
+      "type": "similar_topic",
+      "weight": 0.5563194751739502
+    },
+    {
+      "source": "topic_16_beam_energies",
+      "target": "topic_51_energy_deposition",
+      "type": "similar_topic",
+      "weight": 0.4203345477581024
+    },
+    {
+      "source": "topic_16_beam_energies",
+      "target": "topic_80_excitation_energies",
+      "type": "similar_topic",
+      "weight": 0.6299488544464111
+    },
+    {
+      "source": "topic_16_beam_energies",
+      "target": "topic_93_relativistic_energies",
+      "type": "similar_topic",
+      "weight": 0.5933456420898438
+    },
+    {
+      "source": "topic_16_beam_energies",
+      "target": "topic_104_subbarrier_energies",
+      "type": "similar_topic",
+      "weight": 0.5251198410987854
+    },
+    {
+      "source": "topic_16_beam_energies",
+      "target": "topic_112_low_energies",
+      "type": "similar_topic",
+      "weight": 0.5839982628822327
+    },
+    {
+      "source": "topic_18_rotational_spectrum",
+      "target": "topic_65_resonance_regime",
+      "type": "similar_topic",
+      "weight": 0.42778944969177246
+    },
+    {
+      "source": "topic_18_rotational_spectrum",
+      "target": "topic_72_angular_frequencyω",
+      "type": "similar_topic",
+      "weight": 0.5184947848320007
+    },
+    {
+      "source": "topic_18_rotational_spectrum",
+      "target": "topic_119_2πσ2_λe",
+      "type": "similar_topic",
+      "weight": 0.42748427391052246
+    },
+    {
+      "source": "topic_19_nuclear_deformation",
+      "target": "topic_23_nuclear_structure",
+      "type": "similar_topic",
+      "weight": 0.7223277688026428
+    },
+    {
+      "source": "topic_19_nuclear_deformation",
+      "target": "topic_27_total_nucleus",
+      "type": "similar_topic",
+      "weight": 0.4098527133464813
+    },
+    {
+      "source": "topic_19_nuclear_deformation",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.5843355059623718
+    },
+    {
+      "source": "topic_19_nuclear_deformation",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.6118236184120178
+    },
+    {
+      "source": "topic_19_nuclear_deformation",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.5709431171417236
+    },
+    {
+      "source": "topic_19_nuclear_deformation",
+      "target": "topic_114_nucleon_interaction",
+      "type": "similar_topic",
+      "weight": 0.4552980661392212
+    },
+    {
+      "source": "topic_19_nuclear_deformation",
+      "target": "topic_116_heavyion_fusion",
+      "type": "similar_topic",
+      "weight": 0.43748563528060913
+    },
+    {
+      "source": "topic_19_nuclear_deformation",
+      "target": "topic_117_proton_inelastic",
+      "type": "similar_topic",
+      "weight": 0.4413685202598572
+    },
+    {
+      "source": "topic_19_nuclear_deformation",
+      "target": "topic_118_neutron_induced",
+      "type": "similar_topic",
+      "weight": 0.4447612166404724
+    },
+    {
+      "source": "topic_20_event_fluctuations",
+      "target": "topic_26_au_events",
+      "type": "similar_topic",
+      "weight": 0.45132461190223694
+    },
+    {
+      "source": "topic_20_event_fluctuations",
+      "target": "topic_46_temperature_fluctuations",
+      "type": "similar_topic",
+      "weight": 0.6652305126190186
+    },
+    {
+      "source": "topic_20_event_fluctuations",
+      "target": "topic_48_fluctuations",
+      "type": "similar_topic",
+      "weight": 0.7962728142738342
+    },
+    {
+      "source": "topic_22_central_collisions",
+      "target": "topic_25_energy_collisions",
+      "type": "similar_topic",
+      "weight": 0.6282450556755066
+    },
+    {
+      "source": "topic_22_central_collisions",
+      "target": "topic_30_au_collisions",
+      "type": "similar_topic",
+      "weight": 0.6394310593605042
+    },
+    {
+      "source": "topic_22_central_collisions",
+      "target": "topic_38_collision_zvtxrange",
+      "type": "similar_topic",
+      "weight": 0.49077123403549194
+    },
+    {
+      "source": "topic_22_central_collisions",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.6611266732215881
+    },
+    {
+      "source": "topic_23_nuclear_structure",
+      "target": "topic_27_total_nucleus",
+      "type": "similar_topic",
+      "weight": 0.6138712167739868
+    },
+    {
+      "source": "topic_23_nuclear_structure",
+      "target": "topic_60_understand_atomic",
+      "type": "similar_topic",
+      "weight": 0.4976279139518738
+    },
+    {
+      "source": "topic_23_nuclear_structure",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.6587631702423096
+    },
+    {
+      "source": "topic_23_nuclear_structure",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.5858315825462341
+    },
+    {
+      "source": "topic_23_nuclear_structure",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.6297418475151062
+    },
+    {
+      "source": "topic_23_nuclear_structure",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.4822423756122589
+    },
+    {
+      "source": "topic_23_nuclear_structure",
+      "target": "topic_114_nucleon_interaction",
+      "type": "similar_topic",
+      "weight": 0.538244366645813
+    },
+    {
+      "source": "topic_23_nuclear_structure",
+      "target": "topic_117_proton_inelastic",
+      "type": "similar_topic",
+      "weight": 0.4232509136199951
+    },
+    {
+      "source": "topic_23_nuclear_structure",
+      "target": "topic_118_neutron_induced",
+      "type": "similar_topic",
+      "weight": 0.44820189476013184
+    },
+    {
+      "source": "topic_24_star_detector",
+      "target": "topic_56_star_measurements",
+      "type": "similar_topic",
+      "weight": 0.6373333930969238
+    },
+    {
+      "source": "topic_25_energy_collisions",
+      "target": "topic_30_au_collisions",
+      "type": "similar_topic",
+      "weight": 0.573701798915863
+    },
+    {
+      "source": "topic_25_energy_collisions",
+      "target": "topic_38_collision_zvtxrange",
+      "type": "similar_topic",
+      "weight": 0.4130542576313019
+    },
+    {
+      "source": "topic_25_energy_collisions",
+      "target": "topic_51_energy_deposition",
+      "type": "similar_topic",
+      "weight": 0.4803469181060791
+    },
+    {
+      "source": "topic_25_energy_collisions",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.46336832642555237
+    },
+    {
+      "source": "topic_25_energy_collisions",
+      "target": "topic_69_ion_reactions",
+      "type": "similar_topic",
+      "weight": 0.40201541781425476
+    },
+    {
+      "source": "topic_25_energy_collisions",
+      "target": "topic_80_excitation_energies",
+      "type": "similar_topic",
+      "weight": 0.5247234106063843
+    },
+    {
+      "source": "topic_25_energy_collisions",
+      "target": "topic_93_relativistic_energies",
+      "type": "similar_topic",
+      "weight": 0.5479742288589478
+    },
+    {
+      "source": "topic_25_energy_collisions",
+      "target": "topic_104_subbarrier_energies",
+      "type": "similar_topic",
+      "weight": 0.4253461956977844
+    },
+    {
+      "source": "topic_25_energy_collisions",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.7304596304893494
+    },
+    {
+      "source": "topic_25_energy_collisions",
+      "target": "topic_112_low_energies",
+      "type": "similar_topic",
+      "weight": 0.5136518478393555
+    },
+    {
+      "source": "topic_26_au_events",
+      "target": "topic_30_au_collisions",
+      "type": "similar_topic",
+      "weight": 0.6878689527511597
+    },
+    {
+      "source": "topic_26_au_events",
+      "target": "topic_59_gold_exhibits",
+      "type": "similar_topic",
+      "weight": 0.403238445520401
+    },
+    {
+      "source": "topic_27_total_nucleus",
+      "target": "topic_44_charged_hadrons",
+      "type": "similar_topic",
+      "weight": 0.40110746026039124
+    },
+    {
+      "source": "topic_27_total_nucleus",
+      "target": "topic_60_understand_atomic",
+      "type": "similar_topic",
+      "weight": 0.45242345333099365
+    },
+    {
+      "source": "topic_27_total_nucleus",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.5138742327690125
+    },
+    {
+      "source": "topic_27_total_nucleus",
+      "target": "topic_64_carbon_isotopes",
+      "type": "similar_topic",
+      "weight": 0.4549304246902466
+    },
+    {
+      "source": "topic_27_total_nucleus",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.434929758310318
+    },
+    {
+      "source": "topic_27_total_nucleus",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.6585484743118286
+    },
+    {
+      "source": "topic_27_total_nucleus",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.6460012197494507
+    },
+    {
+      "source": "topic_27_total_nucleus",
+      "target": "topic_114_nucleon_interaction",
+      "type": "similar_topic",
+      "weight": 0.4663538932800293
+    },
+    {
+      "source": "topic_27_total_nucleus",
+      "target": "topic_118_neutron_induced",
+      "type": "similar_topic",
+      "weight": 0.43219488859176636
+    },
+    {
+      "source": "topic_30_au_collisions",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.602026104927063
+    },
+    {
+      "source": "topic_35_gap_dependence",
+      "target": "topic_95_significantly_overlap",
+      "type": "similar_topic",
+      "weight": 0.41990068554878235
+    },
+    {
+      "source": "topic_36_redistribute_nonflow",
+      "target": "topic_57_nonflow_effects",
+      "type": "similar_topic",
+      "weight": 0.5462082624435425
+    },
+    {
+      "source": "topic_37_flow_physics",
+      "target": "topic_41_multiphase_transport",
+      "type": "similar_topic",
+      "weight": 0.410394549369812
+    },
+    {
+      "source": "topic_37_flow_physics",
+      "target": "topic_47_harmonic_flow",
+      "type": "similar_topic",
+      "weight": 0.6059947609901428
+    },
+    {
+      "source": "topic_37_flow_physics",
+      "target": "topic_57_nonflow_effects",
+      "type": "similar_topic",
+      "weight": 0.4522930383682251
+    },
+    {
+      "source": "topic_37_flow_physics",
+      "target": "topic_99_volume_conservation",
+      "type": "similar_topic",
+      "weight": 0.4054645895957947
+    },
+    {
+      "source": "topic_38_collision_zvtxrange",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.47613075375556946
+    },
+    {
+      "source": "topic_39_resonance_decays",
+      "target": "topic_65_resonance_regime",
+      "type": "similar_topic",
+      "weight": 0.7389727830886841
+    },
+    {
+      "source": "topic_39_resonance_decays",
+      "target": "topic_80_excitation_energies",
+      "type": "similar_topic",
+      "weight": 0.41354337334632874
+    },
+    {
+      "source": "topic_40_momentum_resolution",
+      "target": "topic_91_inelastic_scattering",
+      "type": "similar_topic",
+      "weight": 0.4033058285713196
+    },
+    {
+      "source": "topic_41_multiphase_transport",
+      "target": "topic_52_hadronic_transport",
+      "type": "similar_topic",
+      "weight": 0.548385739326477
+    },
+    {
+      "source": "topic_44_charged_hadrons",
+      "target": "topic_52_hadronic_transport",
+      "type": "similar_topic",
+      "weight": 0.571428120136261
+    },
+    {
+      "source": "topic_44_charged_hadrons",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.4432099461555481
+    },
+    {
+      "source": "topic_44_charged_hadrons",
+      "target": "topic_118_neutron_induced",
+      "type": "similar_topic",
+      "weight": 0.4147252142429352
+    },
+    {
+      "source": "topic_45_mass_number",
+      "target": "topic_110_heaviest_elements",
+      "type": "similar_topic",
+      "weight": 0.40271034836769104
+    },
+    {
+      "source": "topic_46_temperature_fluctuations",
+      "target": "topic_48_fluctuations",
+      "type": "similar_topic",
+      "weight": 0.7666492462158203
+    },
+    {
+      "source": "topic_47_harmonic_flow",
+      "target": "topic_99_volume_conservation",
+      "type": "similar_topic",
+      "weight": 0.4018538296222687
+    },
+    {
+      "source": "topic_50_matter_undergoes",
+      "target": "topic_51_energy_deposition",
+      "type": "similar_topic",
+      "weight": 0.40511173009872437
+    },
+    {
+      "source": "topic_50_matter_undergoes",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.4256685674190521
+    },
+    {
+      "source": "topic_51_energy_deposition",
+      "target": "topic_80_excitation_energies",
+      "type": "similar_topic",
+      "weight": 0.41818588972091675
+    },
+    {
+      "source": "topic_51_energy_deposition",
+      "target": "topic_112_low_energies",
+      "type": "similar_topic",
+      "weight": 0.43070170283317566
+    },
+    {
+      "source": "topic_60_understand_atomic",
+      "target": "topic_62_nuclear_reactions",
+      "type": "similar_topic",
+      "weight": 0.48398691415786743
+    },
+    {
+      "source": "topic_60_understand_atomic",
+      "target": "topic_69_ion_reactions",
+      "type": "similar_topic",
+      "weight": 0.43327322602272034
+    },
+    {
+      "source": "topic_60_understand_atomic",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.4047652781009674
+    },
+    {
+      "source": "topic_60_understand_atomic",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.4038289785385132
+    },
+    {
+      "source": "topic_61_optical_potential",
+      "target": "topic_80_excitation_energies",
+      "type": "similar_topic",
+      "weight": 0.4172549843788147
+    },
+    {
+      "source": "topic_61_optical_potential",
+      "target": "topic_89_coupling_potential",
+      "type": "similar_topic",
+      "weight": 0.4921010434627533
+    },
+    {
+      "source": "topic_61_optical_potential",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.4823126196861267
+    },
+    {
+      "source": "topic_62_nuclear_reactions",
+      "target": "topic_63_heavyion_reactions",
+      "type": "similar_topic",
+      "weight": 0.5913949012756348
+    },
+    {
+      "source": "topic_62_nuclear_reactions",
+      "target": "topic_66_reaction_processes",
+      "type": "similar_topic",
+      "weight": 0.7047746777534485
+    },
+    {
+      "source": "topic_62_nuclear_reactions",
+      "target": "topic_69_ion_reactions",
+      "type": "similar_topic",
+      "weight": 0.7052622437477112
+    },
+    {
+      "source": "topic_62_nuclear_reactions",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.7326487898826599
+    },
+    {
+      "source": "topic_62_nuclear_reactions",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.5471824407577515
+    },
+    {
+      "source": "topic_62_nuclear_reactions",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.4808451235294342
+    },
+    {
+      "source": "topic_62_nuclear_reactions",
+      "target": "topic_114_nucleon_interaction",
+      "type": "similar_topic",
+      "weight": 0.5994707345962524
+    },
+    {
+      "source": "topic_62_nuclear_reactions",
+      "target": "topic_116_heavyion_fusion",
+      "type": "similar_topic",
+      "weight": 0.40011066198349
+    },
+    {
+      "source": "topic_62_nuclear_reactions",
+      "target": "topic_118_neutron_induced",
+      "type": "similar_topic",
+      "weight": 0.5626298189163208
+    },
+    {
+      "source": "topic_63_heavyion_reactions",
+      "target": "topic_66_reaction_processes",
+      "type": "similar_topic",
+      "weight": 0.5819503664970398
+    },
+    {
+      "source": "topic_63_heavyion_reactions",
+      "target": "topic_69_ion_reactions",
+      "type": "similar_topic",
+      "weight": 0.7222222222222222
+    },
+    {
+      "source": "topic_63_heavyion_reactions",
+      "target": "topic_110_heaviest_elements",
+      "type": "similar_topic",
+      "weight": 0.47775495052337646
+    },
+    {
+      "source": "topic_63_heavyion_reactions",
+      "target": "topic_116_heavyion_fusion",
+      "type": "similar_topic",
+      "weight": 0.6395611763000488
+    },
+    {
+      "source": "topic_64_carbon_isotopes",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.4005955159664154
+    },
+    {
+      "source": "topic_65_resonance_regime",
+      "target": "topic_72_angular_frequencyω",
+      "type": "similar_topic",
+      "weight": 0.40039750933647156
+    },
+    {
+      "source": "topic_66_reaction_processes",
+      "target": "topic_69_ion_reactions",
+      "type": "similar_topic",
+      "weight": 0.6804649233818054
+    },
+    {
+      "source": "topic_69_ion_reactions",
+      "target": "topic_73_ion_elastic",
+      "type": "similar_topic",
+      "weight": 0.47282472252845764
+    },
+    {
+      "source": "topic_69_ion_reactions",
+      "target": "topic_105_nuclear_collisions",
+      "type": "similar_topic",
+      "weight": 0.4204214811325073
+    },
+    {
+      "source": "topic_69_ion_reactions",
+      "target": "topic_118_neutron_induced",
+      "type": "similar_topic",
+      "weight": 0.4120703935623169
+    },
+    {
+      "source": "topic_70_various_quantum",
+      "target": "topic_111_quantum_interferences",
+      "type": "similar_topic",
+      "weight": 0.6383166909217834
+    },
+    {
+      "source": "topic_72_angular_frequencyω",
+      "target": "topic_102_zdω_8π2",
+      "type": "similar_topic",
+      "weight": 0.4677356779575348
+    },
+    {
+      "source": "topic_73_ion_elastic",
+      "target": "topic_97_stiffness_parameters",
+      "type": "similar_topic",
+      "weight": 0.41307371854782104
+    },
+    {
+      "source": "topic_73_ion_elastic",
+      "target": "topic_117_proton_inelastic",
+      "type": "similar_topic",
+      "weight": 0.4013160169124603
+    },
+    {
+      "source": "topic_75_differential_cross",
+      "target": "topic_78_cross_sections",
+      "type": "similar_topic",
+      "weight": 0.5580552816390991
+    },
+    {
+      "source": "topic_77_coulomb_barrier",
+      "target": "topic_85_barrier_distributions",
+      "type": "similar_topic",
+      "weight": 0.5434010624885559
+    },
+    {
+      "source": "topic_77_coulomb_barrier",
+      "target": "topic_106_fusion_barrier",
+      "type": "similar_topic",
+      "weight": 0.5011579394340515
+    },
+    {
+      "source": "topic_80_excitation_energies",
+      "target": "topic_93_relativistic_energies",
+      "type": "similar_topic",
+      "weight": 0.5724833607673645
+    },
+    {
+      "source": "topic_80_excitation_energies",
+      "target": "topic_104_subbarrier_energies",
+      "type": "similar_topic",
+      "weight": 0.45867013931274414
+    },
+    {
+      "source": "topic_80_excitation_energies",
+      "target": "topic_112_low_energies",
+      "type": "similar_topic",
+      "weight": 0.5472838878631592
+    },
+    {
+      "source": "topic_80_excitation_energies",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.40240049362182617
+    },
+    {
+      "source": "topic_82_adiabatic_limit",
+      "target": "topic_94_adiabatic_approximation",
+      "type": "similar_topic",
+      "weight": 0.8126339316368103
+    },
+    {
+      "source": "topic_85_barrier_distributions",
+      "target": "topic_106_fusion_barrier",
+      "type": "similar_topic",
+      "weight": 0.5269648432731628
+    },
+    {
+      "source": "topic_87_channels_calculations",
+      "target": "topic_88_dimensional_twochannel",
+      "type": "similar_topic",
+      "weight": 0.586434006690979
+    },
+    {
+      "source": "topic_87_channels_calculations",
+      "target": "topic_107_channel_scattering",
+      "type": "similar_topic",
+      "weight": 0.6187311410903931
+    },
+    {
+      "source": "topic_88_dimensional_twochannel",
+      "target": "topic_107_channel_scattering",
+      "type": "similar_topic",
+      "weight": 0.557287335395813
+    },
+    {
+      "source": "topic_89_coupling_potential",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.4939005970954895
+    },
+    {
+      "source": "topic_91_inelastic_scattering",
+      "target": "topic_107_channel_scattering",
+      "type": "similar_topic",
+      "weight": 0.6577474474906921
+    },
+    {
+      "source": "topic_91_inelastic_scattering",
+      "target": "topic_115_quasielastic_scattering",
+      "type": "similar_topic",
+      "weight": 0.826782763004303
+    },
+    {
+      "source": "topic_91_inelastic_scattering",
+      "target": "topic_117_proton_inelastic",
+      "type": "similar_topic",
+      "weight": 0.5067161917686462
+    },
+    {
+      "source": "topic_93_relativistic_energies",
+      "target": "topic_104_subbarrier_energies",
+      "type": "similar_topic",
+      "weight": 0.4231286346912384
+    },
+    {
+      "source": "topic_93_relativistic_energies",
+      "target": "topic_112_low_energies",
+      "type": "similar_topic",
+      "weight": 0.5356528759002686
+    },
+    {
+      "source": "topic_93_relativistic_energies",
+      "target": "topic_120_discussed_relativistic",
+      "type": "similar_topic",
+      "weight": 0.7152513265609741
+    },
+    {
+      "source": "topic_96_radius_parameter",
+      "target": "topic_100_eccentricity_parameters",
+      "type": "similar_topic",
+      "weight": 0.4596170485019684
+    },
+    {
+      "source": "topic_97_stiffness_parameters",
+      "target": "topic_100_eccentricity_parameters",
+      "type": "similar_topic",
+      "weight": 0.4850207567214966
+    },
+    {
+      "source": "topic_102_zdω_8π2",
+      "target": "topic_119_2πσ2_λe",
+      "type": "similar_topic",
+      "weight": 0.5205571055412292
+    },
+    {
+      "source": "topic_104_subbarrier_energies",
+      "target": "topic_112_low_energies",
+      "type": "similar_topic",
+      "weight": 0.4533642530441284
+    },
+    {
+      "source": "topic_105_nuclear_collisions",
+      "target": "topic_106_fusion_barrier",
+      "type": "similar_topic",
+      "weight": 0.4305856227874756
+    },
+    {
+      "source": "topic_105_nuclear_collisions",
+      "target": "topic_109_superheavy_nuclei",
+      "type": "similar_topic",
+      "weight": 0.5690345168113708
+    },
+    {
+      "source": "topic_105_nuclear_collisions",
+      "target": "topic_114_nucleon_interaction",
+      "type": "similar_topic",
+      "weight": 0.5559225678443909
+    },
+    {
+      "source": "topic_105_nuclear_collisions",
+      "target": "topic_117_proton_inelastic",
+      "type": "similar_topic",
+      "weight": 0.40883898735046387
+    },
+    {
+      "source": "topic_105_nuclear_collisions",
+      "target": "topic_118_neutron_induced",
+      "type": "similar_topic",
+      "weight": 0.444489985704422
+    },
+    {
+      "source": "topic_106_fusion_barrier",
+      "target": "topic_116_heavyion_fusion",
+      "type": "similar_topic",
+      "weight": 0.6173786520957947
+    },
+    {
+      "source": "topic_107_channel_scattering",
+      "target": "topic_115_quasielastic_scattering",
+      "type": "similar_topic",
+      "weight": 0.5986538529396057
+    },
+    {
+      "source": "topic_108_internalwave_interference",
+      "target": "topic_111_quantum_interferences",
+      "type": "similar_topic",
+      "weight": 0.5423092246055603
+    },
+    {
+      "source": "topic_109_superheavy_nuclei",
+      "target": "topic_110_heaviest_elements",
+      "type": "similar_topic",
+      "weight": 0.42552003264427185
+    },
+    {
+      "source": "topic_109_superheavy_nuclei",
+      "target": "topic_113_nucleus_potential",
+      "type": "similar_topic",
+      "weight": 0.5081881284713745
+    },
+    {
+      "source": "topic_109_superheavy_nuclei",
+      "target": "topic_114_nucleon_interaction",
+      "type": "similar_topic",
+      "weight": 0.5240564346313477
+    },
+    {
+      "source": "topic_109_superheavy_nuclei",
+      "target": "topic_116_heavyion_fusion",
+      "type": "similar_topic",
+      "weight": 0.4303364157676697
+    },
+    {
+      "source": "topic_109_superheavy_nuclei",
+      "target": "topic_117_proton_inelastic",
+      "type": "similar_topic",
+      "weight": 0.43527695536613464
+    },
+    {
+      "source": "topic_109_superheavy_nuclei",
+      "target": "topic_118_neutron_induced",
+      "type": "similar_topic",
+      "weight": 0.412227600812912
+    },
+    {
+      "source": "topic_110_heaviest_elements",
+      "target": "topic_116_heavyion_fusion",
+      "type": "similar_topic",
+      "weight": 0.5229809284210205
+    },
+    {
+      "source": "topic_113_nucleus_potential",
+      "target": "topic_114_nucleon_interaction",
+      "type": "similar_topic",
+      "weight": 0.4732317328453064
+    },
+    {
+      "source": "topic_114_nucleon_interaction",
+      "target": "topic_118_neutron_induced",
+      "type": "similar_topic",
+      "weight": 0.41883957386016846
+    }
+  ],
+  "metadata": {
+    "papers_count": 2,
+    "topics_count": 123,
+    "edges_count": 368,
+    "paper_topic_edges": 130,
+    "topic_topic_edges": 238
+  }
+}
