@@ -36,6 +36,24 @@ Upload your PDFs and the system takes care of the rest:
 - **Summaries**: It automatically creates summaries of your documents so you can quickly see what's in them
 - **Multi-document**: Search across all your documents at once, or focus on a specific one
 
+### Research Graph Builder
+
+Build interactive knowledge graphs from research papers:
+
+- **PDF Processing**: Uses Grobid for clean text and formula extraction from PDFs
+- **Keyword Extraction**: Uses KeyBERT with Sentence-BERT embeddings to extract meaningful keywords
+- **Semantic Understanding**: Uses Sentence-BERT (all-mpnet-base-v2) for capturing real meaning, not just words
+- **Concept Comparison**: Uses Ollama/Mistral to check if sentences describe the same scientific concept
+- **Graph Visualization**: Interactive network graphs showing relationships between papers and topics
+- **Multiple Graphs**: Save multiple graph builds with descriptive filenames (paper names separated by underscore)
+- **Graph Management**: Delete graphs you no longer need
+- **Filtering Options**:
+  - **All Nodes**: Shows all papers and topics
+  - **Papers Only**: Shows only paper nodes
+  - **Topics Only**: Shows all topic nodes
+  - **Linked Topics**: Shows only topics that are connected to other topics (topic-to-topic relationships)
+  - **Difference**: Shows only topics that are linked to topics from different papers (excludes connections where both topics are from the same paper)
+
 ### MCP Integration (Optional)
 
 If you're into Model Context Protocol, you can connect custom MCP servers to enhance how the system processes information. It's optional though - everything works fine without it.
@@ -69,6 +87,7 @@ It's like having a team working together instead of just one person trying to re
 - Python 3.8 or newer
 - Ollama installed and running on your computer
 - The Mistral 7B model (or something compatible)
+- Grobid server (optional, for advanced PDF processing with formulas)
 
 ### Step-by-Step Setup
 
@@ -77,6 +96,14 @@ First, make sure you have Ollama installed. If you don't, grab it from ollama.ai
 ```bash
 ollama pull mistral:7b-instruct
 ```
+
+**Optional: Set up Grobid** (for better PDF extraction with formulas)
+
+If you want to use Grobid for PDF processing (recommended for research papers with formulas):
+
+1. Install Grobid server (see [Grobid documentation](https://grobid.readthedocs.io/))
+2. Start Grobid server (default: `http://localhost:8070`)
+3. Set `GROBID_URL` environment variable if using a different address
 
 Now let's set up the project:
 
@@ -116,7 +143,7 @@ Now let's set up the project:
    uvicorn app:app --reload
    ```
 
-Now you should be able to access the API at `http://localhost:8000`. Nice!
+Now you should be able to access the API at `http://localhost:8000`. The application will display "Application start" when it launches.
 
 ## Using It
 
@@ -138,7 +165,8 @@ The `mode` can be "math" or "physics". The `planning_mode` can be "react" (faste
 ### Uploading Documents
 
 Want to ask questions about your PDFs? Upload them to `/upload_pdfs`. The system will automatically:
-- Extract the text
+- Extract the text (using Grobid if available, otherwise PyPDF2)
+- Extract formulas (if using Grobid)
 - Index it for searching
 - Create summaries
 - Make it searchable
@@ -168,6 +196,35 @@ Sometimes you want both local documents and web results. Use `/hybrid_search`:
 
 This searches both your documents and the web, giving you the best of both worlds.
 
+### Building Research Graphs
+
+Create knowledge graphs from your research papers:
+
+1. **Upload PDFs** via `/upload_pdfs` or use the frontend
+2. **Build a graph** via `/research-graph/build`:
+   ```json
+   {
+     "pdf_files": ["paper1.pdf", "paper2.pdf"]
+   }
+   ```
+   Or leave `pdf_files` empty to use all PDFs in the data folder.
+
+3. **Graphs are saved** with filenames based on paper names (e.g., `paper1_paper2.json`)
+
+4. **List all graphs** via `/research-graph/list`
+
+5. **Load a specific graph** via `/research-graph?graph_filename=paper1_paper2.json`
+
+6. **Delete a graph** via `DELETE /research-graph/{graph_filename}`
+
+The graph building process:
+- Extracts clean text and formulas using Grobid (or PyPDF2 fallback)
+- Extracts keywords using KeyBERT with Sentence-BERT embeddings
+- Creates sentence embeddings using Sentence-BERT (all-mpnet-base-v2)
+- Compares sentences using Ollama/Mistral to find same concepts
+- Builds relationships between papers based on shared topics, embeddings, and concept similarity
+- Stores everything in JSON format with nodes (papers and topics) and edges (relationships)
+
 ## API Endpoints
 
 ### The Main Ones
@@ -176,6 +233,14 @@ This searches both your documents and the web, giving you the best of both world
 - `POST /upload_pdfs` - Upload PDFs to make them searchable
 - `POST /ask_doc` - Ask about a specific document
 - `POST /hybrid_search` - Search both local docs and web
+
+### Research Graph Endpoints
+
+- `POST /research-graph/build` - Build a knowledge graph from selected PDFs
+- `GET /research-graph` - Get a research graph (optionally specify `graph_filename` query parameter)
+- `GET /research-graph/list` - List all available graphs
+- `DELETE /research-graph/{graph_filename}` - Delete a specific graph
+- `GET /research-graph/pdfs` - List all available PDF files
 
 ### Managing Sessions
 
@@ -212,6 +277,7 @@ Agent/
 ├── agentic_core.py        # The Central Agent with memory and planning
 ├── specialized_agents.py  # The Local Data and Search Engine agents
 ├── generation.py          # Takes all the results and makes a final answer
+├── research_graph.py      # Research graph builder with Grobid, KeyBERT, Sentence-BERT
 ├── rag_setup.py           # Sets up the document search database
 ├── mcp_client.py          # Handles MCP server connections
 ├── session_manager.py     # Manages conversation sessions
@@ -223,6 +289,7 @@ Agent/
 │   ├── chroma_db/        # The search database
 │   ├── summaries/        # Generated summaries
 │   ├── memories/         # Long-term memory storage
+│   ├── research_graphs/  # Saved research graphs (JSON files)
 │   └── sessions.json     # Conversation history
 └── README.md             # This file
 ```
@@ -234,19 +301,29 @@ Agent/
 - Uvicorn - The server that runs everything
 
 **AI/ML**
-- Ollama - Runs the language model locally
-- Sentence Transformers - Converts text to vectors for searching
+- Ollama - Runs the language model locally (Mistral 7B)
+- Sentence Transformers (Sentence-BERT) - Converts text to vectors for searching
 - ChromaDB - Stores and searches your documents
+- KeyBERT - Extracts keywords using embeddings
 
 **Document Processing**
-- PyPDF2 - Extracts text from PDFs
+- Grobid - Extracts clean text and formulas from PDFs (optional)
+- PyPDF2 - Fallback PDF text extraction
 - LangChain - Helps split and process text
+
+**Graph Processing**
+- NetworkX - Builds and manages knowledge graphs
+- Sentence-BERT (all-mpnet-base-v2) - Creates semantic embeddings
+- KeyBERT - Extracts keywords/phrases using embeddings
+- Ollama/Mistral - Compares sentences to find same concepts
 
 **Other Useful Stuff**
 - SymPy - For doing actual math calculations
 - Pint - Handles physics units
 - Requests - Makes HTTP calls
 - MCP SDK - For Model Context Protocol integration
+- NumPy - Numerical computations
+- scikit-learn - Machine learning utilities
 
 ## Configuration
 
@@ -256,10 +333,14 @@ Want to change something? Edit `config.py`:
 OLLAMA_URL = "http://localhost:11434/api/chat"
 MODEL_NAME = "mistral:7b-instruct"
 HTTP_TIMEOUT = 60.0
-MAX_HISTORY_TURNS = 8
+MAX_HISTORY_TURNS = 4
 ```
 
 Change the model name if you're using something different, adjust the timeout if you need more time, etc.
+
+**Environment Variables:**
+- `GROBID_URL` - Set to your Grobid server URL (default: `http://localhost:8070`)
+- `OLLAMA_KEEP_ALIVE` - Keep model loaded in memory (e.g., `5m` for 5 minutes)
 
 ## How It Actually Works
 
@@ -283,6 +364,38 @@ Let me walk you through what happens when you ask a question:
 6. **Memory gets updated** - Important stuff gets saved. The answer goes into short-term memory, and if it's really important, it might get promoted to long-term memory
 
 7. **You get your answer** - Along with metadata about what sources were used
+
+## Research Graph Building Process
+
+When building a research graph:
+
+1. **PDF Extraction**:
+   - Tries Grobid first (if available) for clean text + formulas
+   - Falls back to PyPDF2 if Grobid unavailable
+   - Extracts formulas from PDFs (if using Grobid)
+
+2. **Keyword Extraction**:
+   - Uses KeyBERT with Sentence-BERT embeddings
+   - Extracts meaningful keywords/phrases (1-2 word phrases)
+   - Validates keywords appear in source text
+
+3. **Embedding Creation**:
+   - Uses Sentence-BERT (all-mpnet-base-v2) for semantic embeddings
+   - Creates embeddings for topics/keywords
+   - Creates embeddings for paper contexts
+
+4. **Relationship Detection**:
+   - Finds similar topics using embeddings
+   - Compares papers using:
+     - Shared keywords (40% weight)
+     - Sentence-BERT embedding similarity (30% weight)
+     - Ollama sentence comparison for same concepts (30% weight)
+   - Uses Ollama/Mistral to check if sentences describe the same scientific concept
+
+5. **Graph Storage**:
+   - Saves as JSON with nodes (papers and topics) and edges (relationships)
+   - Filename based on paper names (e.g., `paper1_paper2.json`)
+   - Stores formulas, keywords, embeddings, and relationship metadata
 
 ## Planning Modes Explained
 
@@ -331,6 +444,49 @@ Here are some things you might ask:
 
 The system is designed for math and physics, but feel free to experiment!
 
+## Frontend
+
+The project includes a React frontend for:
+- Chat interface with the tutoring system
+- Research graph visualization (interactive network graphs)
+- Graph building and management (upload PDFs, build graphs, delete graphs)
+- Paper comparison and visualization
+- **Graph Filtering**: Multiple filter options to focus on specific aspects:
+  - View all nodes, papers only, or topics only
+  - **Linked Topics**: Focus on topics that have relationships with other topics
+  - **Difference**: Identify topics that connect across different papers (cross-paper relationships)
+
+To run the frontend:
+```bash
+cd agent_frontend
+npm install
+npm run dev
+```
+
+The frontend will be available at `http://localhost:5173` (or the port shown in the terminal).
+
+## Troubleshooting
+
+**Grobid not working?**
+- Make sure Grobid server is running on port 8070 (or set `GROBID_URL` environment variable)
+- The system will automatically fall back to PyPDF2 if Grobid is unavailable
+- Check Grobid logs for any errors
+
+**Ollama connection issues?**
+- Make sure Ollama is running: `ollama serve`
+- Verify the model is installed: `ollama list`
+- Check `config.py` for correct `OLLAMA_URL` and `MODEL_NAME`
+
+**Graph building is slow?**
+- Sentence comparison with Ollama can be slow - it compares up to 5 sentence pairs per paper pair
+- Consider reducing the number of papers in a single graph build
+- The system processes papers sequentially for better reliability
+
+**Memory issues?**
+- Large PDFs can consume memory during processing
+- Consider processing fewer papers at once
+- The system uses efficient embeddings, but very large documents may need chunking
+
 ## Contributing
 
 Found a bug? Have an idea? Want to add a feature? Contributions are welcome! Just submit a pull request and we'll take a look.
@@ -341,8 +497,11 @@ Found a bug? Have an idea? Want to add a feature? Contributions are welcome! Jus
 
 ## Acknowledgments
 
-Built with FastAPI and Ollama for the AI, ChromaDB for document storage, and integrates with Model Context Protocol for advanced features.
+Built with FastAPI and Ollama for the AI, ChromaDB for document storage, Grobid for PDF processing, Sentence-BERT for embeddings, KeyBERT for keyword extraction, NetworkX for graph building, and integrates with Model Context Protocol for advanced features.
 
 ---
 
-**Important Note**: Make sure Ollama is running before you start the server. The system needs it to generate answers. If Ollama isn't running, you'll get errors when trying to ask questions.
+**Important Notes**: 
+- Make sure Ollama is running before you start the server. The system needs it to generate answers. If Ollama isn't running, you'll get errors when trying to ask questions.
+- Grobid is optional but recommended for research papers with formulas. The system works fine without it, using PyPDF2 as a fallback.
+- All console output is plain text (no emojis) for better compatibility with various terminals.

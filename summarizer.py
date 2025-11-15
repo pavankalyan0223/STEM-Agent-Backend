@@ -66,7 +66,7 @@ def summarize_pdf(pdf_path):
     with open(summary_path, "w") as f:
         json.dump(summaries, f, indent=2)
 
-    print(f"✅ Summary saved to {summary_path}")
+    print(f"Summary saved to {summary_path}")
     return summary_path
 
 

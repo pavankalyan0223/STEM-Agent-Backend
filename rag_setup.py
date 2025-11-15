@@ -8,7 +8,8 @@ from PyPDF2 import PdfReader
 # --- CONFIG ---
 PDF_DIR = "data/"       # Folder where you keep your textbook PDFs
 DB_DIR = "data/chroma_db"   # Where to store the local Chroma index
-EMBED_MODEL = "all-MiniLM-L6-v2"
+# Use Sentence-BERT model (same as research_graph.py for consistency)
+EMBED_MODEL = "all-mpnet-base-v2"  # Strong Sentence-BERT model for better semantic understanding
 
 # --- SETUP ---
 embedder = SentenceTransformer(EMBED_MODEL)
@@ -72,7 +73,7 @@ def query_rag(question, top_k=3):
     q_emb = embedder.encode(question).tolist()
     results = collection.query(query_embeddings=[q_emb], n_results=top_k)
 
-    print("\n🔍 Retrieved context:")
+    print("\nRetrieved context:")
     formatted_contexts = []
     for i, (doc, meta) in enumerate(zip(results["documents"][0], results["metadatas"][0]), 1):
         print(f" - Source: {meta['source']}")

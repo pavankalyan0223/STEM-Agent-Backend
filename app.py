@@ -29,11 +29,7 @@ generator = Generator()
 async def lifespan(app: FastAPI):
     """Handle application lifespan events."""
     # Startup
-    print("🤖 Agentic RAG System Initialized")
-    print("   - Central Agent with Memory & Planning")
-    print("   - Local Data Agent (RAG + MCP)")
-    print("   - Search Engine Agent (Web Search + MCP)")
-    print("   - Generation Component")
+    print("Application start")
     yield
     # Shutdown (cleanup if needed)
     pass
@@ -557,17 +553,36 @@ async def build_graph(request: BuildGraphRequest = BuildGraphRequest()):
     Build a knowledge graph from selected research papers.
     If pdf_files is None or empty, uses all PDFs in data folder.
     Creates nodes for papers and topics, and edges showing relationships.
+    Saves graph with filename based on paper names separated by '_'.
     """
     try:
         from research_graph import build_research_graph
         import os
+        import re
         
         pdf_dir = "data/"
         
         pdf_files = request.pdf_files if request else None
         
+        # Generate filename from paper names
+        def generate_graph_filename(pdf_list):
+            """Generate filename from PDF names, removing .pdf extension and joining with '_'"""
+            if not pdf_list:
+                return "all_papers"
+            # Remove .pdf extension and sanitize filenames
+            clean_names = []
+            for pdf in pdf_list:
+                name = pdf.replace('.pdf', '').replace('.PDF', '')
+                # Remove invalid filename characters
+                name = re.sub(r'[<>:"/\\|?*]', '_', name)
+                clean_names.append(name)
+            return '_'.join(clean_names)
+        
         # If specific PDFs are provided, filter them
         if pdf_files and len(pdf_files) > 0:
+            # Generate filename from selected PDFs
+            graph_filename = generate_graph_filename(pdf_files)
+            
             # Create a temporary directory with only selected PDFs
             import tempfile
             import shutil
@@ -579,7 +594,7 @@ async def build_graph(request: BuildGraphRequest = BuildGraphRequest()):
                     if os.path.exists(src_path):
                         shutil.copy2(src_path, os.path.join(temp_dir, pdf_file))
                 
-                graph = build_research_graph(temp_dir)
+                graph = build_research_graph(temp_dir, graph_filename=graph_filename)
                 # Add metadata about which PDFs were used
                 if "metadata" in graph:
                     graph["metadata"]["pdf_files_used"] = pdf_files
@@ -588,23 +603,41 @@ async def build_graph(request: BuildGraphRequest = BuildGraphRequest()):
                 shutil.rmtree(temp_dir)
         else:
             # Use all PDFs
-            graph = build_research_graph(pdf_dir)
+            all_pdfs = [f for f in os.listdir(pdf_dir) if f.lower().endswith(".pdf")]
+            graph_filename = generate_graph_filename(all_pdfs)
+            graph = build_research_graph(pdf_dir, graph_filename=graph_filename)
             if "metadata" in graph:
-                pdf_files = [f for f in os.listdir(pdf_dir) if f.lower().endswith(".pdf")]
-                graph["metadata"]["pdf_files_used"] = pdf_files
+                graph["metadata"]["pdf_files_used"] = all_pdfs
             return graph
     except Exception as e:
         return {"error": f"Error building research graph: {str(e)}"}
 
 @app.get("/research-graph")
-async def get_graph():
-    """Get the current research graph."""
+async def get_graph(graph_filename: Optional[str] = None):
+    """
+    Get a research graph by filename.
+    If graph_filename is not provided, returns the default graph.
+    """
     try:
         from research_graph import get_research_graph
-        graph = get_research_graph()
+        graph = get_research_graph(graph_filename=graph_filename)
         return graph
     except Exception as e:
         return {"error": f"Error loading research graph: {str(e)}"}
+
+
+@app.delete("/research-graph/{graph_filename}")
+async def delete_graph(graph_filename: str):
+    """Delete a research graph by filename."""
+    try:
+        from research_graph import delete_research_graph
+        import urllib.parse
+        # Decode URL-encoded filename
+        decoded_filename = urllib.parse.unquote(graph_filename)
+        result = delete_research_graph(decoded_filename)
+        return result
+    except Exception as e:
+        return {"error": f"Error deleting research graph: {str(e)}"}
 
 @app.get("/research-graph/list")
 async def list_graphs():
