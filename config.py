@@ -1,6 +1,6 @@
 # Central config
 OLLAMA_URL = "http://localhost:11434/api/chat"
-MODEL_NAME = "phi3:mini"
+MODEL_NAME = "mistral:7b-instruct"
 
 HTTP_TIMEOUT = 60.0
 

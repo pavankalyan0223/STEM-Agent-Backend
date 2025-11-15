@@ -1,0 +1,4788 @@
+{
+  "nodes": [
+    {
+      "id": "paper_0",
+      "type": "paper",
+      "label": "1803.09780v3",
+      "title": "1803.09780v3",
+      "abstract": "No abstract found.",
+      "filename": "1803.09780v3.pdf",
+      "topics_count": 62,
+      "keywords": [
+        "boltzmann",
+        "conventional rnns",
+        "quantum max",
+        "function representations",
+        "matrix embedding",
+        "yoav levine",
+        "renormalization algorithms",
+        "2010",
+        "employed rbms",
+        "essentially",
+        "identity matrices"
+      ],
+      "formulas": [],
+      "formulas_count": 0
+    },
+    {
+      "id": "paper_1",
+      "type": "paper",
+      "label": "2405.05888v2",
+      "title": "2405.05888v2",
+      "abstract": "No abstract found.",
+      "filename": "2405.05888v2.pdf",
+      "topics_count": 63,
+      "keywords": [
+        "entangled sensor",
+        "quantum sensing",
+        "tolerant quantum",
+        "trajectory sensing",
+        "computationally intractable",
+        "projective measurements",
+        "single shot",
+        "state requires",
+        "pinckney",
+        "rarely interact",
+        "ali",
+        "filtering charged"
+      ],
+      "formulas": [],
+      "formulas_count": 0
+    },
+    {
+      "id": "topic_0_restricted_boltzmann",
+      "type": "topic",
+      "label": "restricted boltzmann",
+      "name": "restricted boltzmann",
+      "description": "Extracted from section 1",
+      "score": 0.502,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Nonetheless, employment of machine learning for wave function representations is focused on more traditional architectures such as restricted Boltzmann machines (RBMs) and fully-connected neural networks",
+            "A consequent machine learning inspired approach for modeling wave functions makes use of fullyconnected neural-networks and restricted Boltzmann machines (RBMs) [19{25], which represent relatively veteran machine learning constructs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_1_learning_architectures",
+      "type": "topic",
+      "label": "learning architectures",
+      "name": "learning architectures",
+      "description": "Extracted from section 1",
+      "score": 0.416,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Quantum Entanglement in Deep Learning Architectures Yoav Levine,1,\u0003Or Sharir,1,yNadav Cohen,2,zand Amnon Shashua1,x 1The Hebrew University of Jerusalem, Israel 2School of Mathematics, Institute for Advanced Study, Princeton, NJ, USA Modern deep learning has enabled unprecedented achievements in various domains",
+            "In this letter, we establish that contemporary deep learning architectures, in the form of deep convolutional and recurrent networks, can e\u000eciently represent highly entangled quantum systems",
+            "Thus, beyond a quanti cation of the entanglement capacity of leading deep learning architectures, our analysis formally motivates a shift of trending neural-network based wave function representations closer to the state-of-the-art in machine learning"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_2_cohen",
+      "type": "topic",
+      "label": "cohen",
+      "name": "cohen",
+      "description": "Extracted from section 1",
+      "score": 0.3025,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Quantum Entanglement in Deep Learning Architectures Yoav Levine,1,\u0003Or Sharir,1,yNadav Cohen,2,zand Amnon Shashua1,x 1The Hebrew University of Jerusalem, Israel 2School of Mathematics, Institute for Advanced Study, Princeton, NJ, USA Modern deep learning has enabled unprecedented achievements in various domains"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_3_standard_tensor",
+      "type": "topic",
+      "label": "standard tensor",
+      "name": "standard tensor",
+      "description": "Extracted from section 1",
+      "score": 0.2802,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "By constructing Tensor Network equivalents of these architectures, we identify an inherent re-use of information in the network operation as a key trait which distinguishes them from standard Tensor Network based representations, and which enhances their entanglement capacity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_4_yoav_levine",
+      "type": "topic",
+      "label": "yoav levine",
+      "name": "yoav levine",
+      "description": "Extracted from section 1",
+      "score": 0.2649,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Quantum Entanglement in Deep Learning Architectures Yoav Levine,1,\u0003Or Sharir,1,yNadav Cohen,2,zand Amnon Shashua1,x 1The Hebrew University of Jerusalem, Israel 2School of Mathematics, Institute for Advanced Study, Princeton, NJ, USA Modern deep learning has enabled unprecedented achievements in various domains"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_5_body_wave",
+      "type": "topic",
+      "label": "body wave",
+      "name": "body wave",
+      "description": "Extracted from section 2",
+      "score": 0.2749,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "In this letter, we formally establish that highly entangled many-body wave functions can be e\u000eciently represented by deep learning architectures that are at the forefront of recent empirical successes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_6_prominent_architectures",
+      "type": "topic",
+      "label": "prominent architectures",
+      "name": "prominent architectures",
+      "description": "Extracted from section 2",
+      "score": 0.2682,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Speci cally, we address two prominent architectures in the form of convolutional neural networks (CNNs), commonly used over spatial inputs ( e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_7_functions",
+      "type": "topic",
+      "label": "functions",
+      "name": "functions",
+      "description": "Extracted from section 2",
+      "score": 0.2138,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "In this letter, we formally establish that highly entangled many-body wave functions can be e\u000eciently represented by deep learning architectures that are at the forefront of recent empirical successes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_8_lconvolutional_network",
+      "type": "topic",
+      "label": "lconvolutional network",
+      "name": "lconvolutional network",
+      "description": "Extracted from section 3",
+      "score": 0.5855,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "of a depth- Lconvolutional network, convolution kernels of sizeKare slid across the input maps, computing the layer outputs after every stride of Ssteps"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_9_edge_activations",
+      "type": "topic",
+      "label": "edge activations",
+      "name": "edge activations",
+      "description": "Extracted from section 3",
+      "score": 0.3976,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "The 0-padding at the edges ensures that a layer's output is produced also for the edge activations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_10_tree_structure",
+      "type": "topic",
+      "label": "tree structure",
+      "name": "tree structure",
+      "description": "Extracted from section 3",
+      "score": 0.3207,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "(b,c) The calculation of a non-overlapping convolutional network (for which K=S) assumes a tree structure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_11_cac_networks",
+      "type": "topic",
+      "label": "cac networks",
+      "name": "cac networks",
+      "description": "Extracted from section 4",
+      "score": 0.3749,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "The above equivalence to TNs was not obtained for general CAC networks, but rather for a simpli ed version for which the convolution stride sizeSis equal to the convolution kernel size K"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_12_adjacent_calculations",
+      "type": "topic",
+      "label": "adjacent calculations",
+      "name": "adjacent calculations",
+      "description": "Extracted from section 4",
+      "score": 0.294,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "In such S=Knetworks, kernels of adjacent calculations do not overlap [see Fig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_13_represented_wave",
+      "type": "topic",
+      "label": "represented wave",
+      "name": "represented wave",
+      "description": "Extracted from section 4",
+      "score": 0.2356,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "The description of non-overlap-conv in terms of a Tree TN reveals an upper bound on the maximum entanglement capacity of the represented wave function: non-overlapping convolutional networks can support up to logarithmic corrections to area-law entanglement scaling in 1D and up to area-law entanglement in 2D [37]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_14_corresponding_tensor",
+      "type": "topic",
+      "label": "corresponding tensor",
+      "name": "corresponding tensor",
+      "description": "Extracted from section 4",
+      "score": 0.1798,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "For such inputs, the output yof a nonoverlapping ( K=S) CAC is the corresponding tensor entry: y\u0010 ^e(s1);:::;^e(sN)\u0011 =Anon-overlap-conv s1:::sN; (1) whereAnon-overlap-convcan be e\u000eciently written as a Tree TN [28]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_15_convolutional_architectures",
+      "type": "topic",
+      "label": "convolutional architectures",
+      "name": "convolutional architectures",
+      "description": "Extracted from section 5",
+      "score": 0.4699,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "In the following, we rely on results regarding expressiveness ofoverlapping-convolutional architectures [40] and bound from below the maximum entanglement of a state modeled by such networks: Theorem 1 (Proof in Supplemental Material) Let overlap-conv be the state represented by an overlapping CAC (stride S= 1) of depth Lwith convolution"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_16_computational_nodes",
+      "type": "topic",
+      "label": "computational nodes",
+      "name": "computational nodes",
+      "description": "Extracted from section 5",
+      "score": 0.3919,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "This inherent re-use of data, which is graphically represented by the multiple edges emanating out of the computational nodes in Fig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_17_kernels_overlap",
+      "type": "topic",
+      "label": "kernels overlap",
+      "name": "kernels overlap",
+      "description": "Extracted from section 5",
+      "score": 0.3588,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "This architectural trait, which implies that the kernels overlap during computation [see Fig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_18_exponential_enhancement",
+      "type": "topic",
+      "label": "exponential enhancement",
+      "name": "exponential enhancement",
+      "description": "Extracted from section 5",
+      "score": 0.3271,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "1(d)], was shown to yield an exponential enhancement in network expressivity [40] despite admitting a mere linear growth in the amount of parameters and in computational cost"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_19_decimation_schemes",
+      "type": "topic",
+      "label": "decimation schemes",
+      "name": "decimation schemes",
+      "description": "Extracted from section 5",
+      "score": 0.3202,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "deep learning communities for enhancing tree-like decimation schemes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_20_maximal_entanglement",
+      "type": "topic",
+      "label": "maximal entanglement",
+      "name": "maximal entanglement",
+      "description": "Extracted from section 6",
+      "score": 0.5708,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Then, the maximal entanglement entropy w"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_21_overlappingconvolutional_networks",
+      "type": "topic",
+      "label": "overlappingconvolutional networks",
+      "name": "overlappingconvolutional networks",
+      "description": "Extracted from section 6",
+      "score": 0.5178,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Practically, overlappingconvolutional networks with common characteristics of e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_22_depth_lwith",
+      "type": "topic",
+      "label": "depth lwith",
+      "name": "depth lwith",
+      "description": "Extracted from section 6",
+      "score": 0.281,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "from below the maximum entanglement of a state modeled by such networks: Theorem 1 (Proof in Supplemental Material) Let overlap-conv be the state represented by an overlapping CAC (stride S= 1) of depth Lwith convolution kernel size Kdindspatial dimensions for d= 1;2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_23_size_kdindspatial",
+      "type": "topic",
+      "label": "size kdindspatial",
+      "name": "size kdindspatial",
+      "description": "Extracted from section 6",
+      "score": 0.2722,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "from below the maximum entanglement of a state modeled by such networks: Theorem 1 (Proof in Supplemental Material) Let overlap-conv be the state represented by an overlapping CAC (stride S= 1) of depth Lwith convolution kernel size Kdindspatial dimensions for d= 1;2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_24_tractable_access",
+      "type": "topic",
+      "label": "tractable access",
+      "name": "tractable access",
+      "description": "Extracted from section 6",
+      "score": 0.1962,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "These approaches are promising to grant tractable access to 2D systems that cannot be modeled by 2D TNs, since they render computation of wave function amplitudes tractable and therefore stochastic-sampling based optimization techniques can be employed even for large 2D systems"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_25_recurrent_network",
+      "type": "topic",
+      "label": "recurrent network",
+      "name": "recurrent network",
+      "description": "Extracted from section 7",
+      "score": 0.5486,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Here,\u00121stands for the learned parameters de ning the recurrent network computation, Ris the number of hidden feature maps, andMis the number of input feature maps",
+            "An empirically successful architectural choice [16, 48], recently proven to bring forth a substantial advantage in a recurrent network long-term memory capacity [29], involves adding more layers, i",
+            "Recurrent networks: In a recurrent network, an incoming input is integrated with an existing hidden state that the network computes from previous inputs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_26_quantum_state",
+      "type": "topic",
+      "label": "quantum state",
+      "name": "quantum state",
+      "description": "Extracted from section 7",
+      "score": 0.3835,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Thus, the above network represents anN-particle quantum state in 1D, denoted: shallow-recurrent :=PM s1;:::;sN=1Ashallow-recurrent s1:::sN ^ s1:::sNE , which can support no higher than area-law entanglement scaling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_27_basis_inputs",
+      "type": "topic",
+      "label": "basis inputs",
+      "name": "basis inputs",
+      "description": "Extracted from section 7",
+      "score": 0.3382,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "For standard-basis inputs, the output yof a singlelayered (shallow) RAC, depicted in Fig",
+            "The network operation over standard-basis inputs upholds: y\u0010 ^e(s1);:::;^e(sN)\u0011 =\u0002 DUP (Adeep-recurrent)\u0003 s1:::sN;(4) where, as before, DUP (Adeep-recurrent) is the orderNsub-tensor ofAdeep-recurrentholding its values when duplicated external indices are equal (as illustrated in Fig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_28_term_memory",
+      "type": "topic",
+      "label": "term memory",
+      "name": "term memory",
+      "description": "Extracted from section 7",
+      "score": 0.3114,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "An empirically successful architectural choice [16, 48], recently proven to bring forth a substantial advantage in a recurrent network long-term memory capacity [29], involves adding more layers, i"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_29_represents_ann",
+      "type": "topic",
+      "label": "represents ann",
+      "name": "represents ann",
+      "description": "Extracted from section 7",
+      "score": 0.306,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Thus, the above network represents anN-particle quantum state in 1D, denoted: shallow-recurrent :=PM s1;:::;sN=1Ashallow-recurrent s1:::sN ^ s1:::sNE , which can support no higher than area-law entanglement scaling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_30_shallow_rac",
+      "type": "topic",
+      "label": "shallow rac",
+      "name": "shallow rac",
+      "description": "Extracted from section 8",
+      "score": 0.4073,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "(b,c) The shallow RAC is equivalent to an MPS TN with internal order-3 tensors obeying index-wise: a1 ijk=W(H,1) ijW(I,1) ik"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_31_weights_matrices",
+      "type": "topic",
+      "label": "weights matrices",
+      "name": "weights matrices",
+      "description": "Extracted from section 8",
+      "score": 0.3912,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "input weights matrices \u0012l= (W(H,l);W(I,l)), and an output weights matrix WO"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_32_recursive_mps",
+      "type": "topic",
+      "label": "recursive mps",
+      "name": "recursive mps",
+      "description": "Extracted from section 8",
+      "score": 0.3511,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "(d,e) A depth 2 RAC is represented by a `recursive MPS' TN structure, which makes use of input duplication to circumvent an inherent inability of TNs to model information re-use"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_33_input_duplication",
+      "type": "topic",
+      "label": "input duplication",
+      "name": "input duplication",
+      "description": "Extracted from section 8",
+      "score": 0.2724,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "(d,e) A depth 2 RAC is represented by a `recursive MPS' TN structure, which makes use of input duplication to circumvent an inherent inability of TNs to model information re-use"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_34_hidden_state",
+      "type": "topic",
+      "label": "hidden state",
+      "name": "hidden state",
+      "description": "Extracted from section 8",
+      "score": 0.2221,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "h1 0is some initial hidden state"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_35_tensor_networks",
+      "type": "topic",
+      "label": "tensor networks",
+      "name": "tensor networks",
+      "description": "Extracted from section 9",
+      "score": 0.4685,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "\\No-Cloning\" in Tensor Networks The required operation of duplicating a vector and sending it to be part of two di erent calculations, which is simply achieved in any practical setting, is actually impossible to represent in the framework of TNs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_36_entanglement_scaling",
+      "type": "topic",
+      "label": "entanglement scaling",
+      "name": "entanglement scaling",
+      "description": "Extracted from section 9",
+      "score": 0.4623,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Entanglement Scaling in Overlapping-Convolutional Networks In this section we provide a detailed description of overlapping convolutional networks that include spatial decimation, and then provide our proof of Theorem 1 of the main text"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_37_convolution_computation",
+      "type": "topic",
+      "label": "convolution computation",
+      "name": "convolution computation",
+      "description": "Extracted from section 9",
+      "score": 0.363,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "ciency in Corollary 1, together with the locality of the convolution computation relative to long-ranged calculations used in RBMs to attain volume-law entanglement, can provide a further boost in optimization speed { there are signi cant non-linear runtime advantages to having low memory together with local operations when employing Graphical Processing Units, which have substantially sped up deep networks in recent years"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_38_memory",
+      "type": "topic",
+      "label": "memory",
+      "name": "memory",
+      "description": "Extracted from section 9",
+      "score": 0.3144,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "ciency in Corollary 1, together with the locality of the convolution computation relative to long-ranged calculations used in RBMs to attain volume-law entanglement, can provide a further boost in optimization speed { there are signi cant non-linear runtime advantages to having low memory together with local operations when employing Graphical Processing Units, which have substantially sped up deep networks in recent years"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_39_nadav_cohen",
+      "type": "topic",
+      "label": "nadav cohen",
+      "name": "nadav cohen",
+      "description": "Extracted from section 9",
+      "score": 0.2966,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Nadav Cohen is a member of the Zuckerman Israeli Postdoctoral Scholars Program, and is supported by the Schmidt Foundation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_40_decimating_pooling",
+      "type": "topic",
+      "label": "decimating pooling",
+      "name": "decimating pooling",
+      "description": "Extracted from section 10",
+      "score": 0.4171,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Additionally, we analyze the e ect of the added decimating pooling layers on the entanglement entropy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_41_color_channels",
+      "type": "topic",
+      "label": "color channels",
+      "name": "color channels",
+      "description": "Extracted from section 10",
+      "score": 0.4028,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "the input could be a 2D image with RGB color channels"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_42_receptive_eld",
+      "type": "topic",
+      "label": "receptive eld",
+      "name": "receptive eld",
+      "description": "Extracted from section 10",
+      "score": 0.2913,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Each spatial location ( i;j) at the output of the layer corresponds to a 2D window slice of the input tensor of size R\u0002R\u0002r(in), extended through all the input channels, whose top-left corner is located exactly at (i\u0001S;j\u0001S), whereR2Nis referred to as its local receptive eld , or lter size"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_43_kxk_convpxp",
+      "type": "topic",
+      "label": "kxk convpxp",
+      "name": "kxk convpxp",
+      "description": "Extracted from section 10",
+      "score": 0.1804,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "For simplicity, the parts of 6 KxK ConvPxP PoolingPH(in)H(in)H(out)H(out)=H(in)P"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_44_poolingph",
+      "type": "topic",
+      "label": "poolingph",
+      "name": "poolingph",
+      "description": "Extracted from section 11",
+      "score": 0.4831,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "For simplicity, the parts of 6 KxK ConvPxP PoolingPH(in)H(in)H(out)H(out)=H(in)P <latexit sha1_base64=\"K4WEmk/G5i7UiAyVSIzHIenrJnU=\">AAACFXicbZDLSsNAFIYnXmu9VV26CRahBSmJCLoRCm66rGAv0MQymU7aoZNJmDkRypCXcOOruHGhiFvBnW/jtM1CWw8M/Pz/OZw5X5BwpsBxvq2V1bX1jc3CVnF7Z3dvv3Rw2FZxKgltkZjHshtgRTkTtAUMOO0mkuIo4LQTjG+meeeBSsVicQeThPoRHgoWMoLBWP3SWeNeV+IUqpm+zjxFJEtAwYRT7YUSEz2NmahmmW5mWb9UdmrOrOxl4eaijPJq9ktf3iAmaUQFEI6V6rlOAr7GEhjhNCt6qaIJJmM8pD0jBY6o8vXsqsw+Nc7ADmNpngB75v6e0DhSahIFpjPCMFKL2dT8L+ulEF75mokkBSrIfFGYchtie4rIHjBJCfCJEdgAMX+1yQgbGmBAFg0Ed/HkZdE+r7lOzb29KNdrOY4COkYnqIJcdInqqIGaqIUIekTP6BW9WU/Wi/VufcxbV6x85gj9KevzB/l9n+M=</latexit><latexit sha1_base64=\"K4WEmk/G5i7UiAyVSIzHIenrJnU=\">AAACFXicbZDLSsNAFIYnXmu9VV26CRahBSmJCLoRCm66rGAv0MQymU7aoZNJmDkRypCXcOOruHGhiFvBnW/jtM1CWw8M/Pz/OZw5X5BwpsBxvq2V1bX1jc3CVnF7Z3dvv3Rw2FZxKgltkZjHshtgRTkTtAUMOO0mkuIo4LQTjG+meeeBSsVicQeThPoRHgoWMoLBWP3SWeNeV+IUqpm+zjxFJEtAwYRT7YUSEz2NmahmmW5mWb9UdmrOrOxl4eaijPJq9ktf3iAmaUQFEI6V6rlOAr7GEhjhNCt6qaIJJmM8pD0jBY6o8vXsqsw+Nc7ADmNpngB75v6e0DhSahIFpjPCMFKL2dT8L+ulEF75mokkBSrIfFGYchtie4rIHjBJCfCJEdgAMX+1yQgbGmBAFg0Ed/HkZdE+r7lOzb29KNdrOY4COkYnqIJcdInqqIGaqIUIekTP6BW9WU/Wi/VufcxbV6x85gj9KevzB/l9n+M=</latexit><latexit sha1_base64=\"K4WEmk/G5i7UiAyVSIzHIenrJnU=\">AAACFXicbZDLSsNAFIYnXmu9VV26CRahBSmJCLoRCm66rGAv0MQymU7aoZNJmDkRypCXcOOruHGhiFvBnW/jtM1CWw8M/Pz/OZw5X5BwpsBxvq2V1bX1jc3CVnF7Z3dvv3Rw2FZxKgltkZjHshtgRTkTtAUMOO0mkuIo4LQTjG+meeeBSsVicQeThPoRHgoWMoLBWP3SWeNeV+IUqpm+zjxFJEtAwYRT7YUSEz2NmahmmW5mWb9UdmrOrOxl4eaijPJq9ktf3iAmaUQFEI6V6rlOAr7GEhjhNCt6qaIJJmM8pD0jBY6o8vXsqsw+Nc7ADmNpngB75v6e0DhSahIFpjPCMFKL2dT8L+ulEF75mokkBSrIfFGYchtie4rIHjBJCfCJEdgAMX+1yQgbGmBAFg0Ed/HkZdE+r7lOzb29KNdrOY4COkYnqIJcdInqqIGaqIUIekTP6BW9WU/Wi/VufcxbV6x85gj9KevzB/l9n+M=</latexit><latexit sha1_base64=\"K4WEmk/G5i7UiAyVSIzHIenrJnU=\">AAACFXicbZDLSsNAFIYnXmu9VV26CRahBSmJCLoRCm66rGAv0MQymU7aoZNJmDkRypCXcOOruHGhiFvBnW/jtM1CWw8M/Pz/OZw5X5BwpsBxvq2V1bX1jc3CVnF7Z3dvv3Rw2FZxKgltkZjHshtgRTkTtAUMOO0mkuIo4LQTjG+meeeBSsVicQeThPoRHgoWMoLBWP3SWeNeV+IUqpm+zjxFJEtAwYRT7YUSEz2NmahmmW5mWb9UdmrOrOxl4eaijPJq9ktf3iAmaUQFEI6V6rlOAr7GEhjhNCt6qaIJJmM8pD0jBY6o8vXsqsw+Nc7ADmNpngB75v6e0DhSahIFpjPCMFKL2dT8L+ulEF75mokkBSrIfFGYchtie4rIHjBJCfCJEdgAMX+1yQgbGmBAFg0Ed/HkZdE+r7lOzb29KNdrOY4COkYnqIJcdInqqIGaqIUIekTP6BW9WU/Wi/VufcxbV6x85gj9KevzB/l9n+M=</latexit>Pg:Rrl⇥"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_45_lter_size",
+      "type": "topic",
+      "label": "lter size",
+      "name": "lter size",
+      "description": "Extracted from section 11",
+      "score": 0.2782,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "(i\u0001S;j\u0001S), whereR2Nis referred to as its local receptive eld , or lter size"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_46_local",
+      "type": "topic",
+      "label": "local",
+      "name": "local",
+      "description": "Extracted from section 11",
+      "score": 0.2191,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "(i\u0001S;j\u0001S), whereR2Nis referred to as its local receptive eld , or lter size"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_47_layerh",
+      "type": "topic",
+      "label": "layerh",
+      "name": "layerh",
+      "description": "Extracted from section 14",
+      "score": 0.1573,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "<latexit sha1_base64=\"8tGWXTEsFScZEgIAvXQ3NLsRfU0=\">AAACD3icbVBNSwMxEM3Wr1q/qh69BItYQcquCOqt4MVjBdcWunXJZtM2bTZZk2yxLP0JXvwrXjyoePXqzX9j2u5BWx8MPN6bYWZeEDOqtG1/W7mFxaXllfxqYW19Y3OruL1zq0QiMXGxYEI2AqQIo5y4mmpGGrEkKAoYqQf9y7FfHxCpqOA3ehiTVoQ6nLYpRtpIfvFw6FOYeuQ+oYMR9GIpQo8LRiOqld+DDz69S8u9o5FfLNkVewI4T5yMlECGml/88kKBk4hwjRlSqunYsW6lSGqKGRkVvESRGOE+6pCmoRxFRLXSyUMjeGCUELaFNMU1nKi/J1IUKTWMAtMZId1Vs95Y/M9rJrp93kopjxNNOJ4uaicMagHH6cCQSoI1GxqCsKTmVoi7SCKsTYYFE4Iz+/I8cU8qFxXn+rRUPc7SyIM9sA/KwAFnoAquQA24AINH8AxewZv1ZL1Y79bHtDVnZTO74A+szx+EJZ0E</latexit><latexit sha1_base64=\"8tGWXTEsFScZEgIAvXQ3NLsRfU0=\">AAACD3icbVBNSwMxEM3Wr1q/qh69BItYQcquCOqt4MVjBdcWunXJZtM2bTZZk2yxLP0JXvwrXjyoePXqzX9j2u5BWx8MPN6bYWZeEDOqtG1/W7mFxaXllfxqYW19Y3OruL1zq0QiMXGxYEI2AqQIo5y4mmpGGrEkKAoYqQf9y7FfHxCpqOA3ehiTVoQ6nLYpRtpIfvFw6FOYeuQ+oYMR9GIpQo8LRiOqld+DDz69S8u9o5FfLNkVewI4T5yMlECGml/88kKBk4hwjRlSqunYsW6lSGqKGRkVvESRGOE+6pCmoRxFRLXSyUMjeGCUELaFNMU1nKi/J1IUKTWMAtMZId1Vs95Y/M9rJrp93kopjxNNOJ4uaicMagHH6cCQSoI1GxqCsKTmVoi7SCKsTYYFE4Iz+/I8cU8qFxXn+rRUPc7SyIM9sA/KwAFnoAquQA24AINH8AxewZv1ZL1Y79bHtDVnZTO74A+szx+EJZ0E</latexit><latexit sha1_base64=\"8tGWXTEsFScZEgIAvXQ3NLsRfU0=\">AAACD3icbVBNSwMxEM3Wr1q/qh69BItYQcquCOqt4MVjBdcWunXJZtM2bTZZk2yxLP0JXvwrXjyoePXqzX9j2u5BWx8MPN6bYWZeEDOqtG1/W7mFxaXllfxqYW19Y3OruL1zq0QiMXGxYEI2AqQIo5y4mmpGGrEkKAoYqQf9y7FfHxCpqOA3ehiTVoQ6nLYpRtpIfvFw6FOYeuQ+oYMR9GIpQo8LRiOqld+DDz69S8u9o5FfLNkVewI4T5yMlECGml/88kKBk4hwjRlSqunYsW6lSGqKGRkVvESRGOE+6pCmoRxFRLXSyUMjeGCUELaFNMU1nKi/J1IUKTWMAtMZId1Vs95Y/M9rJrp93kopjxNNOJ4uaicMagHH6cCQSoI1GxqCsKTmVoi7SCKsTYYFE4Iz+/I8cU8qFxXn+rRUPc7SyIM9sA/KwAFnoAquQA24AINH8AxewZv1ZL1Y79bHtDVnZTO74A+szx+EJZ0E</latexit><latexit sha1_base64=\"8tGWXTEsFScZEgIAvXQ3NLsRfU0=\">AAACD3icbVBNSwMxEM3Wr1q/qh69BItYQcquCOqt4MVjBdcWunXJZtM2bTZZk2yxLP0JXvwrXjyoePXqzX9j2u5BWx8MPN6bYWZeEDOqtG1/W7mFxaXllfxqYW19Y3OruL1zq0QiMXGxYEI2AqQIo5y4mmpGGrEkKAoYqQf9y7FfHxCpqOA3ehiTVoQ6nLYpRtpIfvFw6FOYeuQ+oYMR9GIpQo8LRiOqld+DDz69S8u9o5FfLNkVewI4T5yMlECGml/88kKBk4hwjRlSqunYsW6lSGqKGRkVvESRGOE+6pCmoRxFRLXSyUMjeGCUELaFNMU1nKi/J1IUKTWMAtMZId1Vs95Y/M9rJrp93kopjxNNOJ4uaicMagHH6cCQSoI1GxqCsKTmVoi7SCKsTYYFE4Iz+/I8cU8qFxXn+rRUPc7SyIM9sA/KwAFnoAquQA24AINH8AxewZv1ZL1Y79bHtDVnZTO74A+szx+EJZ0E</latexit>Block 0KxK Convrepresenta2oninputMr0PxP PoolingHHBlock L-1KxK Convlinear outputr0rL-1rL-1rlrlprevious layerH(in)H(in)rl-1rlrl-1PxP Pooling x(1)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_48_aaab",
+      "type": "topic",
+      "label": "aaab",
+      "name": "aaab",
+      "description": "Extracted from section 15",
+      "score": 0.2515,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "x(1) <latexit sha1_base64=\"56s56lVgg545MY3eVvNO4xx9ymg=\">AAAB+HicbVBNS8NAFHypX7V+RT16WVqEeimJCOqt4MVjBWMLbS2b7aZdutmE3U2xhPwTLx5UvPpTvPlv3LQ5aOvAwjDzHm92/JgzpR3n2yqtrW9sbpW3Kzu7e/sH9uHRg4oSSahHIh7Jjo8V5UxQTzPNaSeWFIc+p21/cpP77SmVikXiXs9i2g/xSLCAEayNNLDtXoj12A/Sp+wxrbtn2cCuOQ1nDrRK3ILUoEBrYH/1hhFJQio04VipruvEup9iqRnhNKv0EkVjTCZ4RLuGChxS1U/nyTN0apQhCiJpntBorv7eSHGo1Cz0zWSeUy17ufif1010cNVPmYgTTQVZHAoSjnSE8hrQkElKNJ8ZgolkJisiYywx0aasiinBXf7yKvHOG9cN9+6i1qwWbZThBKpQBxcuoQm30AIPCEzhGV7hzUqtF+vd+liMlqxi5xj+wPr8AZu+kxU=</latexit><latexit sha1_base64=\"56s56lVgg545MY3eVvNO4xx9ymg=\">AAAB+HicbVBNS8NAFHypX7V+RT16WVqEeimJCOqt4MVjBWMLbS2b7aZdutmE3U2xhPwTLx5UvPpTvPlv3LQ5aOvAwjDzHm92/JgzpR3n2yqtrW9sbpW3Kzu7e/sH9uHRg4oSSahHIh7Jjo8V5UxQTzPNaSeWFIc+p21/cpP77SmVikXiXs9i2g/xSLCAEayNNLDtXoj12A/Sp+wxrbtn2cCuOQ1nDrRK3ILUoEBrYH/1hhFJQio04VipruvEup9iqRnhNKv0EkVjTCZ4RLuGChxS1U/nyTN0apQhCiJpntBorv7eSHGo1Cz0zWSeUy17ufif1010cNVPmYgTTQVZHAoSjnSE8hrQkElKNJ8ZgolkJisiYywx0aasiinBXf7yKvHOG9cN9+6i1qwWbZThBKpQBxcuoQm30AIPCEzhGV7hzUqtF+vd+liMlqxi5xj+wPr8AZu+kxU=</latexit><latexit sha1_base64=\"56s56lVgg545MY3eVvNO4xx9ymg=\">AAAB+HicbVBNS8NAFHypX7V+RT16WVqEeimJCOqt4MVjBWMLbS2b7aZdutmE3U2xhPwTLx5UvPpTvPlv3LQ5aOvAwjDzHm92/JgzpR3n2yqtrW9sbpW3Kzu7e/sH9uHRg4oSSahHIh7Jjo8V5UxQTzPNaSeWFIc+p21/cpP77SmVikXiXs9i2g/xSLCAEayNNLDtXoj12A/Sp+wxrbtn2cCuOQ1nDrRK3ILUoEBrYH/1hhFJQio04VipruvEup9iqRnhNKv0EkVjTCZ4RLuGChxS1U/nyTN0apQhCiJpntBorv7eSHGo1Cz0zWSeUy17ufif1010cNVPmYgTTQVZHAoSjnSE8hrQkElKNJ8ZgolkJisiYywx0aasiinBXf7yKvHOG9cN9+6i1qwWbZThBKpQBxcuoQm30AIPCEzhGV7hzUqtF+vd+liMlqxi5xj+wPr8AZu+kxU=</latexit><latexit sha1_base64=\"56s56lVgg545MY3eVvNO4xx9ymg=\">AAAB+HicbVBNS8NAFHypX7V+RT16WVqEeimJCOqt4MVjBWMLbS2b7aZdutmE3U2xhPwTLx5UvPpTvPlv3LQ5aOvAwjDzHm92/JgzpR3n2yqtrW9sbpW3Kzu7e/sH9uHRg4oSSahHIh7Jjo8V5UxQTzPNaSeWFIc+p21/cpP77SmVikXiXs9i2g/xSLCAEayNNLDtXoj12A/Sp+wxrbtn2cCuOQ1nDrRK3ILUoEBrYH/1hhFJQio04VipruvEup9iqRnhNKv0EkVjTCZ4RLuGChxS1U/nyTN0apQhCiJpntBorv7eSHGo1Cz0zWSeUy17ufif1010cNVPmYgTTQVZHAoSjnSE8hrQkElKNJ8ZgolkJisiYywx0aasiinBXf7yKvHOG9cN9+6i1qwWbZThBKpQBxcuoQm30AIPCEzhGV7hzUqtF+vd+liMlqxi5xj+wPr8AZu+kxU=</latexit>KKx(1)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_49_boltzmann",
+      "type": "topic",
+      "label": "boltzmann",
+      "name": "boltzmann",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.4005,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Nonetheless, employment of machine learning for wave function representations is focused on more traditional architectures such as restricted Boltzmann machines (RBMs) and fully-connected neural networks",
+            "A consequent machine learning inspired approach for modeling wave functions makes use of fullyconnected neural-networks and restricted Boltzmann machines (RBMs) [19{25], which represent relatively veteran machine learning constructs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_50_conventional_rnns",
+      "type": "topic",
+      "label": "conventional rnns",
+      "name": "conventional rnns",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.3826,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "RACs work well in practice [36] and share the architectural features of conventional RNNs, with polynomial non-linearities in g\u00121"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_51_quantum_max",
+      "type": "topic",
+      "label": "quantum max",
+      "name": "quantum max",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.3733,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "[51] Shawn X Cui, Michael H Freedman, Or Sattath, Richard Stong, and Greg Minton, \\Quantum max- ow/min-cut,\" Journal of Mathematical Physics 57, 062206 (2016)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_52_function_representations",
+      "type": "topic",
+      "label": "function representations",
+      "name": "function representations",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.3674,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Nonetheless, employment of machine learning for wave function representations is focused on more traditional architectures such as restricted Boltzmann machines (RBMs) and fully-connected neural networks",
+            "Thus, beyond a quanti cation of the entanglement capacity of leading deep learning architectures, our analysis formally motivates a shift of trending neural-network based wave function representations closer to the state-of-the-art in machine learning",
+            "Above, we have shown how the introduction of performance enhancing mechanisms that are commonly employed by deep learning practitioners, entails wave function representations which cannot be matched by common TNs",
+            "Our work quanti es the power of deep learning for highly-entangled wave function representations, theoretically motivating a shift towards employment of state-of-the-art deep learning architectures in many-body physics research"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_53_matrix_embedding",
+      "type": "topic",
+      "label": "matrix embedding",
+      "name": "matrix embedding",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.3016,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "[45] Bo-Xiao Zheng and Garnet Kin-Lic Chan, \\Ground-state phase diagram of the square lattice hubbard model from density matrix embedding theory,\" Physical Review B 93, 035126 (2016)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_54_spin_systems",
+      "type": "topic",
+      "label": "spin systems",
+      "name": "spin systems",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.2864,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "[5] Frank Verstraete, Valentin Murg, and J Ignacio Cirac, \\Matrix product states, projected entangled pair states, and variational renormalization group methods for quantum spin systems,\" Advances in Physics 57, 143{224 (2008)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_55_fundamental_connections",
+      "type": "topic",
+      "label": "fundamental connections",
+      "name": "fundamental connections",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.274,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "[28] Yoav Levine, David Yakira, Nadav Cohen, and Amnon Shashua, \\Deep learning and quantum entanglement: Fundamental connections with implications to network design,\" in 6th International Conference on Learning Representations (ICLR) (2018)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_56_intractability",
+      "type": "topic",
+      "label": "intractability",
+      "name": "intractability",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.2421,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Though this method is successful in modeling one-dimensional (1D) systems that obey area-law entanglement scaling with sub-system size [9] through the Matrix Product State (MPS) TN [1, 2], it still faces difculties in modeling two-dimensional (2D) systems due to intractability [3, 10]",
+            "The MERA TN introduces loops via the disentangling operations, which entail intractability of straightforward wave function amplitude computation [39]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_57_renormalization_algorithms",
+      "type": "topic",
+      "label": "renormalization algorithms",
+      "name": "renormalization algorithms",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.2328,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "[3] Frank Verstraete and J Ignacio Cirac, \\Renormalization algorithms for quantum-many body systems in two and higher dimensions,\" arXiv preprint cond-mat/0407066 (2004)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_58_schmidt_foundation",
+      "type": "topic",
+      "label": "schmidt foundation",
+      "name": "schmidt foundation",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.2181,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Nadav Cohen is a member of the Zuckerman Israeli Postdoctoral Scholars Program, and is supported by the Schmidt Foundation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_59_2010",
+      "type": "topic",
+      "label": "2010",
+      "name": "2010",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.2105,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "[9] Jens Eisert, Marcus Cramer, and Martin B Plenio, \\Colloquium: Area laws for the entanglement entropy,\" Reviews of Modern Physics 82, 277 (2010)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_60_employed_rbms",
+      "type": "topic",
+      "label": "employed rbms",
+      "name": "employed rbms",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.2007,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "Our results show that such architectures can support volume-law entanglement scaling, polynomially more e\u000eciently than presently employed RBMs",
+            "Beyond the shown polynomial e\u000eciency of convolutional networks in resources required for representing 2D volume-law entanglement (Corollary 1), they enjoy an advantage relative to previously employed RBMs in the optimization aspect as well"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_61_essentially",
+      "type": "topic",
+      "label": "essentially",
+      "name": "essentially",
+      "description": "Main keyword from 1803.09780v3",
+      "score": 0.1561,
+      "papers": [
+        "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "1803.09780v3",
+          "paper_filename": "1803.09780v3.pdf",
+          "context_lines": [
+            "In the body of the paper we have discussed the entanglement entropy of overlapping convolutional networks with no spatial decimation, which essentially amount to having pooling layers with P= 1, which was summarized in Theorem 1 of the main text",
+            "Essentially, the combinatorial dependence of the lower bound follows from the indistinguishability of duplicated indices"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_62_entangled_sensor",
+      "type": "topic",
+      "label": "entangled sensor",
+      "name": "entangled sensor",
+      "description": "Extracted from section 1",
+      "score": 0.6033,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Within an interval of θabove this reduced threshold, any unentangled sensor requires Θ(log(1 /ϵ)) repetitions of the protocol to estimate a previously unknown particle trajectory with ϵerror probability, whereas an entangled sensor can succeed with zero error in a single shot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_63_dark_matter",
+      "type": "topic",
+      "label": "dark matter",
+      "name": "dark matter",
+      "description": "Extracted from section 1",
+      "score": 0.3046,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Chuang Department of Physics, Center for Ultracold Atoms, and Research Laboratory of Electronics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, USA (Dated: October 10, 2024) Sensors for mapping the trajectory of an incoming particle find important utility in experimental high energy physics and searches for dark matter",
+            "Additionally, the cosmic origins of particles such as muons, neutrinos, and possible dark matter candidates can be traced from snapshots of their motion taken with detectors such as bubble chambers [3]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_64_shot_trajectory",
+      "type": "topic",
+      "label": "shot trajectory",
+      "name": "shot trajectory",
+      "description": "Extracted from section 1",
+      "score": 0.2509,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Quantum entanglement enables single-shot trajectory sensing for weakly interacting particles Zachary E"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_65_weakly_interacting",
+      "type": "topic",
+      "label": "weakly interacting",
+      "name": "weakly interacting",
+      "description": "Extracted from section 1",
+      "score": 0.2349,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Quantum entanglement enables single-shot trajectory sensing for weakly interacting particles Zachary E"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_66_quantum_sensor",
+      "type": "topic",
+      "label": "quantum sensor",
+      "name": "quantum sensor",
+      "description": "Extracted from section 2",
+      "score": 0.6115,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Entangled states have also been useful for localizing few-qubit perturbations in a quantum sensor network [17, 18], even in the presence of realistic noise [19]",
+            "These successes offer hope that entanglement could similarly enhance quantum sensor arrays aiming to unambiguously distinguish particle trajectories involving many qubits"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_67_entangled_states",
+      "type": "topic",
+      "label": "entangled states",
+      "name": "entangled states",
+      "description": "Extracted from section 2",
+      "score": 0.5088,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Furthermore, entangled states have been beneficial for the problem of quantum channel discrimination, which is closely related to trajectory sensing [15, 16]",
+            "Entangled states have also been useful for localizing few-qubit perturbations in a quantum sensor network [17, 18], even in the presence of realistic noise [19]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_68_superconducting_qubits",
+      "type": "topic",
+      "label": "superconducting qubits",
+      "name": "superconducting qubits",
+      "description": "Extracted from section 2",
+      "score": 0.4366,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Arrays of atoms and superconducting qubits have been shown to be sensitive to in-cident particles [11–14]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_69_projective_measurements",
+      "type": "topic",
+      "label": "projective measurements",
+      "name": "projective measurements",
+      "description": "Extracted from section 2",
+      "score": 0.3127,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "The concept of using projective measurements to detect various perturbations on an entangled quantum state is familiar elsewhere as the setting for quantum error correction (QEC), where the goal is instead to preserve the state"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_70_particle_trajectories",
+      "type": "topic",
+      "label": "particle trajectories",
+      "name": "particle trajectories",
+      "description": "Extracted from section 2",
+      "score": 0.2716,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "These successes offer hope that entanglement could similarly enhance quantum sensor arrays aiming to unambiguously distinguish particle trajectories involving many qubits",
+            "By reimagining codes as sensors rather than a means to protect information, our question equivalently asks whether quantum codes exist which allow the “errors” imposed by different particle trajectories to be distinguished using a syndrome measurement"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_71_quantum_enhancement",
+      "type": "topic",
+      "label": "quantum enhancement",
+      "name": "quantum enhancement",
+      "description": "Extracted from section 3",
+      "score": 0.4465,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "This paper focuses on entanglement and the quantum enhancement offered over classical TS, while the companion paper develops the mathematical framework"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_72_profile_laser",
+      "type": "topic",
+      "label": "profile laser",
+      "name": "profile laser",
+      "description": "Extracted from section 3",
+      "score": 0.295,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "For the problem of tracking a Gaussian-profile laser pulse propagating through an array of atoms, we show that entangled sensors reduce the failure probability by an amount proportional to the beam amplitude in the wideand weak-beam limit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_73_beam_limit",
+      "type": "topic",
+      "label": "beam limit",
+      "name": "beam limit",
+      "description": "Extracted from section 3",
+      "score": 0.2828,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "For the problem of tracking a Gaussian-profile laser pulse propagating through an array of atoms, we show that entangled sensors reduce the failure probability by an amount proportional to the beam amplitude in the wideand weak-beam limit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_74_nonzero_probability",
+      "type": "topic",
+      "label": "nonzero probability",
+      "name": "nonzero probability",
+      "description": "Extracted from section 3",
+      "score": 0.1272,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "In contrast, if θ < π (a “weak” interaction regime), the outputs of this unentangled sensor are not orthogonal and can only be distinguished with some nonzero probability of failure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_75_symmetric_ts",
+      "type": "topic",
+      "label": "symmetric ts",
+      "name": "symmetric ts",
+      "description": "Extracted from section 4",
+      "score": 0.4777,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Two symmetries of the symmetric TS problem can be leveraged to greatly simplify this system"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_76_discrete_trajectory",
+      "type": "topic",
+      "label": "discrete trajectory",
+      "name": "discrete trajectory",
+      "description": "Extracted from section 4",
+      "score": 0.4495,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "(b)Gaussian-profile laser pulse and its nearest discrete trajectory in Tcyc(n, m)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_77_orthogonality_conditions",
+      "type": "topic",
+      "label": "orthogonality conditions",
+      "name": "orthogonality conditions",
+      "description": "Extracted from section 4",
+      "score": 0.2947,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "|ψ⟩to be a TS state are summarized by the following orthogonality conditions: ⟨ψ|R†(T)(θ)R(T′)(θ)|ψ⟩=δT,T′ (1) for all T, T′∈ T"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_78_state_exists",
+      "type": "topic",
+      "label": "state exists",
+      "name": "state exists",
+      "description": "Extracted from section 4",
+      "score": 0.2735,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "— We now introduce a general family of TS problems and provide a working example to illustrate how to systematically determine the range of θfor which a TS state exists",
+            "(1) remains satisfied under the action of these two symmetries means that the search for TS states can be restricted to a much smaller symmetrized subspace; specifically, a TS state exists for Tsym(n, m) if and only if there exists a TS state which is permutation and bit-flip invariant [20]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_79_eigenbasis_states",
+      "type": "topic",
+      "label": "eigenbasis states",
+      "name": "eigenbasis states",
+      "description": "Extracted from section 5",
+      "score": 0.4154,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "jn⟩areZ-eigenbasis states and Wνis the set of all length- nbit-strings j1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_80_neutrino_paths",
+      "type": "topic",
+      "label": "neutrino paths",
+      "name": "neutrino paths",
+      "description": "Extracted from section 6",
+      "score": 0.4829,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "In fact, many experimental applications may require relatively few trajectories—for example, neutrino paths might only comprise straight lines"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_81_cyclic_ts",
+      "type": "topic",
+      "label": "cyclic ts",
+      "name": "cyclic ts",
+      "description": "Extracted from section 6",
+      "score": 0.4358,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "For these reasons, we now introduce cyclic TS states, where Tis restricted to include only “continuous” trajectories where the m≤nconstituent qubits have consecutive indices modulo n(see Figure 1a); denote such aTwithTcyc(n, m) ={zj({1,",
+            "Since the larger cyclic TS state exists over the range of θfor which the smaller symmetric TS state exists, the range of achievable θcan be expressed entirely in terms of the size parameter κ of the smaller symmetric problem"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_82_computationally_intractable",
+      "type": "topic",
+      "label": "computationally intractable",
+      "name": "computationally intractable",
+      "description": "Extracted from section 6",
+      "score": 0.3436,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "(1) for all T, T′∈ Tcyc(n, m); however, the naive approach using a completely general TS ansatz still remains computationally intractable for large n"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_83_θthere_exists",
+      "type": "topic",
+      "label": "θthere exists",
+      "name": "θthere exists",
+      "description": "Extracted from section 6",
+      "score": 0.2925,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "As before, we ask for what θthere exists a TS state satisfying Eq"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_84_nindices",
+      "type": "topic",
+      "label": "nindices",
+      "name": "nindices",
+      "description": "Extracted from section 6",
+      "score": 0.2052,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "n) is the cyclic permutation of nindices"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_85_minimum_θneeded",
+      "type": "topic",
+      "label": "minimum θneeded",
+      "name": "minimum θneeded",
+      "description": "Extracted from section 7",
+      "score": 0.3901,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "(8) In contrast to Theorem 1, Theorem 2 shows for Tcyc(n, m) that, so long as nis a constant multiple of m, the minimum θneeded for a TS state remains constant as the sensor and trajectory set grow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_86_state_requires",
+      "type": "topic",
+      "label": "state requires",
+      "name": "state requires",
+      "description": "Extracted from section 7",
+      "score": 0.2322,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "For example, when n= 2m, a symmetric TS state requires θ≈0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_87_protocol_succeeds",
+      "type": "topic",
+      "label": "protocol succeeds",
+      "name": "protocol succeeds",
+      "description": "Extracted from section 7",
+      "score": 0.2009,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "ForT=Tsym(n= 4, m= 2), the quantum protocol succeeds with lower failure probability for all nontrivial values θ∈(0, π) of the interaction strength (Figure 2)",
+            "Furthermore, the quantum protocol succeeds with zero failure probability for all θ≥3π 4satisfying Eq"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_88_sensor_qubits",
+      "type": "topic",
+      "label": "sensor qubits",
+      "name": "sensor qubits",
+      "description": "Extracted from section 8",
+      "score": 0.4032,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "—In an experimental setting, it may be desirable to characterize a continuum of possible particle paths, especially when the particle has a distance-dependent interaction with the sensor qubits"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_89_shot_failure",
+      "type": "topic",
+      "label": "shot failure",
+      "name": "shot failure",
+      "description": "Extracted from section 8",
+      "score": 0.2559,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Single-shot failure probabilities of classical and quantum TS protocols vs",
+            "If an entangled TS state is used as the sensor, then the one-shot failure probability for estimating the"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_90_arbitrary_nandm",
+      "type": "topic",
+      "label": "arbitrary nandm",
+      "name": "arbitrary nandm",
+      "description": "Extracted from section 8",
+      "score": 0.2258,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "More generally, for arbitrary nandm, entanglement-enhanced trajectory sensing can succeed perfectly in one shot over an interval of θ∈[θmin, π) where a protocol without entanglement cannot; θminis the bound given by Eq"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_91_trajectory_sensing",
+      "type": "topic",
+      "label": "trajectory sensing",
+      "name": "trajectory sensing",
+      "description": "Extracted from section 8",
+      "score": 0.2179,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "More generally, for arbitrary nandm, entanglement-enhanced trajectory sensing can succeed perfectly in one shot over an interval of θ∈[θmin, π) where a protocol without entanglement cannot; θminis the bound given by Eq"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_92_rparticles_sequentially",
+      "type": "topic",
+      "label": "rparticles sequentially",
+      "name": "rparticles sequentially",
+      "description": "Extracted from section 8",
+      "score": 0.1653,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Suppose rparticles sequentially pass through the array along the same trajectory T, and we measure and reinitialize the TS state between each particle interaction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_93_quantum_error",
+      "type": "topic",
+      "label": "quantum error",
+      "name": "quantum error",
+      "description": "Extracted from section 9",
+      "score": 0.4943,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "— A beautiful connection emerges between TS and quantum error correction when the trajectories are instead interpreted as errors to be identified"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_94_entangled_ts",
+      "type": "topic",
+      "label": "entangled ts",
+      "name": "entangled ts",
+      "description": "Extracted from section 9",
+      "score": 0.4932,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "If an entangled TS state is used as the sensor, then the one-shot failure probability for estimating the nearest discrete trajectory (averaged over possible beam paths) is3 4−8 π2w2θ0to first order in θ0and1 w2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_95_state_density",
+      "type": "topic",
+      "label": "state density",
+      "name": "state density",
+      "description": "Extracted from section 9",
+      "score": 0.283,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Given nand a trajectory set T, consider the quantum “error” channel E(ρ) =1 |T |/summationdisplay T∈TR(T)(θ)ρR†(T)(θ), (9) which corresponds to the action of picking an unknown trajectory T∈ Tuniformly at random and applying it to the input state density matrix ρ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_96_beam_paths",
+      "type": "topic",
+      "label": "beam paths",
+      "name": "beam paths",
+      "description": "Extracted from section 9",
+      "score": 0.2521,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "If an entangled TS state is used as the sensor, then the one-shot failure probability for estimating the nearest discrete trajectory (averaged over possible beam paths) is3 4−8 π2w2θ0to first order in θ0and1 w2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_97_logical_qubit",
+      "type": "topic",
+      "label": "logical qubit",
+      "name": "logical qubit",
+      "description": "Extracted from section 10",
+      "score": 0.4845,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            ", applying RZ/parenleftbigπ 2/parenrightbig to each physical qubit implements R† Z/parenleftbigπ 2/parenrightbig on the logical qubit [27]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_98_tsymandtcycmay_include",
+      "type": "topic",
+      "label": "tsymandtcycmay include",
+      "name": "tsymandtcycmay include",
+      "description": "Extracted from section 10",
+      "score": 0.2576,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "However, for many applications, TsymandTcycmay include more trajectories than needed, and further restricting Tshould continue to decrease the achievable θ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_99_multiple_steane",
+      "type": "topic",
+      "label": "multiple steane",
+      "name": "multiple steane",
+      "description": "Extracted from section 10",
+      "score": 0.2076,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Thus, if the logical qubits of multiple Steane code blocks are prepared to some symmetric/cyclic TS state with parameters n, m, and θ=π 2, then the physical qubits together constitute a larger TS state with parameters 7 n,7m, and θ=π 2, where the trajectories consist of whole blocks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_100_nature_photonics",
+      "type": "topic",
+      "label": "nature photonics",
+      "name": "nature photonics",
+      "description": "Extracted from section 11",
+      "score": 0.4769,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Zhang, Nature Photonics 17, 470 (2023)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_101_geophysical_research",
+      "type": "topic",
+      "label": "geophysical research",
+      "name": "geophysical research",
+      "description": "Extracted from section 11",
+      "score": 0.3236,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "SchultePelkum, Journal of Geophysical Research: Solid Earth 123, 6871 (2018)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_102_solid_earth",
+      "type": "topic",
+      "label": "solid earth",
+      "name": "solid earth",
+      "description": "Extracted from section 11",
+      "score": 0.3021,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "SchultePelkum, Journal of Geophysical Research: Solid Earth 123, 6871 (2018)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_103_virgo_collaboration",
+      "type": "topic",
+      "label": "virgo collaboration",
+      "name": "virgo collaboration",
+      "description": "Extracted from section 11",
+      "score": 0.1663,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "[7] LIGO Scientific Collaboration and Virgo Collaboration, Phys"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_104_quantum_protocol",
+      "type": "topic",
+      "label": "quantum protocol",
+      "name": "quantum protocol",
+      "description": "Extracted from section 12",
+      "score": 0.5798,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Quantum protocol for discrete TS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_105_quantum_trajectory",
+      "type": "topic",
+      "label": "quantum trajectory",
+      "name": "quantum trajectory",
+      "description": "Extracted from section 12",
+      "score": 0.5594,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Chuang Department of Physics, Center for Ultracold Atoms, and Research Laboratory of Electronics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, USA This Supplemental Material describes the classical and quantum trajectory sensing (TS) protocols used in the main text",
+            "— The following quantum trajectory sensing protocol is used in Figure 2 to illustrate the TS enhancement possible with entangled sensors"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_106_entangled_sensors",
+      "type": "topic",
+      "label": "entangled sensors",
+      "name": "entangled sensors",
+      "description": "Extracted from section 12",
+      "score": 0.5134,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "— The following classical TS protocol does not use entangled sensors and serves as a performance benchmark in Figure 2",
+            "— The following quantum trajectory sensing protocol is used in Figure 2 to illustrate the TS enhancement possible with entangled sensors"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_107_ultracold_atoms",
+      "type": "topic",
+      "label": "ultracold atoms",
+      "name": "ultracold atoms",
+      "description": "Extracted from section 12",
+      "score": 0.2717,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Chuang Department of Physics, Center for Ultracold Atoms, and Research Laboratory of Electronics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, USA This Supplemental Material describes the classical and quantum trajectory sensing (TS) protocols used in the main text"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_108_projective_measurement",
+      "type": "topic",
+      "label": "projective measurement",
+      "name": "projective measurement",
+      "description": "Extracted from section 13",
+      "score": 0.4929,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "The output state R(T)|ψθmin⟩resulting from Tis then subjected to the projective measurement with projectors /braceleftbig PT′∀T′∈ T, P⊥/bracerightbig , (S"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_109_orthogonal_outputs",
+      "type": "topic",
+      "label": "orthogonal outputs",
+      "name": "orthogonal outputs",
+      "description": "Extracted from section 13",
+      "score": 0.3705,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Then a TS state yielding orthogonal outputs is no longer guaranteed to exist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_110_classical_protocol",
+      "type": "topic",
+      "label": "classical protocol",
+      "name": "classical protocol",
+      "description": "Extracted from section 13",
+      "score": 0.2543,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "5) The classical protocol for path estimation prepares the internal qubits to the unentangled |ψπ⟩=|+⟩⊗4and allows Rg(ϕ1, ϕ2) to perturb the sensor state, where ϕ1andϕ2are chosen uniformly at random from ( −π, π]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_111_quantum_path",
+      "type": "topic",
+      "label": "quantum path",
+      "name": "quantum path",
+      "description": "Extracted from section 14",
+      "score": 0.5901,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "To derive the failure probabilities of these classical and quantum path estimation protocols, we must determine explicit expressions for the various di(ϕ1, ϕ2)",
+            "15) We now derive one-shot failure probabilities for the classical and quantum path estimation protocols"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_112_estimation_protocols",
+      "type": "topic",
+      "label": "estimation protocols",
+      "name": "estimation protocols",
+      "description": "Extracted from section 14",
+      "score": 0.4124,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "To derive the failure probabilities of these classical and quantum path estimation protocols, we must determine explicit expressions for the various di(ϕ1, ϕ2)",
+            "15) We now derive one-shot failure probabilities for the classical and quantum path estimation protocols"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_113_discrete_ts",
+      "type": "topic",
+      "label": "discrete ts",
+      "name": "discrete ts",
+      "description": "Extracted from section 14",
+      "score": 0.2928,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "The output is measured and an estimated trajectory T∈ Tis proposed using the same strategy as for discrete TS",
+            "The quantum protocol for path estimation also proceeds analogously to its discrete TS counterpart",
+            "1), and an estimated Tis proposed as in the discrete TS case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_114_success_probability",
+      "type": "topic",
+      "label": "success probability",
+      "name": "success probability",
+      "description": "Extracted from section 14",
+      "score": 0.1087,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Letting |ψout(φ1, φ2)⟩=Rg(φ1, φ2)|ψπ 2⟩be the output state of the sensor and ρout(φ1, φ2) =|ψout⟩⟨ψout|be the corresponding density matrix, the success probability is then Pr[success]( φ1, φ2) = tr[ PTminρout(φ1, φ2)] +1 |T |tr/bracketleftbig P⊥ρout(φ1, φ2)/bracketrightbig (S"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_115_density_matrix",
+      "type": "topic",
+      "label": "density matrix",
+      "name": "density matrix",
+      "description": "Extracted from section 15",
+      "score": 0.4009,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "density matrix, the success probability is then Pr[success]( φ1, φ2) = tr[ PTminρout(φ1, φ2)] +1 |T |tr/bracketleftbig P⊥ρout(φ1, φ2)/bracketrightbig (S"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_116_quantum_sensing",
+      "type": "topic",
+      "label": "quantum sensing",
+      "name": "quantum sensing",
+      "description": "Main keyword from 2405.05888v2",
+      "score": 0.5705,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "For a quantum sensing protocol that uses projective measurements on a multi-qubit sensor array to infer the trajectory of an incident particle, we establish that entanglement can dramatically reduce the particle-qubit interaction strength θ required for perfect trajectory discrimination"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_117_tolerant_quantum",
+      "type": "topic",
+      "label": "tolerant quantum",
+      "name": "tolerant quantum",
+      "description": "Main keyword from 2405.05888v2",
+      "score": 0.4528,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Shor, “Fault-tolerant quantum computation,” (1997), arXiv:quant-ph/9605011 [quant-ph]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_118_single_shot",
+      "type": "topic",
+      "label": "single shot",
+      "name": "single shot",
+      "description": "Main keyword from 2405.05888v2",
+      "score": 0.2577,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "Within an interval of θabove this reduced threshold, any unentangled sensor requires Θ(log(1 /ϵ)) repetitions of the protocol to estimate a previously unknown particle trajectory with ϵerror probability, whereas an entangled sensor can succeed with zero error in a single shot",
+            "We solve this problem and show for some threshold θminthat for all θ∈[θmin, π), there exist entangled sensor states that perfectly discriminate trajectories in a single shot while any unentangled sensor must instead fail with nonzero probability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_119_nbit",
+      "type": "topic",
+      "label": "nbit",
+      "name": "nbit",
+      "description": "Main keyword from 2405.05888v2",
+      "score": 0.2317,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "jn⟩areZ-eigenbasis states and Wνis the set of all length- nbit-strings j1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_120_precisely_reveal",
+      "type": "topic",
+      "label": "precisely reveal",
+      "name": "precisely reveal",
+      "description": "Main keyword from 2405.05888v2",
+      "score": 0.1913,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "In fact, any (pure) TS state ρTS=|ψTS⟩⟨ψTS|is actually a QEC code state for this error channel, since a single syndrome measurement can precisely reveal which error R(T)was applied to ρTS, andρTScan then be recovered by applying the operator R†(T)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_121_pinckney",
+      "type": "topic",
+      "label": "pinckney",
+      "name": "pinckney",
+      "description": "Main keyword from 2405.05888v2",
+      "score": 0.1577,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": []
+        }
+      ]
+    },
+    {
+      "id": "topic_122_rarely_interact",
+      "type": "topic",
+      "label": "rarely interact",
+      "name": "rarely interact",
+      "description": "Main keyword from 2405.05888v2",
+      "score": 0.1516,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "— Single-shot trajectory sensing using entangled TS states is particularly promising for experimental applications where the particles rarely interact with the sensor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic_123_ali",
+      "type": "topic",
+      "label": "ali",
+      "name": "ali",
+      "description": "Main keyword from 2405.05888v2",
+      "score": 0.1432,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": []
+        }
+      ]
+    },
+    {
+      "id": "topic_124_filtering_charged",
+      "type": "topic",
+      "label": "filtering charged",
+      "name": "filtering charged",
+      "description": "Main keyword from 2405.05888v2",
+      "score": 0.1396,
+      "papers": [
+        "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "2405.05888v2",
+          "paper_filename": "2405.05888v2.pdf",
+          "context_lines": [
+            "In biology and chemistry, positron emission tomography localizes tumors along a line traversed by emitted gamma photons [4], and mass spectrometers determine molar masses by filtering charged molecular fragments according to their trajectories [5]"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "paper_0",
+      "target": "topic_0_restricted_boltzmann",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_1_learning_architectures",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_2_cohen",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_3_standard_tensor",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_4_yoav_levine",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_5_body_wave",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_6_prominent_architectures",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_7_functions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_8_lconvolutional_network",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_9_edge_activations",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_10_tree_structure",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_11_cac_networks",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_12_adjacent_calculations",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_13_represented_wave",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_14_corresponding_tensor",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_15_convolutional_architectures",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_16_computational_nodes",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_17_kernels_overlap",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_18_exponential_enhancement",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_19_decimation_schemes",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_20_maximal_entanglement",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_21_overlappingconvolutional_networks",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_22_depth_lwith",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_23_size_kdindspatial",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_24_tractable_access",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_25_recurrent_network",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_26_quantum_state",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_27_basis_inputs",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_28_term_memory",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_29_represents_ann",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_30_shallow_rac",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_31_weights_matrices",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_32_recursive_mps",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_33_input_duplication",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_34_hidden_state",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_35_tensor_networks",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_36_entanglement_scaling",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_37_convolution_computation",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_38_memory",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_39_nadav_cohen",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_40_decimating_pooling",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_41_color_channels",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_42_receptive_eld",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_43_kxk_convpxp",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_44_poolingph",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_45_lter_size",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_46_local",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_47_layerh",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_48_aaab",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_49_boltzmann",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_50_conventional_rnns",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_51_quantum_max",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_52_function_representations",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_53_matrix_embedding",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_54_spin_systems",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_55_fundamental_connections",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_56_intractability",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_57_renormalization_algorithms",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_58_schmidt_foundation",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_59_2010",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_60_employed_rbms",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "topic_61_essentially",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_62_entangled_sensor",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_63_dark_matter",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_64_shot_trajectory",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_65_weakly_interacting",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_66_quantum_sensor",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_67_entangled_states",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_68_superconducting_qubits",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_69_projective_measurements",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_70_particle_trajectories",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_71_quantum_enhancement",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_72_profile_laser",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_73_beam_limit",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_74_nonzero_probability",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_75_symmetric_ts",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_76_discrete_trajectory",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_77_orthogonality_conditions",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_78_state_exists",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_79_eigenbasis_states",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_80_neutrino_paths",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_81_cyclic_ts",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_82_computationally_intractable",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_83_θthere_exists",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_84_nindices",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_85_minimum_θneeded",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_86_state_requires",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_87_protocol_succeeds",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_88_sensor_qubits",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_89_shot_failure",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_90_arbitrary_nandm",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_91_trajectory_sensing",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_92_rparticles_sequentially",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_93_quantum_error",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_94_entangled_ts",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_95_state_density",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_96_beam_paths",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_97_logical_qubit",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_98_tsymandtcycmay_include",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_99_multiple_steane",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_100_nature_photonics",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_101_geophysical_research",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_102_solid_earth",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_103_virgo_collaboration",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_104_quantum_protocol",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_105_quantum_trajectory",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_106_entangled_sensors",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_107_ultracold_atoms",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_108_projective_measurement",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_109_orthogonal_outputs",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_110_classical_protocol",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_111_quantum_path",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_112_estimation_protocols",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_113_discrete_ts",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_114_success_probability",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_115_density_matrix",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_116_quantum_sensing",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_117_tolerant_quantum",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_118_single_shot",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_119_nbit",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_120_precisely_reveal",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_121_pinckney",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_122_rarely_interact",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_123_ali",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "paper_1",
+      "target": "topic_124_filtering_charged",
+      "type": "contains_topic",
+      "weight": 1.0
+    },
+    {
+      "source": "topic_0_restricted_boltzmann",
+      "target": "topic_49_boltzmann",
+      "type": "similar_topic",
+      "weight": 0.7527384161949158
+    },
+    {
+      "source": "topic_0_restricted_boltzmann",
+      "target": "topic_57_renormalization_algorithms",
+      "type": "similar_topic",
+      "weight": 0.4312696158885956
+    },
+    {
+      "source": "topic_1_learning_architectures",
+      "target": "topic_15_convolutional_architectures",
+      "type": "similar_topic",
+      "weight": 0.5621379017829895
+    },
+    {
+      "source": "topic_1_learning_architectures",
+      "target": "topic_25_recurrent_network",
+      "type": "similar_topic",
+      "weight": 0.43501177430152893
+    },
+    {
+      "source": "topic_1_learning_architectures",
+      "target": "topic_28_term_memory",
+      "type": "similar_topic",
+      "weight": 0.4644787907600403
+    },
+    {
+      "source": "topic_1_learning_architectures",
+      "target": "topic_35_tensor_networks",
+      "type": "similar_topic",
+      "weight": 0.4726274013519287
+    },
+    {
+      "source": "topic_2_cohen",
+      "target": "topic_4_yoav_levine",
+      "type": "similar_topic",
+      "weight": 0.5244724154472351
+    },
+    {
+      "source": "topic_2_cohen",
+      "target": "topic_39_nadav_cohen",
+      "type": "similar_topic",
+      "weight": 0.7796424627304077
+    },
+    {
+      "source": "topic_3_standard_tensor",
+      "target": "topic_14_corresponding_tensor",
+      "type": "similar_topic",
+      "weight": 0.7380673885345459
+    },
+    {
+      "source": "topic_3_standard_tensor",
+      "target": "topic_35_tensor_networks",
+      "type": "similar_topic",
+      "weight": 0.4757738709449768
+    },
+    {
+      "source": "topic_3_standard_tensor",
+      "target": "topic_75_symmetric_ts",
+      "type": "similar_topic",
+      "weight": 0.41004595160484314
+    },
+    {
+      "source": "topic_4_yoav_levine",
+      "target": "topic_39_nadav_cohen",
+      "type": "similar_topic",
+      "weight": 0.6529768705368042
+    },
+    {
+      "source": "topic_5_body_wave",
+      "target": "topic_13_represented_wave",
+      "type": "similar_topic",
+      "weight": 0.5860779285430908
+    },
+    {
+      "source": "topic_7_functions",
+      "target": "topic_52_function_representations",
+      "type": "similar_topic",
+      "weight": 0.6156755089759827
+    },
+    {
+      "source": "topic_8_lconvolutional_network",
+      "target": "topic_15_convolutional_architectures",
+      "type": "similar_topic",
+      "weight": 0.5422941446304321
+    },
+    {
+      "source": "topic_8_lconvolutional_network",
+      "target": "topic_21_overlappingconvolutional_networks",
+      "type": "similar_topic",
+      "weight": 0.5666453838348389
+    },
+    {
+      "source": "topic_8_lconvolutional_network",
+      "target": "topic_25_recurrent_network",
+      "type": "similar_topic",
+      "weight": 0.49368515610694885
+    },
+    {
+      "source": "topic_8_lconvolutional_network",
+      "target": "topic_35_tensor_networks",
+      "type": "similar_topic",
+      "weight": 0.47234997153282166
+    },
+    {
+      "source": "topic_11_cac_networks",
+      "target": "topic_16_computational_nodes",
+      "type": "similar_topic",
+      "weight": 0.42753395438194275
+    },
+    {
+      "source": "topic_13_represented_wave",
+      "target": "topic_52_function_representations",
+      "type": "similar_topic",
+      "weight": 0.4050805866718292
+    },
+    {
+      "source": "topic_14_corresponding_tensor",
+      "target": "topic_35_tensor_networks",
+      "type": "similar_topic",
+      "weight": 0.4655325710773468
+    },
+    {
+      "source": "topic_15_convolutional_architectures",
+      "target": "topic_21_overlappingconvolutional_networks",
+      "type": "similar_topic",
+      "weight": 0.574996829032898
+    },
+    {
+      "source": "topic_15_convolutional_architectures",
+      "target": "topic_25_recurrent_network",
+      "type": "similar_topic",
+      "weight": 0.43356654047966003
+    },
+    {
+      "source": "topic_15_convolutional_architectures",
+      "target": "topic_35_tensor_networks",
+      "type": "similar_topic",
+      "weight": 0.5550874471664429
+    },
+    {
+      "source": "topic_18_exponential_enhancement",
+      "target": "topic_71_quantum_enhancement",
+      "type": "similar_topic",
+      "weight": 0.5035256147384644
+    },
+    {
+      "source": "topic_19_decimation_schemes",
+      "target": "topic_40_decimating_pooling",
+      "type": "similar_topic",
+      "weight": 0.42146384716033936
+    },
+    {
+      "source": "topic_20_maximal_entanglement",
+      "target": "topic_26_quantum_state",
+      "type": "similar_topic",
+      "weight": 0.4897713363170624
+    },
+    {
+      "source": "topic_20_maximal_entanglement",
+      "target": "topic_36_entanglement_scaling",
+      "type": "similar_topic",
+      "weight": 0.6341314315795898
+    },
+    {
+      "source": "topic_20_maximal_entanglement",
+      "target": "topic_51_quantum_max",
+      "type": "similar_topic",
+      "weight": 0.5207732319831848
+    },
+    {
+      "source": "topic_20_maximal_entanglement",
+      "target": "topic_62_entangled_sensor",
+      "type": "similar_topic",
+      "weight": 0.49921298027038574
+    },
+    {
+      "source": "topic_20_maximal_entanglement",
+      "target": "topic_67_entangled_states",
+      "type": "similar_topic",
+      "weight": 0.7192513346672058
+    },
+    {
+      "source": "topic_20_maximal_entanglement",
+      "target": "topic_68_superconducting_qubits",
+      "type": "similar_topic",
+      "weight": 0.4592576324939728
+    },
+    {
+      "source": "topic_20_maximal_entanglement",
+      "target": "topic_71_quantum_enhancement",
+      "type": "similar_topic",
+      "weight": 0.4219486713409424
+    },
+    {
+      "source": "topic_20_maximal_entanglement",
+      "target": "topic_94_entangled_ts",
+      "type": "similar_topic",
+      "weight": 0.5227802395820618
+    },
+    {
+      "source": "topic_20_maximal_entanglement",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.4392218291759491
+    },
+    {
+      "source": "topic_20_maximal_entanglement",
+      "target": "topic_106_entangled_sensors",
+      "type": "similar_topic",
+      "weight": 0.5104978680610657
+    },
+    {
+      "source": "topic_21_overlappingconvolutional_networks",
+      "target": "topic_35_tensor_networks",
+      "type": "similar_topic",
+      "weight": 0.5026409029960632
+    },
+    {
+      "source": "topic_23_size_kdindspatial",
+      "target": "topic_45_lter_size",
+      "type": "similar_topic",
+      "weight": 0.47211533784866333
+    },
+    {
+      "source": "topic_24_tractable_access",
+      "target": "topic_56_intractability",
+      "type": "similar_topic",
+      "weight": 0.5077306628227234
+    },
+    {
+      "source": "topic_24_tractable_access",
+      "target": "topic_82_computationally_intractable",
+      "type": "similar_topic",
+      "weight": 0.511285126209259
+    },
+    {
+      "source": "topic_25_recurrent_network",
+      "target": "topic_28_term_memory",
+      "type": "similar_topic",
+      "weight": 0.564518928527832
+    },
+    {
+      "source": "topic_25_recurrent_network",
+      "target": "topic_35_tensor_networks",
+      "type": "similar_topic",
+      "weight": 0.5102596879005432
+    },
+    {
+      "source": "topic_25_recurrent_network",
+      "target": "topic_50_conventional_rnns",
+      "type": "similar_topic",
+      "weight": 0.5862860679626465
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_34_hidden_state",
+      "type": "similar_topic",
+      "weight": 0.5468239188194275
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_51_quantum_max",
+      "type": "similar_topic",
+      "weight": 0.5306863784790039
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_54_spin_systems",
+      "type": "similar_topic",
+      "weight": 0.41035112738609314
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_66_quantum_sensor",
+      "type": "similar_topic",
+      "weight": 0.4763030409812927
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_67_entangled_states",
+      "type": "similar_topic",
+      "weight": 0.6678109765052795
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_68_superconducting_qubits",
+      "type": "similar_topic",
+      "weight": 0.4189765155315399
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_71_quantum_enhancement",
+      "type": "similar_topic",
+      "weight": 0.5030180215835571
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_78_state_exists",
+      "type": "similar_topic",
+      "weight": 0.58533775806427
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_79_eigenbasis_states",
+      "type": "similar_topic",
+      "weight": 0.5563810467720032
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_93_quantum_error",
+      "type": "similar_topic",
+      "weight": 0.5423048138618469
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_95_state_density",
+      "type": "similar_topic",
+      "weight": 0.5985348224639893
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_97_logical_qubit",
+      "type": "similar_topic",
+      "weight": 0.5606130361557007
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.5619792938232422
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_105_quantum_trajectory",
+      "type": "similar_topic",
+      "weight": 0.5522336363792419
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.601751446723938
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.5143557786941528
+    },
+    {
+      "source": "topic_26_quantum_state",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.48716214299201965
+    },
+    {
+      "source": "topic_27_basis_inputs",
+      "target": "topic_53_matrix_embedding",
+      "type": "similar_topic",
+      "weight": 0.4283021092414856
+    },
+    {
+      "source": "topic_27_basis_inputs",
+      "target": "topic_109_orthogonal_outputs",
+      "type": "similar_topic",
+      "weight": 0.4720972776412964
+    },
+    {
+      "source": "topic_28_term_memory",
+      "target": "topic_35_tensor_networks",
+      "type": "similar_topic",
+      "weight": 0.404694139957428
+    },
+    {
+      "source": "topic_28_term_memory",
+      "target": "topic_38_memory",
+      "type": "similar_topic",
+      "weight": 0.6263916492462158
+    },
+    {
+      "source": "topic_31_weights_matrices",
+      "target": "topic_53_matrix_embedding",
+      "type": "similar_topic",
+      "weight": 0.4348400831222534
+    },
+    {
+      "source": "topic_31_weights_matrices",
+      "target": "topic_115_density_matrix",
+      "type": "similar_topic",
+      "weight": 0.49292418360710144
+    },
+    {
+      "source": "topic_34_hidden_state",
+      "target": "topic_67_entangled_states",
+      "type": "similar_topic",
+      "weight": 0.4599158763885498
+    },
+    {
+      "source": "topic_34_hidden_state",
+      "target": "topic_78_state_exists",
+      "type": "similar_topic",
+      "weight": 0.5708231925964355
+    },
+    {
+      "source": "topic_34_hidden_state",
+      "target": "topic_95_state_density",
+      "type": "similar_topic",
+      "weight": 0.41074705123901367
+    },
+    {
+      "source": "topic_34_hidden_state",
+      "target": "topic_120_precisely_reveal",
+      "type": "similar_topic",
+      "weight": 0.4250841438770294
+    },
+    {
+      "source": "topic_35_tensor_networks",
+      "target": "topic_53_matrix_embedding",
+      "type": "similar_topic",
+      "weight": 0.48604798316955566
+    },
+    {
+      "source": "topic_36_entanglement_scaling",
+      "target": "topic_62_entangled_sensor",
+      "type": "similar_topic",
+      "weight": 0.43817222118377686
+    },
+    {
+      "source": "topic_36_entanglement_scaling",
+      "target": "topic_67_entangled_states",
+      "type": "similar_topic",
+      "weight": 0.6111160516738892
+    },
+    {
+      "source": "topic_36_entanglement_scaling",
+      "target": "topic_93_quantum_error",
+      "type": "similar_topic",
+      "weight": 0.4019993841648102
+    },
+    {
+      "source": "topic_36_entanglement_scaling",
+      "target": "topic_94_entangled_ts",
+      "type": "similar_topic",
+      "weight": 0.5084242224693298
+    },
+    {
+      "source": "topic_36_entanglement_scaling",
+      "target": "topic_106_entangled_sensors",
+      "type": "similar_topic",
+      "weight": 0.4450702369213104
+    },
+    {
+      "source": "topic_40_decimating_pooling",
+      "target": "topic_44_poolingph",
+      "type": "similar_topic",
+      "weight": 0.6152382493019104
+    },
+    {
+      "source": "topic_44_poolingph",
+      "target": "topic_47_layerh",
+      "type": "similar_topic",
+      "weight": 0.4556599259376526
+    },
+    {
+      "source": "topic_51_quantum_max",
+      "target": "topic_66_quantum_sensor",
+      "type": "similar_topic",
+      "weight": 0.46439579129219055
+    },
+    {
+      "source": "topic_51_quantum_max",
+      "target": "topic_68_superconducting_qubits",
+      "type": "similar_topic",
+      "weight": 0.48245155811309814
+    },
+    {
+      "source": "topic_51_quantum_max",
+      "target": "topic_71_quantum_enhancement",
+      "type": "similar_topic",
+      "weight": 0.5253372192382812
+    },
+    {
+      "source": "topic_51_quantum_max",
+      "target": "topic_93_quantum_error",
+      "type": "similar_topic",
+      "weight": 0.5297735333442688
+    },
+    {
+      "source": "topic_51_quantum_max",
+      "target": "topic_97_logical_qubit",
+      "type": "similar_topic",
+      "weight": 0.46054738759994507
+    },
+    {
+      "source": "topic_51_quantum_max",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.5469452738761902
+    },
+    {
+      "source": "topic_51_quantum_max",
+      "target": "topic_105_quantum_trajectory",
+      "type": "similar_topic",
+      "weight": 0.4963950216770172
+    },
+    {
+      "source": "topic_51_quantum_max",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.5113774538040161
+    },
+    {
+      "source": "topic_51_quantum_max",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.4243534803390503
+    },
+    {
+      "source": "topic_51_quantum_max",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.569327175617218
+    },
+    {
+      "source": "topic_54_spin_systems",
+      "target": "topic_67_entangled_states",
+      "type": "similar_topic",
+      "weight": 0.42933470010757446
+    },
+    {
+      "source": "topic_54_spin_systems",
+      "target": "topic_79_eigenbasis_states",
+      "type": "similar_topic",
+      "weight": 0.4071703553199768
+    },
+    {
+      "source": "topic_56_intractability",
+      "target": "topic_82_computationally_intractable",
+      "type": "similar_topic",
+      "weight": 0.5715730786323547
+    },
+    {
+      "source": "topic_62_entangled_sensor",
+      "target": "topic_66_quantum_sensor",
+      "type": "similar_topic",
+      "weight": 0.6749274134635925
+    },
+    {
+      "source": "topic_62_entangled_sensor",
+      "target": "topic_67_entangled_states",
+      "type": "similar_topic",
+      "weight": 0.6474199295043945
+    },
+    {
+      "source": "topic_62_entangled_sensor",
+      "target": "topic_88_sensor_qubits",
+      "type": "similar_topic",
+      "weight": 0.5530242919921875
+    },
+    {
+      "source": "topic_62_entangled_sensor",
+      "target": "topic_91_trajectory_sensing",
+      "type": "similar_topic",
+      "weight": 0.46637189388275146
+    },
+    {
+      "source": "topic_62_entangled_sensor",
+      "target": "topic_94_entangled_ts",
+      "type": "similar_topic",
+      "weight": 0.5187844038009644
+    },
+    {
+      "source": "topic_62_entangled_sensor",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.470381498336792
+    },
+    {
+      "source": "topic_62_entangled_sensor",
+      "target": "topic_106_entangled_sensors",
+      "type": "similar_topic",
+      "weight": 0.9661962985992432
+    },
+    {
+      "source": "topic_62_entangled_sensor",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.6368921399116516
+    },
+    {
+      "source": "topic_64_shot_trajectory",
+      "target": "topic_70_particle_trajectories",
+      "type": "similar_topic",
+      "weight": 0.4179319739341736
+    },
+    {
+      "source": "topic_64_shot_trajectory",
+      "target": "topic_76_discrete_trajectory",
+      "type": "similar_topic",
+      "weight": 0.5056827664375305
+    },
+    {
+      "source": "topic_64_shot_trajectory",
+      "target": "topic_89_shot_failure",
+      "type": "similar_topic",
+      "weight": 0.5397072434425354
+    },
+    {
+      "source": "topic_64_shot_trajectory",
+      "target": "topic_91_trajectory_sensing",
+      "type": "similar_topic",
+      "weight": 0.40661272406578064
+    },
+    {
+      "source": "topic_64_shot_trajectory",
+      "target": "topic_118_single_shot",
+      "type": "similar_topic",
+      "weight": 0.4908521771430969
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_68_superconducting_qubits",
+      "type": "similar_topic",
+      "weight": 0.44917845726013184
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_69_projective_measurements",
+      "type": "similar_topic",
+      "weight": 0.4175400137901306
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_71_quantum_enhancement",
+      "type": "similar_topic",
+      "weight": 0.5753371715545654
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_88_sensor_qubits",
+      "type": "similar_topic",
+      "weight": 0.713961660861969
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_91_trajectory_sensing",
+      "type": "similar_topic",
+      "weight": 0.42296525835990906
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_93_quantum_error",
+      "type": "similar_topic",
+      "weight": 0.5431742072105408
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_97_logical_qubit",
+      "type": "similar_topic",
+      "weight": 0.4700283110141754
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_100_nature_photonics",
+      "type": "similar_topic",
+      "weight": 0.4028044641017914
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.5748388171195984
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_105_quantum_trajectory",
+      "type": "similar_topic",
+      "weight": 0.4603489637374878
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_106_entangled_sensors",
+      "type": "similar_topic",
+      "weight": 0.6302337050437927
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_108_projective_measurement",
+      "type": "similar_topic",
+      "weight": 0.4341239929199219
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.4309808611869812
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.8773230910301208
+    },
+    {
+      "source": "topic_66_quantum_sensor",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.5058992505073547
+    },
+    {
+      "source": "topic_67_entangled_states",
+      "target": "topic_68_superconducting_qubits",
+      "type": "similar_topic",
+      "weight": 0.4057875871658325
+    },
+    {
+      "source": "topic_67_entangled_states",
+      "target": "topic_71_quantum_enhancement",
+      "type": "similar_topic",
+      "weight": 0.41102808713912964
+    },
+    {
+      "source": "topic_67_entangled_states",
+      "target": "topic_78_state_exists",
+      "type": "similar_topic",
+      "weight": 0.4034000039100647
+    },
+    {
+      "source": "topic_67_entangled_states",
+      "target": "topic_79_eigenbasis_states",
+      "type": "similar_topic",
+      "weight": 0.47383707761764526
+    },
+    {
+      "source": "topic_67_entangled_states",
+      "target": "topic_93_quantum_error",
+      "type": "similar_topic",
+      "weight": 0.41049090027809143
+    },
+    {
+      "source": "topic_67_entangled_states",
+      "target": "topic_94_entangled_ts",
+      "type": "similar_topic",
+      "weight": 0.6538608074188232
+    },
+    {
+      "source": "topic_67_entangled_states",
+      "target": "topic_95_state_density",
+      "type": "similar_topic",
+      "weight": 0.420043408870697
+    },
+    {
+      "source": "topic_67_entangled_states",
+      "target": "topic_97_logical_qubit",
+      "type": "similar_topic",
+      "weight": 0.40060627460479736
+    },
+    {
+      "source": "topic_67_entangled_states",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.5010972023010254
+    },
+    {
+      "source": "topic_67_entangled_states",
+      "target": "topic_106_entangled_sensors",
+      "type": "similar_topic",
+      "weight": 0.659796416759491
+    },
+    {
+      "source": "topic_67_entangled_states",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.44647425413131714
+    },
+    {
+      "source": "topic_68_superconducting_qubits",
+      "target": "topic_71_quantum_enhancement",
+      "type": "similar_topic",
+      "weight": 0.44181811809539795
+    },
+    {
+      "source": "topic_68_superconducting_qubits",
+      "target": "topic_88_sensor_qubits",
+      "type": "similar_topic",
+      "weight": 0.6302017569541931
+    },
+    {
+      "source": "topic_68_superconducting_qubits",
+      "target": "topic_93_quantum_error",
+      "type": "similar_topic",
+      "weight": 0.41319093108177185
+    },
+    {
+      "source": "topic_68_superconducting_qubits",
+      "target": "topic_97_logical_qubit",
+      "type": "similar_topic",
+      "weight": 0.4987736940383911
+    },
+    {
+      "source": "topic_68_superconducting_qubits",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.4392338991165161
+    },
+    {
+      "source": "topic_68_superconducting_qubits",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.4477815628051758
+    },
+    {
+      "source": "topic_68_superconducting_qubits",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.4403725862503052
+    },
+    {
+      "source": "topic_69_projective_measurements",
+      "target": "topic_108_projective_measurement",
+      "type": "similar_topic",
+      "weight": 0.9719578623771667
+    },
+    {
+      "source": "topic_69_projective_measurements",
+      "target": "topic_112_estimation_protocols",
+      "type": "similar_topic",
+      "weight": 0.4153496325016022
+    },
+    {
+      "source": "topic_69_projective_measurements",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.4557289779186249
+    },
+    {
+      "source": "topic_70_particle_trajectories",
+      "target": "topic_76_discrete_trajectory",
+      "type": "similar_topic",
+      "weight": 0.6303102374076843
+    },
+    {
+      "source": "topic_70_particle_trajectories",
+      "target": "topic_80_neutrino_paths",
+      "type": "similar_topic",
+      "weight": 0.46865788102149963
+    },
+    {
+      "source": "topic_70_particle_trajectories",
+      "target": "topic_91_trajectory_sensing",
+      "type": "similar_topic",
+      "weight": 0.46928316354751587
+    },
+    {
+      "source": "topic_70_particle_trajectories",
+      "target": "topic_96_beam_paths",
+      "type": "similar_topic",
+      "weight": 0.421115905046463
+    },
+    {
+      "source": "topic_70_particle_trajectories",
+      "target": "topic_105_quantum_trajectory",
+      "type": "similar_topic",
+      "weight": 0.6726493239402771
+    },
+    {
+      "source": "topic_70_particle_trajectories",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.4829182028770447
+    },
+    {
+      "source": "topic_71_quantum_enhancement",
+      "target": "topic_88_sensor_qubits",
+      "type": "similar_topic",
+      "weight": 0.4478074908256531
+    },
+    {
+      "source": "topic_71_quantum_enhancement",
+      "target": "topic_93_quantum_error",
+      "type": "similar_topic",
+      "weight": 0.5513797402381897
+    },
+    {
+      "source": "topic_71_quantum_enhancement",
+      "target": "topic_100_nature_photonics",
+      "type": "similar_topic",
+      "weight": 0.4830913245677948
+    },
+    {
+      "source": "topic_71_quantum_enhancement",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.5303269624710083
+    },
+    {
+      "source": "topic_71_quantum_enhancement",
+      "target": "topic_105_quantum_trajectory",
+      "type": "similar_topic",
+      "weight": 0.4607492685317993
+    },
+    {
+      "source": "topic_71_quantum_enhancement",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.4755961000919342
+    },
+    {
+      "source": "topic_71_quantum_enhancement",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.6239501237869263
+    },
+    {
+      "source": "topic_71_quantum_enhancement",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.5421417951583862
+    },
+    {
+      "source": "topic_72_profile_laser",
+      "target": "topic_96_beam_paths",
+      "type": "similar_topic",
+      "weight": 0.45539358258247375
+    },
+    {
+      "source": "topic_73_beam_limit",
+      "target": "topic_96_beam_paths",
+      "type": "similar_topic",
+      "weight": 0.5916222333908081
+    },
+    {
+      "source": "topic_74_nonzero_probability",
+      "target": "topic_114_success_probability",
+      "type": "similar_topic",
+      "weight": 0.5106212496757507
+    },
+    {
+      "source": "topic_75_symmetric_ts",
+      "target": "topic_81_cyclic_ts",
+      "type": "similar_topic",
+      "weight": 0.5737031102180481
+    },
+    {
+      "source": "topic_75_symmetric_ts",
+      "target": "topic_94_entangled_ts",
+      "type": "similar_topic",
+      "weight": 0.4784448444843292
+    },
+    {
+      "source": "topic_75_symmetric_ts",
+      "target": "topic_98_tsymandtcycmay_include",
+      "type": "similar_topic",
+      "weight": 0.4153584837913513
+    },
+    {
+      "source": "topic_75_symmetric_ts",
+      "target": "topic_113_discrete_ts",
+      "type": "similar_topic",
+      "weight": 0.5798388719558716
+    },
+    {
+      "source": "topic_76_discrete_trajectory",
+      "target": "topic_91_trajectory_sensing",
+      "type": "similar_topic",
+      "weight": 0.4976229667663574
+    },
+    {
+      "source": "topic_76_discrete_trajectory",
+      "target": "topic_105_quantum_trajectory",
+      "type": "similar_topic",
+      "weight": 0.5702728629112244
+    },
+    {
+      "source": "topic_76_discrete_trajectory",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.40245482325553894
+    },
+    {
+      "source": "topic_76_discrete_trajectory",
+      "target": "topic_113_discrete_ts",
+      "type": "similar_topic",
+      "weight": 0.4167916476726532
+    },
+    {
+      "source": "topic_77_orthogonality_conditions",
+      "target": "topic_109_orthogonal_outputs",
+      "type": "similar_topic",
+      "weight": 0.5949733853340149
+    },
+    {
+      "source": "topic_78_state_exists",
+      "target": "topic_79_eigenbasis_states",
+      "type": "similar_topic",
+      "weight": 0.4284300208091736
+    },
+    {
+      "source": "topic_78_state_exists",
+      "target": "topic_86_state_requires",
+      "type": "similar_topic",
+      "weight": 0.4965965747833252
+    },
+    {
+      "source": "topic_78_state_exists",
+      "target": "topic_95_state_density",
+      "type": "similar_topic",
+      "weight": 0.5538383722305298
+    },
+    {
+      "source": "topic_79_eigenbasis_states",
+      "target": "topic_95_state_density",
+      "type": "similar_topic",
+      "weight": 0.4511139988899231
+    },
+    {
+      "source": "topic_80_neutrino_paths",
+      "target": "topic_96_beam_paths",
+      "type": "similar_topic",
+      "weight": 0.46328213810920715
+    },
+    {
+      "source": "topic_80_neutrino_paths",
+      "target": "topic_105_quantum_trajectory",
+      "type": "similar_topic",
+      "weight": 0.4561237692832947
+    },
+    {
+      "source": "topic_80_neutrino_paths",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.5845413208007812
+    },
+    {
+      "source": "topic_81_cyclic_ts",
+      "target": "topic_98_tsymandtcycmay_include",
+      "type": "similar_topic",
+      "weight": 0.4200446307659149
+    },
+    {
+      "source": "topic_81_cyclic_ts",
+      "target": "topic_113_discrete_ts",
+      "type": "similar_topic",
+      "weight": 0.5340185165405273
+    },
+    {
+      "source": "topic_83_θthere_exists",
+      "target": "topic_85_minimum_θneeded",
+      "type": "similar_topic",
+      "weight": 0.43112683296203613
+    },
+    {
+      "source": "topic_87_protocol_succeeds",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.5301907658576965
+    },
+    {
+      "source": "topic_87_protocol_succeeds",
+      "target": "topic_110_classical_protocol",
+      "type": "similar_topic",
+      "weight": 0.6528360843658447
+    },
+    {
+      "source": "topic_88_sensor_qubits",
+      "target": "topic_93_quantum_error",
+      "type": "similar_topic",
+      "weight": 0.45836135745048523
+    },
+    {
+      "source": "topic_88_sensor_qubits",
+      "target": "topic_97_logical_qubit",
+      "type": "similar_topic",
+      "weight": 0.6450563073158264
+    },
+    {
+      "source": "topic_88_sensor_qubits",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.4332857131958008
+    },
+    {
+      "source": "topic_88_sensor_qubits",
+      "target": "topic_106_entangled_sensors",
+      "type": "similar_topic",
+      "weight": 0.5849406719207764
+    },
+    {
+      "source": "topic_88_sensor_qubits",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.6633332371711731
+    },
+    {
+      "source": "topic_88_sensor_qubits",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.47555768489837646
+    },
+    {
+      "source": "topic_88_sensor_qubits",
+      "target": "topic_119_nbit",
+      "type": "similar_topic",
+      "weight": 0.4062756597995758
+    },
+    {
+      "source": "topic_89_shot_failure",
+      "target": "topic_118_single_shot",
+      "type": "similar_topic",
+      "weight": 0.5396590828895569
+    },
+    {
+      "source": "topic_91_trajectory_sensing",
+      "target": "topic_105_quantum_trajectory",
+      "type": "similar_topic",
+      "weight": 0.4369550943374634
+    },
+    {
+      "source": "topic_91_trajectory_sensing",
+      "target": "topic_106_entangled_sensors",
+      "type": "similar_topic",
+      "weight": 0.46187713742256165
+    },
+    {
+      "source": "topic_91_trajectory_sensing",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.46095728874206543
+    },
+    {
+      "source": "topic_93_quantum_error",
+      "target": "topic_97_logical_qubit",
+      "type": "similar_topic",
+      "weight": 0.4662379026412964
+    },
+    {
+      "source": "topic_93_quantum_error",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.5973648428916931
+    },
+    {
+      "source": "topic_93_quantum_error",
+      "target": "topic_105_quantum_trajectory",
+      "type": "similar_topic",
+      "weight": 0.6023209691047668
+    },
+    {
+      "source": "topic_93_quantum_error",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.523029625415802
+    },
+    {
+      "source": "topic_93_quantum_error",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.5362260937690735
+    },
+    {
+      "source": "topic_93_quantum_error",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.6142565608024597
+    },
+    {
+      "source": "topic_94_entangled_ts",
+      "target": "topic_106_entangled_sensors",
+      "type": "similar_topic",
+      "weight": 0.5295023322105408
+    },
+    {
+      "source": "topic_94_entangled_ts",
+      "target": "topic_113_discrete_ts",
+      "type": "similar_topic",
+      "weight": 0.5190675854682922
+    },
+    {
+      "source": "topic_95_state_density",
+      "target": "topic_115_density_matrix",
+      "type": "similar_topic",
+      "weight": 0.6459755301475525
+    },
+    {
+      "source": "topic_96_beam_paths",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.45891058444976807
+    },
+    {
+      "source": "topic_97_logical_qubit",
+      "target": "topic_104_quantum_protocol",
+      "type": "similar_topic",
+      "weight": 0.4708094298839569
+    },
+    {
+      "source": "topic_97_logical_qubit",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.4606294333934784
+    },
+    {
+      "source": "topic_97_logical_qubit",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.4348942041397095
+    },
+    {
+      "source": "topic_97_logical_qubit",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.5133959650993347
+    },
+    {
+      "source": "topic_97_logical_qubit",
+      "target": "topic_119_nbit",
+      "type": "similar_topic",
+      "weight": 0.44260546565055847
+    },
+    {
+      "source": "topic_98_tsymandtcycmay_include",
+      "target": "topic_113_discrete_ts",
+      "type": "similar_topic",
+      "weight": 0.40300726890563965
+    },
+    {
+      "source": "topic_101_geophysical_research",
+      "target": "topic_102_solid_earth",
+      "type": "similar_topic",
+      "weight": 0.4043566584587097
+    },
+    {
+      "source": "topic_104_quantum_protocol",
+      "target": "topic_105_quantum_trajectory",
+      "type": "similar_topic",
+      "weight": 0.5542899966239929
+    },
+    {
+      "source": "topic_104_quantum_protocol",
+      "target": "topic_106_entangled_sensors",
+      "type": "similar_topic",
+      "weight": 0.45965901017189026
+    },
+    {
+      "source": "topic_104_quantum_protocol",
+      "target": "topic_110_classical_protocol",
+      "type": "similar_topic",
+      "weight": 0.6680037379264832
+    },
+    {
+      "source": "topic_104_quantum_protocol",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.5703901052474976
+    },
+    {
+      "source": "topic_104_quantum_protocol",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.5880857706069946
+    },
+    {
+      "source": "topic_104_quantum_protocol",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.579571545124054
+    },
+    {
+      "source": "topic_105_quantum_trajectory",
+      "target": "topic_111_quantum_path",
+      "type": "similar_topic",
+      "weight": 0.7958930730819702
+    },
+    {
+      "source": "topic_105_quantum_trajectory",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.43170496821403503
+    },
+    {
+      "source": "topic_105_quantum_trajectory",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.47553423047065735
+    },
+    {
+      "source": "topic_106_entangled_sensors",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.6239029765129089
+    },
+    {
+      "source": "topic_108_projective_measurement",
+      "target": "topic_112_estimation_protocols",
+      "type": "similar_topic",
+      "weight": 0.40271270275115967
+    },
+    {
+      "source": "topic_108_projective_measurement",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.47342467308044434
+    },
+    {
+      "source": "topic_111_quantum_path",
+      "target": "topic_116_quantum_sensing",
+      "type": "similar_topic",
+      "weight": 0.41328686475753784
+    },
+    {
+      "source": "topic_111_quantum_path",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.5190339684486389
+    },
+    {
+      "source": "topic_116_quantum_sensing",
+      "target": "topic_117_tolerant_quantum",
+      "type": "similar_topic",
+      "weight": 0.48806992173194885
+    }
+  ],
+  "metadata": {
+    "papers_count": 2,
+    "topics_count": 125,
+    "edges_count": 346,
+    "paper_topic_edges": 125,
+    "topic_topic_edges": 221,
+    "paper_paper_edges": 0
+  }
+}

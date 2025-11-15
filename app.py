@@ -1,4 +1,5 @@
 from fastapi import FastAPI, UploadFile, File
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
@@ -13,6 +14,7 @@ from session_manager import load_sessions, save_sessions, list_sessions, get_ses
 from summarizer import summarize_all_pdfs, SUMMARY_DIR
 from rag_setup import index_pdfs
 from mcp_client import initialize_mcp_client, get_mcp_client
+from research_graph import build_research_graph, get_research_graph
 
 # Agentic architecture imports
 from agentic_core import CentralAgent, PlanningMode
@@ -27,17 +29,13 @@ generator = Generator()
 async def lifespan(app: FastAPI):
     """Handle application lifespan events."""
     # Startup
-    print("🤖 Agentic RAG System Initialized")
-    print("   - Central Agent with Memory & Planning")
-    print("   - Local Data Agent (RAG + MCP)")
-    print("   - Search Engine Agent (Web Search + MCP)")
-    print("   - Generation Component")
+    print("Application start")
     yield
     # Shutdown (cleanup if needed)
     pass
 
 app = FastAPI(
-    title="Agentic STEM Tutor — Math & Physics (RAG with MCP)",
+    title="Agentic STEM Expert — Math & Physics (RAG with MCP)",
     lifespan=lifespan
 )
 
@@ -101,15 +99,15 @@ async def ask(payload: AskPayload):
     if is_casual_greeting(payload.question):
         # Simple friendly response for greetings
         greeting_responses = {
-            "math": "Hello! I'm your friendly math tutor. I'm here to help you with mathematics - whether it's algebra, calculus, geometry, or any other math topic. What would you like to learn today?",
-            "physics": "Hello! I'm your friendly physics tutor. I'm here to help you understand physics concepts - from mechanics and thermodynamics to electromagnetism and quantum physics. What would you like to explore?"
+            "math": "Hello! I'm your friendly math expert. I'm here to help you with mathematics - whether it's algebra, calculus, geometry, or any other math topic. What would you like to learn today?",
+            "physics": "Hello! I'm your friendly physics expert. I'm here to help you understand physics concepts - from mechanics and thermodynamics to electromagnetism and quantum physics. What would you like to explore?"
         }
         answer = greeting_responses.get(payload.mode, greeting_responses["math"])
         
         # Update session store
         if session_id not in session_store:
             system_prompt = (
-                f"You are a friendly and highly knowledgeable {payload.mode} tutor. "
+                f"You are a friendly and highly knowledgeable {payload.mode} expert. "
                 "You use an agentic system with memory, planning, and specialized agents."
             )
             session_store[session_id] = [{"role": "system", "content": system_prompt}]
@@ -122,7 +120,7 @@ async def ask(payload: AskPayload):
             "session_id": session_id,
             "mode": payload.mode,
             "question": payload.question,
-            "tutor_reply": answer,
+            "expert_reply": answer,
             "agentic_metadata": {
                 "casual_greeting": True,
                 "agents_skipped": True
@@ -279,7 +277,7 @@ def ask_doc(payload: AskDocPayload):
 
     context = "\n\n".join(results["documents"][0])
     prompt = (
-        f"You are a tutor who must answer only using '{payload.pdf_name}'.\n\n"
+        f"You are an expert who must answer only using '{payload.pdf_name}'.\n\n"
         f"Relevant excerpts:\n{context}\n\n"
         f"Question: {payload.question}"
     )
@@ -422,10 +420,292 @@ async def list_all_agents():
         "orchestrator_agents": list(orchestrator.agents.keys())
     }
 
+class ResearchQuery(BaseModel):
+    query: str
+    max_results: Optional[int] = Field(default=20, ge=1, le=100)
+    category: Optional[str] = Field(default=None)  # e.g., "math", "physics", "cs", etc.
+
+class BuildGraphRequest(BaseModel):
+    pdf_files: Optional[List[str]] = None
+
+@app.post("/research")
+async def fetch_research_papers(payload: ResearchQuery):
+    """
+    Fetch research papers from arXiv API based on query.
+    Returns papers with titles, authors, abstracts, and links.
+    Note: arXiv API uses HTTP (not HTTPS) and has rate limits.
+    """
+    try:
+        query = payload.query
+        max_results = payload.max_results
+        category = payload.category
+        
+        # Build arXiv API query
+        # arXiv API documentation: https://arxiv.org/help/api/user-manual
+        # IMPORTANT: arXiv API uses HTTP, not HTTPS
+        base_url = "http://export.arxiv.org/api/query"
+        
+        # Map category to arXiv categories
+        category_map = {
+            "math": "math",
+            "physics": "physics",
+            "cs": "cs",
+            "quantum": "quant-ph",
+            "ai": "cs.AI",
+            "ml": "cs.LG"
+        }
+        
+        # Build search query - use proper arXiv search syntax
+        # For text search, use all: prefix or ti: for title, au: for author, etc.
+        search_query = f"all:{query}"
+        if category and category.lower() in category_map:
+            search_query = f"cat:{category_map[category.lower()]} AND all:{query}"
+        
+        params = {
+            "search_query": search_query,
+            "start": 0,
+            "max_results": max_results,
+            "sortBy": "submittedDate",
+            "sortOrder": "descending"
+        }
+        
+        # Add headers to identify the client (arXiv API best practice)
+        headers = {
+            "User-Agent": "STEM-Expert-Research/1.0 (contact: your-email@example.com)"
+        }
+        
+        response = requests.get(base_url, params=params, headers=headers, timeout=HTTP_TIMEOUT)
+        
+        # Handle rate limiting
+        if response.status_code == 429:
+            return {
+                "error": "Rate limit exceeded. Please wait a moment and try again. arXiv API allows 1 request per 3 seconds.",
+                "papers": []
+            }
+        
+        response.raise_for_status()
+        
+        # Parse XML response
+        import xml.etree.ElementTree as ET
+        root = ET.fromstring(response.content)
+        
+        # Namespace for arXiv XML
+        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        
+        papers = []
+        for entry in root.findall('atom:entry', ns):
+            paper = {
+                "id": entry.find('atom:id', ns).text if entry.find('atom:id', ns) is not None else "",
+                "title": entry.find('atom:title', ns).text.strip() if entry.find('atom:title', ns) is not None else "No title",
+                "summary": entry.find('atom:summary', ns).text.strip() if entry.find('atom:summary', ns) is not None else "No abstract",
+                "published": entry.find('atom:published', ns).text if entry.find('atom:published', ns) is not None else "",
+                "updated": entry.find('atom:updated', ns).text if entry.find('atom:updated', ns) is not None else "",
+                "authors": [author.find('atom:name', ns).text for author in entry.findall('atom:author', ns) if author.find('atom:name', ns) is not None],
+                "link": entry.find('atom:id', ns).text if entry.find('atom:id', ns) is not None else "",
+                "pdf_link": ""
+            }
+            
+            # Get PDF link
+            for link in entry.findall('atom:link', ns):
+                if link.get('type') == 'application/pdf':
+                    paper["pdf_link"] = link.get('href', '')
+                    break
+            
+            # If no PDF link found, construct it from ID
+            if not paper["pdf_link"] and paper["id"]:
+                arxiv_id = paper["id"].split('/')[-1]
+                paper["pdf_link"] = f"https://arxiv.org/pdf/{arxiv_id}.pdf"
+            
+            papers.append(paper)
+        
+        return {
+            "papers": papers,
+            "total": len(papers),
+            "query": query,
+            "category": category
+        }
+        
+    except requests.exceptions.Timeout:
+        return {"error": "Request timed out. Please try again with a simpler query.", "papers": []}
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 429:
+            return {"error": "Rate limit exceeded. Please wait a few seconds and try again.", "papers": []}
+        return {"error": f"HTTP error: {str(e)}", "papers": []}
+    except requests.exceptions.RequestException as e:
+        return {"error": f"Failed to fetch research papers: {str(e)}", "papers": []}
+    except Exception as e:
+        return {"error": f"Error processing research papers: {str(e)}", "papers": []}
+
+@app.get("/research-graph/pdfs")
+async def list_pdfs():
+    """List all available PDF files in the data directory."""
+    import os
+    pdf_dir = "data/"
+    if not os.path.exists(pdf_dir):
+        return {"pdfs": []}
+    
+    pdf_files = [f for f in os.listdir(pdf_dir) if f.lower().endswith(".pdf")]
+    return {"pdfs": pdf_files}
+
+@app.post("/research-graph/build")
+async def build_graph(request: BuildGraphRequest = BuildGraphRequest()):
+    """
+    Build a knowledge graph from selected research papers.
+    If pdf_files is None or empty, uses all PDFs in data folder.
+    Creates nodes for papers and topics, and edges showing relationships.
+    Saves graph with filename based on paper names separated by '_'.
+    """
+    try:
+        from research_graph import build_research_graph
+        import os
+        import re
+        
+        pdf_dir = "data/"
+        
+        pdf_files = request.pdf_files if request else None
+        
+        # Generate filename from paper names
+        def generate_graph_filename(pdf_list):
+            """Generate filename from PDF names, removing .pdf extension and joining with '_'"""
+            if not pdf_list:
+                return "all_papers"
+            # Remove .pdf extension and sanitize filenames
+            clean_names = []
+            for pdf in pdf_list:
+                name = pdf.replace('.pdf', '').replace('.PDF', '')
+                # Remove invalid filename characters
+                name = re.sub(r'[<>:"/\\|?*]', '_', name)
+                clean_names.append(name)
+            return '_'.join(clean_names)
+        
+        # If specific PDFs are provided, filter them
+        if pdf_files and len(pdf_files) > 0:
+            # Generate filename from selected PDFs
+            graph_filename = generate_graph_filename(pdf_files)
+            
+            # Create a temporary directory with only selected PDFs
+            import tempfile
+            import shutil
+            
+            temp_dir = tempfile.mkdtemp()
+            try:
+                for pdf_file in pdf_files:
+                    src_path = os.path.join(pdf_dir, pdf_file)
+                    if os.path.exists(src_path):
+                        shutil.copy2(src_path, os.path.join(temp_dir, pdf_file))
+                
+                graph = build_research_graph(temp_dir, graph_filename=graph_filename)
+                # Add metadata about which PDFs were used
+                if "metadata" in graph:
+                    graph["metadata"]["pdf_files_used"] = pdf_files
+                return graph
+            finally:
+                shutil.rmtree(temp_dir)
+        else:
+            # Use all PDFs
+            all_pdfs = [f for f in os.listdir(pdf_dir) if f.lower().endswith(".pdf")]
+            graph_filename = generate_graph_filename(all_pdfs)
+            graph = build_research_graph(pdf_dir, graph_filename=graph_filename)
+            if "metadata" in graph:
+                graph["metadata"]["pdf_files_used"] = all_pdfs
+            return graph
+    except Exception as e:
+        return {"error": f"Error building research graph: {str(e)}"}
+
+@app.get("/research-graph")
+async def get_graph(graph_filename: Optional[str] = None):
+    """
+    Get a research graph by filename.
+    If graph_filename is not provided, returns the default graph.
+    """
+    try:
+        from research_graph import get_research_graph
+        graph = get_research_graph(graph_filename=graph_filename)
+        return graph
+    except Exception as e:
+        return {"error": f"Error loading research graph: {str(e)}"}
+
+
+@app.delete("/research-graph/{graph_filename}")
+async def delete_graph(graph_filename: str):
+    """Delete a research graph by filename."""
+    try:
+        from research_graph import delete_research_graph
+        import urllib.parse
+        # Decode URL-encoded filename
+        decoded_filename = urllib.parse.unquote(graph_filename)
+        result = delete_research_graph(decoded_filename)
+        return result
+    except Exception as e:
+        return {"error": f"Error deleting research graph: {str(e)}"}
+
+@app.get("/research-graph/list")
+async def list_graphs():
+    """List all available research graphs with their associated papers."""
+    import os
+    import json
+    
+    graph_dir = "data/research_graphs"
+    graphs = []
+    
+    if os.path.exists(graph_dir):
+        graph_files = [f for f in os.listdir(graph_dir) if f.endswith(".json")]
+        
+        for graph_file in graph_files:
+            graph_path = os.path.join(graph_dir, graph_file)
+            try:
+                with open(graph_path, "r", encoding="utf-8") as f:
+                    graph_data = json.load(f)
+                    
+                    # Extract paper information
+                    papers = []
+                    if "nodes" in graph_data:
+                        for node in graph_data["nodes"]:
+                            if node.get("type") == "paper":
+                                papers.append({
+                                    "id": node.get("id"),
+                                    "title": node.get("title") or node.get("label"),
+                                    "filename": node.get("filename")
+                                })
+                    
+                    graphs.append({
+                        "filename": graph_file,
+                        "name": graph_file.replace(".json", ""),
+                        "papers": papers,
+                        "papers_count": len(papers),
+                        "topics_count": graph_data.get("metadata", {}).get("topics_count", 0),
+                        "edges_count": graph_data.get("metadata", {}).get("edges_count", 0),
+                        "created": os.path.getmtime(graph_path) if os.path.exists(graph_path) else None
+                    })
+            except Exception as e:
+                print(f"Error reading graph {graph_file}: {e}")
+                continue
+    
+    return {"graphs": graphs}
+
+@app.get("/research-graph/pdf/{filename}")
+async def get_pdf_file(filename: str):
+    """Serve a PDF file directly."""
+    import urllib.parse
+    
+    pdf_dir = "data/"
+    decoded_filename = urllib.parse.unquote(filename)
+    pdf_path = os.path.join(pdf_dir, decoded_filename)
+    
+    if not os.path.exists(pdf_path) or not decoded_filename.lower().endswith(".pdf"):
+        return {"error": "PDF not found"}
+    
+    return FileResponse(
+        pdf_path,
+        media_type="application/pdf",
+        filename=decoded_filename,
+        headers={"Content-Disposition": f"inline; filename={decoded_filename}"}
+    )
+
 @app.get("/")
 def root():
     return {
-        "message": "Agentic STEM Tutor — Math & Physics (RAG with MCP)",
+        "message": "Agentic STEM Expert — Math & Physics (RAG with MCP)",
         "architecture": {
             "central_agent": "Memory (Short/Long-term) + Planning (ReACT/CoT)",
             "specialized_agents": [

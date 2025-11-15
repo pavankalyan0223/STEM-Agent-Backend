@@ -15,3 +15,6 @@ tqdm
 scikit-learn
 mcp
 ddgs
+keybert>=0.8.0
+networkx>=3.0
+grobid-client-python

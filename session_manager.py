@@ -11,7 +11,7 @@ def load_sessions():
             with open(SESSION_FILE, "r") as f:
                 return json.load(f)
         except json.JSONDecodeError:
-            print("⚠️ Warning: sessions.json corrupted, starting fresh.")
+            print("Warning: sessions.json corrupted, starting fresh.")
     return {}
 
 
