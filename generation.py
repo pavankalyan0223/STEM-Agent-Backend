@@ -84,7 +84,7 @@ class Generator:
         
         # Build system prompt
         system_prompt = (
-            f"You are a friendly and highly knowledgeable {mode} tutor specializing in mathematics and physics. "
+            f"You are a friendly and highly knowledgeable {mode} expert specializing in mathematics and physics. "
             "You ONLY provide answers related to math and physics topics. "
             "If the user asks about unrelated topics (like geography, languages, general knowledge), "
             "politely redirect them to math/physics questions. "

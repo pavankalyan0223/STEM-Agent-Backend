@@ -60,6 +60,16 @@
       "score": 0.4511,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "- Reconstruction from boundary measurements for less regular conductivities Andoni García and Guo Zhang - Impact of Se and Te addition on optical characteristics of ternary GeInSb chalcogenide films as promising materials for optoelectronic applications E G El-Metwally, H E Atyia and A M Ismail - This content was downloaded from IP address 69"
+          ]
+        }
       ]
     },
     {
@@ -71,6 +81,17 @@
       "score": 0.4046,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "PAPER • OPEN ACCESS Imaging nuclear shape through anisotropic and radial flow in high-energy heavy-ion collisions To cite this article: The STAR Collaboration 2025 Rep",
+            "1088/1361-6633/ae0fc3 Imaging nuclear shape through anisotropic and radial flow in high-energy heavy-ion collisions The STAR Collaboration E-mail: star-publication@bnl"
+          ]
+        }
       ]
     },
     {
@@ -82,6 +103,16 @@
       "score": 0.3326,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "- Reconstruction from boundary measurements for less regular conductivities Andoni García and Guo Zhang - Impact of Se and Te addition on optical characteristics of ternary GeInSb chalcogenide films as promising materials for optoelectronic applications E G El-Metwally, H E Atyia and A M Ismail - This content was downloaded from IP address 69"
+          ]
+        }
       ]
     },
     {
@@ -93,6 +124,16 @@
       "score": 0.3232,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "- Reconstruction from boundary measurements for less regular conductivities Andoni García and Guo Zhang - Impact of Se and Te addition on optical characteristics of ternary GeInSb chalcogenide films as promising materials for optoelectronic applications E G El-Metwally, H E Atyia and A M Ismail - This content was downloaded from IP address 69"
+          ]
+        }
       ]
     },
     {
@@ -105,6 +146,25 @@
       "papers": [
         "paper_0",
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "PAPER • OPEN ACCESS Imaging nuclear shape through anisotropic and radial flow in high-energy heavy-ion collisions To cite this article: The STAR Collaboration 2025 Rep",
+            "1088/1361-6633/ae0fc3 Imaging nuclear shape through anisotropic and radial flow in high-energy heavy-ion collisions The STAR Collaboration E-mail: star-publication@bnl"
+          ]
+        },
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "We finally point out that relativistic heavy-ion collisions have large similarities to low-energy heavy-ion reactions in the context of nuclear shape dynamics"
+          ]
+        }
       ]
     },
     {
@@ -116,6 +176,16 @@
       "score": 0.6036,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Quantitative constraints on Uranium deformation parameters 16 5"
+          ]
+        }
       ]
     },
     {
@@ -127,6 +197,16 @@
       "score": 0.3564,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Influence of non-flow correlations 6 2"
+          ]
+        }
       ]
     },
     {
@@ -138,6 +218,16 @@
       "score": 0.3509,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Comparisons with initial-state and hydrodynamic models for vn–pTcorrelations 12 4"
+          ]
+        }
       ]
     },
     {
@@ -150,6 +240,24 @@
       "papers": [
         "paper_0",
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Introduction High-energy heavy-ion collisions, conducted at the relativistic heavy ion collider (RHIC) and the large Hadron collider (LHC), have been used to produce and study the quarkgluon plasma (QGP)"
+          ]
+        },
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "We finally point out that relativistic heavy-ion collisions have large similarities to low-energy heavy-ion reactions in the context of nuclear shape dynamics"
+          ]
+        }
       ]
     },
     {
@@ -162,6 +270,25 @@
       "papers": [
         "paper_0",
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "However, accurately describing the initial conditions requires a good understanding of both the nucleon spatial distribution within colliding nuclei and the mechanisms of energy deposition [ 14]"
+          ]
+        },
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "For instance, the ground state properties of colliding nuclei, such as the shape of the nuclei as well as their excitations, significantly affect those nuclear reaction processes [7, 8]",
+            "An optical potential is a complex potential given by, Vopt(r)=V(r)−iW(r),(1) whereris the relative coordinate between two colliding nuclei"
+          ]
+        }
       ]
     },
     {
@@ -173,6 +300,17 @@
       "score": 0.4947,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Analyzing these ratios as a function of nuclear shape also provides valuable insights into the energy deposition mechanisms [ 21]",
+            "Nuclear shape, including the dominant quadrupole component β2, and smaller axial octupole β3and axial hexadecapole β4components, can be described by a Woods–Saxon density profile, ρ(r,θ,ϕ)∝(1+exp[r−R(θ,ϕ)/a])−1, R(θ,ϕ)=R0(1+β2[cosγY2,0+sinγY2,2]+β3Y3,0+β4Y4,0), (1) where R0=1"
+          ]
+        }
       ]
     },
     {
@@ -184,6 +322,16 @@
       "score": 0.3716,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Hydrodynamic models predict approximately linear relationships: vn∝εnforn=2 and 3 (and for n=4 in central collisions) [ 12], and δpT∝δd⊥[13], where δpT= [pT]− ⟨[pT]⟩and δd⊥=d⊥− ⟨d⊥⟩represent deviations from their mean values"
+          ]
+        }
       ]
     },
     {
@@ -195,6 +343,16 @@
       "score": 0.2616,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Analyzing these ratios as a function of nuclear shape also provides valuable insights into the energy deposition mechanisms [ 21]"
+          ]
+        }
       ]
     },
     {
@@ -206,6 +364,16 @@
       "score": 0.1994,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "the compactness of the initial conditions, quantified by the inverse area d⊥of the overlap region [ 11], influences radial flow, as reflected in the event-by-event average transverse momentum ( [pT])"
+          ]
+        }
       ]
     },
     {
@@ -218,6 +386,26 @@
       "papers": [
         "paper_0",
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "MeV/nucleon beam energies [ 22–24], which probe collective nuclear shapes on timescales longer than 100 fm c−1",
+            "Furthermore, high-energy heavy-ion collisions are sensitive not only to these global nuclear shapes relevant at 2 Rep"
+          ]
+        },
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "To this end, we put emphasis on a viewpoint of probing nuclear shapes with heavy-ion reactions",
+            "We then discuss multi-channel scattering problems, and demonstrate that heavy-ion fusion reactions at energies around the Coulomb barrier are sensitive to the shape of colliding nuclei, providing a powerful tool to probe nuclear shapes"
+          ]
+        }
       ]
     },
     {
@@ -229,6 +417,16 @@
       "score": 0.4418,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "low-energy, but also to fluctuations of the nuclear wavefunction on much shorter timescales"
+          ]
+        }
       ]
     },
     {
@@ -240,6 +438,16 @@
       "score": 0.4017,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "MeV/nucleon beam energies [ 22–24], which probe collective nuclear shapes on timescales longer than 100 fm c−1"
+          ]
+        }
       ]
     },
     {
@@ -251,6 +459,16 @@
       "score": 0.3344,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Estimates based on electric quadrupole transition data and rigid rotor assumption yield β2U=0"
+          ]
+        }
       ]
     },
     {
@@ -262,6 +480,16 @@
       "score": 0.3068,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "For instance, the238U nucleus, with an even number of protons and neutrons, exhibits a rotational spectrum consistent with a prolate rigid rotor"
+          ]
+        }
       ]
     },
     {
@@ -274,6 +502,24 @@
       "papers": [
         "paper_0",
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "(3) We employ two complementary approaches to probe the initial conditions and quantify the effects of nuclear deformation"
+          ]
+        },
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Using this property, information on nuclear deformation has been succesfully extracted for several nuclei from low-energy heavy-ion fusion reactions [9]"
+          ]
+        }
       ]
     },
     {
@@ -285,6 +531,16 @@
       "score": 0.482,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "This leads to enhanced, anti-correlated eventby-event fluctuations in ε2andd⊥[32]"
+          ]
+        }
       ]
     },
     {
@@ -296,6 +552,16 @@
       "score": 0.246,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "We also measure correlators involving high-order flow coefficients:⟨ v2 3⟩ ,⟨ v2 4⟩ ,⟨ v2 3δpT⟩ and⟨ v2 4δpT⟩"
+          ]
+        }
       ]
     },
     {
@@ -308,6 +574,24 @@
       "papers": [
         "paper_0",
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Both observables are expected to be strongly modified in U+U ultra-central collisions (UCCs) for n=2, but not for n=3 and 4"
+          ]
+        },
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "for ultra-central collisions [11, 37]"
+          ]
+        }
       ]
     },
     {
@@ -320,6 +604,24 @@
       "papers": [
         "paper_0",
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "•Model comparison: we perform detailed hydrodynamic model and Glauber model calculations to extract β2Uand γU, validating the ‘imaging-by-smashing’ approach against low-energy nuclear structure data"
+          ]
+        },
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "It has been demonstrated that the barrier distribution is sensitive to nuclear structure, especially to the sign of hexadecapole deformation parameter [9, 23]"
+          ]
+        }
       ]
     },
     {
@@ -331,6 +633,16 @@
       "score": 0.4772,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Event and track selections This analysis utilizes Au +Au collisions at√sNN=200GeV (2010 and 2011) and U +U collisions at√sNN=193GeV (2012), recorded by the STAR detector"
+          ]
+        }
       ]
     },
     {
@@ -342,6 +654,16 @@
       "score": 0.3983,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "This study demonstrates high-energy collisions as a promising imaging tool for nuclear structure research, while also advancing our understanding of the initial conditions of the QGP"
+          ]
+        }
       ]
     },
     {
@@ -353,6 +675,16 @@
       "score": 0.3,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "After these selections, the dataset comprises approximately 528 million minimumbias (370 million from 2011) and 120 million triggered central Au +Au events, as well as approximately 300 million minimum-bias and 5 million triggered central U +U events"
+          ]
+        }
       ]
     },
     {
@@ -364,6 +696,16 @@
       "score": 0.5245,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "chdistribution, corrected for vertex position and luminosity dependence, was compared to a Monte Carlo Glauber calculation to define centrality intervals as percentages of the total nucleus-nucleus inelastic cross-section [ 56]"
+          ]
+        }
       ]
     },
     {
@@ -375,6 +717,16 @@
       "score": 0.3635,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Most results are presented as a function of centrality in 0%–60% centrality range, with Nchdependence results included in the appendix"
+          ]
+        }
       ]
     },
     {
@@ -386,6 +738,16 @@
       "score": 0.3603,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "chdistribution, corrected for vertex position and luminosity dependence, was compared to a Monte Carlo Glauber calculation to define centrality intervals as percentages of the total nucleus-nucleus inelastic cross-section [ 56]"
+          ]
+        }
       ]
     },
     {
@@ -397,6 +759,17 @@
       "score": 0.3268,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "2 GeV c−1(right), in U +U and Au +Au collisions",
+            "Relationship between centrality and Nrec ch(left), and mapping between Nrec chandNch(right) in U +U and Au +Au collisions"
+          ]
+        }
       ]
     },
     {
@@ -408,6 +781,16 @@
       "score": 0.1453,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "An efficiency-corrected multiplicity, Nch, was also computed by summing track weights for tracks with pT>0"
+          ]
+        }
       ]
     },
     {
@@ -419,6 +802,16 @@
       "score": 0.2456,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "The twoparticle cumulants, cn{2}, more susceptible to non-flow, are calculated using the two-subevent method"
+          ]
+        }
       ]
     },
     {
@@ -430,6 +823,16 @@
       "score": 0.2378,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Thus, observables measured in different pTranges are expected to provide consistent constraints on nuclear deformation"
+          ]
+        }
       ]
     },
     {
@@ -441,6 +844,16 @@
       "score": 0.3669,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Most non-flow sources are short-range (near-side), but dijet fragmentation can cause wider ηcorrelations (away-side)"
+          ]
+        }
       ]
     },
     {
@@ -452,6 +865,16 @@
       "score": 0.3561,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "However, the η-gap dependence can also arise from longitudinal fluctuations"
+          ]
+        }
       ]
     },
     {
@@ -463,6 +886,16 @@
       "score": 0.2889,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "The latter is applied for⟨ v2 n⟩ and⟨ v2 nδpT⟩ , where medium effects redistribute nonflow azimuthally rather than suppress them"
+          ]
+        }
       ]
     },
     {
@@ -474,6 +907,16 @@
       "score": 0.3521,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Ideally, non-flow physics should be incorporated into theoretical models used for comparison"
+          ]
+        }
       ]
     },
     {
@@ -485,6 +928,16 @@
       "score": 0.2844,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Systematic uncertainties Systematic uncertainties were estimated by varying track quality selections and collision zvtxrange, studying the influence of pileup, comparing results from different data-taking periods, and performing a closure test"
+          ]
+        }
       ]
     },
     {
@@ -496,6 +949,16 @@
       "score": 0.1941,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "including contributions from resonance decays but not jet quenching)"
+          ]
+        }
       ]
     },
     {
@@ -507,6 +970,16 @@
       "score": 0.404,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "The reconstructed pTcan differ from the true value due to finite momentum resolution"
+          ]
+        }
       ]
     },
     {
@@ -518,6 +991,16 @@
       "score": 0.3396,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "efficiency and its variations in ηand ϕfrom data were used to retain a fraction of particles generated by a multiphase transport model [ 69]"
+          ]
+        }
       ]
     },
     {
@@ -529,6 +1012,16 @@
       "score": 0.1575,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Varying this efficiency resulted in variations of about 0"
+          ]
+        }
       ]
     },
     {
@@ -540,6 +1033,16 @@
       "score": 0.084,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Systematic uncertainties for other pTranges are similar, generally smaller for higher pTranges due to better track reconstruction efficiency and fewer fake tracks"
+          ]
+        }
       ]
     },
     {
@@ -551,6 +1054,16 @@
       "score": 0.4546,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "⟨ v2 2⟩ (left) and⟨ (δpT)2⟩ (right) as a function of centrality in U+U and Au +Au collisions for charged hadrons in 0"
+          ]
+        }
       ]
     },
     {
@@ -562,6 +1075,17 @@
       "score": 0.3128,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "difference in mass number between these nuclei is expected to have a minor influence on the hydrodynamic response [ 18], ensuring that observed differences at the same centrality are primarily sensitive to nuclear deformation",
+            "The⟨pT⟩values are slightly larger in U +U collisions, consistent with a denser QGP medium due to uranium’s larger mass number"
+          ]
+        }
       ]
     },
     {
@@ -573,6 +1097,16 @@
       "score": 0.2781,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "central collisions may be linked to genuine temperature fluctuations [ 70]"
+          ]
+        }
       ]
     },
     {
@@ -584,6 +1118,16 @@
       "score": 0.3418,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "A similar study for higher-order harmonic flow is presented in figure 8, which shows⟨ v2 nδpT⟩ andρnforn=3 and 4 as 8 Rep"
+          ]
+        }
       ]
     },
     {
@@ -595,6 +1139,16 @@
       "score": 0.2613,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "In the 30%–60% centrality range, notable discrepancies between the standard and subevent methods reflect non-flow and longitudinal fluctuations"
+          ]
+        }
       ]
     },
     {
@@ -606,6 +1160,16 @@
       "score": 0.3445,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "- Reconstruction from boundary measurements for less regular conductivities Andoni García and Guo Zhang - Impact of Se and Te addition on optical characteristics of ternary GeInSb chalcogenide films as promising materials for optoelectronic applications E G El-Metwally, H E Atyia and A M Ismail - This content was downloaded from IP address 69"
+          ]
+        }
       ]
     },
     {
@@ -617,6 +1181,16 @@
       "score": 0.3389,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "This deconfined state of matter undergoes a spacetime evolution that is well-described by relativistic hydrodynamics [ 1]"
+          ]
+        }
       ]
     },
     {
@@ -628,6 +1202,17 @@
       "score": 0.3207,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "However, accurately describing the initial conditions requires a good understanding of both the nucleon spatial distribution within colliding nuclei and the mechanisms of energy deposition [ 14]",
+            "Analyzing these ratios as a function of nuclear shape also provides valuable insights into the energy deposition mechanisms [ 21]"
+          ]
+        }
       ]
     },
     {
@@ -639,6 +1224,17 @@
       "score": 0.29,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Final-state particles are generated using the Cooper-Fry prescription for hadronization, followed by UrQMD hadronic transport",
+            "Each IPGlasma +MUSIC event is oversampled at least 100 times to minimize non-flow and statistical fluctuations in the hadronic transport"
+          ]
+        }
       ]
     },
     {
@@ -650,6 +1246,16 @@
       "score": 0.2762,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "- Reconstruction from boundary measurements for less regular conductivities Andoni García and Guo Zhang - Impact of Se and Te addition on optical characteristics of ternary GeInSb chalcogenide films as promising materials for optoelectronic applications E G El-Metwally, H E Atyia and A M Ismail - This content was downloaded from IP address 69"
+          ]
+        }
       ]
     },
     {
@@ -661,6 +1267,16 @@
       "score": 0.2731,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "- Reconstruction from boundary measurements for less regular conductivities Andoni García and Guo Zhang - Impact of Se and Te addition on optical characteristics of ternary GeInSb chalcogenide films as promising materials for optoelectronic applications E G El-Metwally, H E Atyia and A M Ismail - This content was downloaded from IP address 69"
+          ]
+        }
       ]
     },
     {
@@ -672,6 +1288,16 @@
       "score": 0.2508,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "You may also like Disentangling the Cosmic Web toward FRB 190608 Sunil Simha, Joseph N"
+          ]
+        }
       ]
     },
     {
@@ -683,6 +1309,16 @@
       "score": 0.2434,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Previous STAR measurements suggest that d1β4 2is larger than |c1|in the 0%–5% most central collisions [ 44]"
+          ]
+        }
       ]
     },
     {
@@ -694,6 +1330,16 @@
       "score": 0.2211,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "By accounting for variations in medium evolution and initial-state parameters, and incorporating nonflow effects in the data, we determine β2U=0"
+          ]
+        }
       ]
     },
     {
@@ -705,6 +1351,16 @@
       "score": 0.2167,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "- Reconstruction from boundary measurements for less regular conductivities Andoni García and Guo Zhang - Impact of Se and Te addition on optical characteristics of ternary GeInSb chalcogenide films as promising materials for optoelectronic applications E G El-Metwally, H E Atyia and A M Ismail - This content was downloaded from IP address 69"
+          ]
+        }
       ]
     },
     {
@@ -716,6 +1372,16 @@
       "score": 0.177,
       "papers": [
         "paper_0"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_0",
+          "paper_title": "re6",
+          "paper_filename": "re6.pdf",
+          "context_lines": [
+            "Uranium is known to be strongly prolate deformed, while gold exhibits mild oblate deformation"
+          ]
+        }
       ]
     },
     {
@@ -727,6 +1393,16 @@
       "score": 0.4254,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "1 Introduction A goal of low-energy nuclear physics is to understand atomic nuclei as quantum many-body systems of nucleons, that is, to understand several properties of nuclei in terms of nucleon degrees of freedom"
+          ]
+        }
       ]
     },
     {
@@ -738,6 +1414,17 @@
       "score": 0.3677,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "We first discuss a single-channel problem with an optical potential model",
+            "We particularly discuss a microscopic modeling of the imaginary part of an optical potential as well as a visualization of quantum interference phenomena observed in heavy-ion elastic scattering"
+          ]
+        }
       ]
     },
     {
@@ -749,6 +1436,18 @@
       "score": 0.6005,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "In this contribution, we shall discuss both of these aspects of nuclear reactions",
+            "For the latter aspect, we shall discuss quantum interference phenomena observed in nuclear reactions",
+            "For the former aspect, we shall mainly focus on extracting nuclear shapes from nuclear reactions"
+          ]
+        }
       ]
     },
     {
@@ -760,6 +1459,16 @@
       "score": 0.3855,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "In recent years, a similar idea has been employed in relativistic heavy-ion collisions as well, providing an interesting intersection between low-energy and high-energy heavyion reactions [10, 11]"
+          ]
+        }
       ]
     },
     {
@@ -771,6 +1480,16 @@
       "score": 0.3781,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "To understand the underlying mechanism of the fusion reactions of the carbon isotopes, we recently constructed a simple schematic model, which consists of a random matrix Hamiltonian based on the Gaussian Orthogonal Ensemble (GOE) [15]"
+          ]
+        }
       ]
     },
     {
@@ -782,6 +1501,16 @@
       "score": 0.3341,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "[14] that the different behaviors of fusion cross sections, and thus the astrophysicalS-factors, in these systems are caused by different properties of the compound nuclei,24Mg and25Mg, indicating that the resonances are isolated in the12C+12C fusion reaction at low energies, while the12C+13C fusion reaction lies in the overlapping resonance regime"
+          ]
+        }
       ]
     },
     {
@@ -793,6 +1522,16 @@
       "score": 0.328,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "On the other hand, there are several reaction processes in which the dynamics after the absorption is important"
+          ]
+        }
       ]
     },
     {
@@ -804,6 +1543,16 @@
       "score": 0.1447,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "To understand the underlying mechanism of the fusion reactions of the carbon isotopes, we recently constructed a simple schematic model, which consists of a random matrix Hamiltonian based on the Gaussian Orthogonal Ensemble (GOE) [15]"
+          ]
+        }
       ]
     },
     {
@@ -815,6 +1564,16 @@
       "score": 0.0846,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "dynamics after absorption is treated as a black box"
+          ]
+        }
       ]
     },
     {
@@ -826,6 +1585,16 @@
       "score": 0.3341,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "One of the interesting aspects in low-energy heavy-ion reactions is that various quantum interference phenomena are seen in their differential cross sections"
+          ]
+        }
       ]
     },
     {
@@ -837,6 +1606,16 @@
       "score": 0.2992,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "One of the interesting aspects in low-energy heavy-ion reactions is that various quantum interference phenomena are seen in their differential cross sections"
+          ]
+        }
       ]
     },
     {
@@ -848,6 +1627,16 @@
       "score": 0.2709,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "The nearside and the farside components correspond to scattering at the opposite sides of the edges, and thus has a close analogy to scattering through two slits in the double slit problem [17]"
+          ]
+        }
       ]
     },
     {
@@ -859,6 +1648,16 @@
       "score": 0.158,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "(2) Let us first consider a double slit problem with classical waves with the amplitudeA, the wave lengthλ, and the angular frequencyω"
+          ]
+        }
       ]
     },
     {
@@ -870,6 +1669,16 @@
       "score": 0.3268,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Let us next apply the same method to heavy-ion elastic scattering [19, 20]"
+          ]
+        }
       ]
     },
     {
@@ -881,6 +1690,16 @@
       "score": 0.2699,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "The imaging of the scattering, |Φ(X,Y)|2, obtained withθ 0=55 deg"
+          ]
+        }
       ]
     },
     {
@@ -892,6 +1711,17 @@
       "score": 0.2636,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "(Upper panel) Differential cross sections for16O+16O elastic scattering atE c",
+            "4 shows differential cross sections for elastic scattering between two16O nuclei atE c"
+          ]
+        }
       ]
     },
     {
@@ -903,6 +1733,17 @@
       "score": 0.2104,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "The solid line shows the result of the optical potential model calculation, while the dashed and the dotted lines show its decomposition to the near-side and the far-side components, respectively",
+            "The solid line shows the result of an optical potential model calculation, while the dashed and the dotted lines show its decomposition into the nearside and the far-side components, respectively"
+          ]
+        }
       ]
     },
     {
@@ -914,6 +1755,18 @@
       "score": 0.4464,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "We in particular discuss the role of nuclear deformation in heavyion fusion reactions at energies around the Coulomb barrier [8, 21, 22]",
+            "Here the energy is measured with respect to the height of the Coulomb barrier,V b=60",
+            "Fusion cross sections for the16O+154Sm system as a function of the incident energy in the center of mass frame, which is measured with respect to the height of the Coulomb barrier,V b=60"
+          ]
+        }
       ]
     },
     {
@@ -925,6 +1778,18 @@
       "score": 0.2534,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "1 Subbarrier enhancement of fusion cross sections We next discuss multi-channel problems [21]",
+            "A typical example is the16O+154Sm fusion reaction, whose cross sections are shown in Fig",
+            "This calculation largely underestimates the fusion cross sections at energies below the barrier"
+          ]
+        }
       ]
     },
     {
@@ -936,6 +1801,16 @@
       "score": 0.1062,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "An advantage of this method is that one can obtain an idea on how many different processes interfere with each other in a nuclear reaction process without explicitly decomposing the scattering amplitude"
+          ]
+        }
       ]
     },
     {
@@ -947,6 +1822,16 @@
       "score": 0.2935,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "(6), can be derived from the coupled-channels equations by neglecting the excitation energies of those states [21, 24]"
+          ]
+        }
       ]
     },
     {
@@ -958,6 +1843,16 @@
       "score": 0.2654,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "For the medium heavy nuclei, such as154Sm, the rotational energies are much smaller than the typical energy scale of the reactions, and the rotational HamiltonianH rotmay be neglected in the total Hamiltonian, (7)"
+          ]
+        }
       ]
     },
     {
@@ -969,6 +1864,16 @@
       "score": 0.2639,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "In this adiabatic limit, the rotational motion is so small that the initial configuration is retained during the reaction"
+          ]
+        }
       ]
     },
     {
@@ -980,6 +1885,16 @@
       "score": 0.2608,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Hrot=ˆI2ℏ2 2J=−ℏ2 2J 1 sinθ∂ ∂θ sinθ∂ ∂θ"
+          ]
+        }
       ]
     },
     {
@@ -991,6 +1906,16 @@
       "score": 0.2144,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "The blue dashed lines take into account only the quadrupole deformation of the target nuclei, while the red solid lines takes into account in addition the hexadecapole deformation"
+          ]
+        }
       ]
     },
     {
@@ -1002,6 +1927,18 @@
       "score": 0.5336,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "The dashed lines in the figure show the barrier distributions with the quadupole deformation parameter of each target nuclei",
+            "This calculation leads to similar barrier distributions to each other for these systems",
+            "The observed difference in the barrier distributions can be attributed to the hexadecapole deformation parameters,β 4"
+          ]
+        }
       ]
     },
     {
@@ -1013,6 +1950,16 @@
       "score": 0.4071,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Multidimensional probability distributions ofβ 2and β4for24Mg obtained with a Bayesian analysis of the quasi-elastic barrier distribution for the24Mg+90Zr reaction"
+          ]
+        }
       ]
     },
     {
@@ -1024,6 +1971,16 @@
       "score": 0.2245,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "[26, 27] analyzed the barrier distributions derived from quasi-elastic scattering [28, 29] using a Bayesian analysis with coupled-channels calculations (see Fig"
+          ]
+        }
       ]
     },
     {
@@ -1035,6 +1992,16 @@
       "score": 0.4988,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "(a) The penetrability for a one-dimensional twochannel problem as a function of the energyE, plotted in the linear scale"
+          ]
+        }
       ]
     },
     {
@@ -1046,6 +2013,16 @@
       "score": 0.4223,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "The solid line shows the exact result, while the dashed line is obtained with the eigenvector continuation for the strength of the coupling potential"
+          ]
+        }
       ]
     },
     {
@@ -1057,6 +2034,18 @@
       "score": 0.3519,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "The solid line shows the exact result, while the dashed line is obtained with the eigenvector continuation for the strength of the coupling potential",
+            "(c) The relative error defined by|P exact−P EC|/P exact, whereP exactandP ECare the exact penetrability and that obtained with the eigenvector continuation, respectively",
+            "To construct an emulator, the eigenvector continuation (EC) has often been employed [30, 31]"
+          ]
+        }
       ]
     },
     {
@@ -1068,6 +2057,16 @@
       "score": 0.3223,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            ", with proton inelastic scattering"
+          ]
+        }
       ]
     },
     {
@@ -1079,6 +2078,16 @@
       "score": 0.3063,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "(c) The relative error defined by|P exact−P EC|/P exact, whereP exactandP ECare the exact penetrability and that obtained with the eigenvector continuation, respectively"
+          ]
+        }
       ]
     },
     {
@@ -1090,6 +2099,16 @@
       "score": 0.4858,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "An idea of this approach is that the time (the energy) scale of heavy-ion collisions is much smaller (larger) at relativistic energies than the time (the energy) scale of nuclear motions, such that one can take a snapshot of a nucleus by choosing the central collision region where the projectile and the target nuclei significantly overlap with each other"
+          ]
+        }
       ]
     },
     {
@@ -1101,6 +2120,16 @@
       "score": 0.3492,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "In other words, the adiabatic approximation works well in the relativistic heavy-ion collisions, and the initial nuclear configuration is frozen during a collision, as in heavy-ion fusion reactions of a deformed nucleus discussed in Sec"
+          ]
+        }
       ]
     },
     {
@@ -1112,6 +2141,16 @@
       "score": 0.2248,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "An idea of this approach is that the time (the energy) scale of heavy-ion collisions is much smaller (larger) at relativistic energies than the time (the energy) scale of nuclear motions, such that one can take a snapshot of a nucleus by choosing the central collision region where the projectile and the target nuclei significantly overlap with each other"
+          ]
+        }
       ]
     },
     {
@@ -1123,6 +2162,16 @@
       "score": 0.3343,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Here,R(θ,ϕ) is the angle dependent radius given by R(θ,ϕ)=R 01−1 4πX λ,µ|αλµ|2+X λ,µαλµY∗ λµ(ˆr),(16) whereR 0is the radius parameter"
+          ]
+        }
       ]
     },
     {
@@ -1134,6 +2183,16 @@
       "score": 0.3306,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "The classical Hamiltonian for the vibration reads H=1 2X λ,µ\u0010 Bλ|˙αλµ|2+Cλ|αλµ|2\u0011 ,(17) where the dot denotes the time derivative, andB λandCλ are the inertia and the stiffness parameters of the oscillator, respectively"
+          ]
+        }
       ]
     },
     {
@@ -1145,6 +2204,16 @@
       "score": 0.3044,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "To compute the eccentricity parameter (14), we shall employ a deformed Woods-Saxon density forρ(r) given by ρ(r)=ρ0 1+e(r−R(θ,ϕ))/a,(15) whereρ 0andaare the central density and the diffuseness parameter, respectively"
+          ]
+        }
       ]
     },
     {
@@ -1156,6 +2225,16 @@
       "score": 0.2717,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "In this equation, the second term in the parenthesis is due to the volume conservation, andα λµis the deformation parameter in the spacefixed system satisfying the conditionα∗ λµ=(−1)µαλ,−µ [39]"
+          ]
+        }
       ]
     },
     {
@@ -1167,6 +2246,17 @@
       "score": 0.4862,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "(23) Figure 9 compares the distribution of the eccentricity parameters for the surface vibration (SV) with that for the static deformation (SD) for58Ni+58Ni collision",
+            "One can clearly see in the figure that SV and SD lead to significantly different distributions of the eccentricity parameters from each other, despite that the mean values are similar to each other, that is,⟨|ϵ 2|⟩is 0"
+          ]
+        }
       ]
     },
     {
@@ -1178,6 +2268,18 @@
       "score": 0.4035,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "(23) Figure 9 compares the distribution of the eccentricity parameters for the surface vibration (SV) with that for the static deformation (SD) for58Ni+58Ni collision",
+            "The red and blue colors denote the results for the surface vibration and the static deformation, respectively",
+            "2|ε2|surface vibration static deformation Figure 10"
+          ]
+        }
       ]
     },
     {
@@ -1189,6 +2291,16 @@
       "score": 0.3708,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "⟨|ϵn|2⟩=ZdΩ 8π2|ϵn(Ω)|2"
+          ]
+        }
       ]
     },
     {
@@ -1200,6 +2312,16 @@
       "score": 0.3367,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "(18) for SV , while for SD only Ωis randomly sampled with fixedβ λfor the axial shape"
+          ]
+        }
       ]
     },
     {
@@ -1211,6 +2333,16 @@
       "score": 0.2513,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "We then discussed multi-channel problems, putting some emphasis on heavy-ion fusion reactions at subbarrier energies"
+          ]
+        }
       ]
     },
     {
@@ -1222,6 +2354,16 @@
       "score": 0.5667,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "This has been known well in low-energy nuclear reactions, but recent studies on relativistic heavy-ion collisions have revealed that this is the case also in highenergy nuclear collisions"
+          ]
+        }
       ]
     },
     {
@@ -1233,6 +2375,16 @@
       "score": 0.4309,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Using fusion barrier distributions, the deformation parameters have been successfully extracted for several nuclei"
+          ]
+        }
       ]
     },
     {
@@ -1244,6 +2396,16 @@
       "score": 0.3992,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "We have demonstrated that an emulator for multi-channel scattering provides a powerful tool for that purpose"
+          ]
+        }
       ]
     },
     {
@@ -1255,6 +2417,16 @@
       "score": 0.3036,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "nearside-farside interference and a barrier-wave-internalwave interference"
+          ]
+        }
       ]
     },
     {
@@ -1266,6 +2438,17 @@
       "score": 0.698,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Utyonkov, Superheavy nuclei from48Ca-induced reactions, Nucl",
+            "Simpson, Experimental studies of the competition between fusion and quasifission in the formation of heavy and superheavy nuclei, Prog"
+          ]
+        }
       ]
     },
     {
@@ -1277,6 +2460,16 @@
       "score": 0.423,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "heaviest elements, Rev"
+          ]
+        }
       ]
     },
     {
@@ -1288,6 +2481,16 @@
       "score": 0.5078,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Hagino, Visualization of quantum interferences in heavy-ion elastic scattering, Phys"
+          ]
+        }
       ]
     },
     {
@@ -1299,6 +2502,17 @@
       "score": 0.4292,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "[14] that the different behaviors of fusion cross sections, and thus the astrophysicalS-factors, in these systems are caused by different properties of the compound nuclei,24Mg and25Mg, indicating that the resonances are isolated in the12C+12C fusion reaction at low energies, while the12C+13C fusion reaction lies in the overlapping resonance regime",
+            ", Constraining the12C+12C astrophysical s-factors with the12C+13C measurements at very low energies, Phys"
+          ]
+        }
       ]
     },
     {
@@ -1310,6 +2524,16 @@
       "score": 0.4253,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "is the angle dependent inter-nucleus potential"
+          ]
+        }
       ]
     },
     {
@@ -1321,6 +2545,16 @@
       "score": 0.3942,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Three-body scattering, such as thed+preaction, has been utilized to investigate a three-nucleon interaction [2]"
+          ]
+        }
       ]
     },
     {
@@ -1332,6 +2566,16 @@
       "score": 0.365,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Rowley, Probing fusion barrier distributions with quasielastic scattering, Nucl"
+          ]
+        }
       ]
     },
     {
@@ -1343,6 +2587,17 @@
       "score": 0.3563,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "We in particular discuss the role of nuclear deformation in heavyion fusion reactions at energies around the Coulomb barrier [8, 21, 22]",
+            "Stelson, On the “distribution of barriers” interpretation of heavyion fusion, Phys"
+          ]
+        }
       ]
     },
     {
@@ -1354,6 +2609,16 @@
       "score": 0.3465,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            ", with proton inelastic scattering"
+          ]
+        }
       ]
     },
     {
@@ -1365,6 +2630,16 @@
       "score": 0.3068,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Good examples for this include a formation of a compound nucleus with neutron induced reactions and its relation to quantum chaos [5], dynamics of the pre-equillibrium process towards a compound nucleus [6], and heavy-ion fusion reactions as quantum tunneling phenomena with many degrees of freedom [7, 8]"
+          ]
+        }
       ]
     },
     {
@@ -1376,6 +2651,16 @@
       "score": 0.3022,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "In quantum mechanics, the ground state of these harmonic oscillators has the zero point fluctuation, with the probability distribution of the coordinate given by, P(x)=1q 2πσ2 λe−x2/(2σ2 λ),(18)whereσ λis the amplitude of the zero point motion, given byσλ=√ℏ/(2Bλωλ) withω λ=√Cλ/Bλ"
+          ]
+        }
       ]
     },
     {
@@ -1387,6 +2672,16 @@
       "score": 0.284,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "Lastly, we have discussed relativistic heavy-ion collisions from the viewpoint of probing nuclear shapes"
+          ]
+        }
       ]
     },
     {
@@ -1398,6 +2693,14 @@
       "score": 0.2108,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": []
+        }
       ]
     },
     {
@@ -1409,6 +2712,16 @@
       "score": 0.1895,
       "papers": [
         "paper_1"
+      ],
+      "contexts": [
+        {
+          "paper_id": "paper_1",
+          "paper_title": "re7",
+          "paper_filename": "re7.pdf",
+          "context_lines": [
+            "This work was partly supported by JSPS KAKENHI Grant Number JP23K03414"
+          ]
+        }
       ]
     }
   ],
@@ -1772,6 +3085,14 @@
       "target": "topic_59_gold_exhibits",
       "type": "contains_topic",
       "weight": 1.0
+    },
+    {
+      "source": "paper_0",
+      "target": "paper_1",
+      "type": "related_paper",
+      "weight": 0.7582528591156006,
+      "shared_topics_count": 7,
+      "context_similarity": 0.3956320285797119
     },
     {
       "source": "paper_1",
@@ -3625,8 +4946,9 @@
   "metadata": {
     "papers_count": 2,
     "topics_count": 123,
-    "edges_count": 368,
+    "edges_count": 369,
     "paper_topic_edges": 130,
-    "topic_topic_edges": 238
+    "topic_topic_edges": 238,
+    "paper_paper_edges": 1
   }
 }

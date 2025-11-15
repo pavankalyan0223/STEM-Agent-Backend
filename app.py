@@ -1,4 +1,5 @@
 from fastapi import FastAPI, UploadFile, File
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
@@ -38,7 +39,7 @@ async def lifespan(app: FastAPI):
     pass
 
 app = FastAPI(
-    title="Agentic STEM Tutor — Math & Physics (RAG with MCP)",
+    title="Agentic STEM Expert — Math & Physics (RAG with MCP)",
     lifespan=lifespan
 )
 
@@ -102,15 +103,15 @@ async def ask(payload: AskPayload):
     if is_casual_greeting(payload.question):
         # Simple friendly response for greetings
         greeting_responses = {
-            "math": "Hello! I'm your friendly math tutor. I'm here to help you with mathematics - whether it's algebra, calculus, geometry, or any other math topic. What would you like to learn today?",
-            "physics": "Hello! I'm your friendly physics tutor. I'm here to help you understand physics concepts - from mechanics and thermodynamics to electromagnetism and quantum physics. What would you like to explore?"
+            "math": "Hello! I'm your friendly math expert. I'm here to help you with mathematics - whether it's algebra, calculus, geometry, or any other math topic. What would you like to learn today?",
+            "physics": "Hello! I'm your friendly physics expert. I'm here to help you understand physics concepts - from mechanics and thermodynamics to electromagnetism and quantum physics. What would you like to explore?"
         }
         answer = greeting_responses.get(payload.mode, greeting_responses["math"])
         
         # Update session store
         if session_id not in session_store:
             system_prompt = (
-                f"You are a friendly and highly knowledgeable {payload.mode} tutor. "
+                f"You are a friendly and highly knowledgeable {payload.mode} expert. "
                 "You use an agentic system with memory, planning, and specialized agents."
             )
             session_store[session_id] = [{"role": "system", "content": system_prompt}]
@@ -123,7 +124,7 @@ async def ask(payload: AskPayload):
             "session_id": session_id,
             "mode": payload.mode,
             "question": payload.question,
-            "tutor_reply": answer,
+            "expert_reply": answer,
             "agentic_metadata": {
                 "casual_greeting": True,
                 "agents_skipped": True
@@ -280,7 +281,7 @@ def ask_doc(payload: AskDocPayload):
 
     context = "\n\n".join(results["documents"][0])
     prompt = (
-        f"You are a tutor who must answer only using '{payload.pdf_name}'.\n\n"
+        f"You are an expert who must answer only using '{payload.pdf_name}'.\n\n"
         f"Relevant excerpts:\n{context}\n\n"
         f"Question: {payload.question}"
     )
@@ -428,6 +429,9 @@ class ResearchQuery(BaseModel):
     max_results: Optional[int] = Field(default=20, ge=1, le=100)
     category: Optional[str] = Field(default=None)  # e.g., "math", "physics", "cs", etc.
 
+class BuildGraphRequest(BaseModel):
+    pdf_files: Optional[List[str]] = None
+
 @app.post("/research")
 async def fetch_research_papers(payload: ResearchQuery):
     """
@@ -471,7 +475,7 @@ async def fetch_research_papers(payload: ResearchQuery):
         
         # Add headers to identify the client (arXiv API best practice)
         headers = {
-            "User-Agent": "STEM-Tutor-Research/1.0 (contact: your-email@example.com)"
+            "User-Agent": "STEM-Expert-Research/1.0 (contact: your-email@example.com)"
         }
         
         response = requests.get(base_url, params=params, headers=headers, timeout=HTTP_TIMEOUT)
@@ -536,15 +540,59 @@ async def fetch_research_papers(payload: ResearchQuery):
     except Exception as e:
         return {"error": f"Error processing research papers: {str(e)}", "papers": []}
 
+@app.get("/research-graph/pdfs")
+async def list_pdfs():
+    """List all available PDF files in the data directory."""
+    import os
+    pdf_dir = "data/"
+    if not os.path.exists(pdf_dir):
+        return {"pdfs": []}
+    
+    pdf_files = [f for f in os.listdir(pdf_dir) if f.lower().endswith(".pdf")]
+    return {"pdfs": pdf_files}
+
 @app.post("/research-graph/build")
-async def build_graph():
+async def build_graph(request: BuildGraphRequest = BuildGraphRequest()):
     """
-    Build a knowledge graph from all research papers in the data folder.
+    Build a knowledge graph from selected research papers.
+    If pdf_files is None or empty, uses all PDFs in data folder.
     Creates nodes for papers and topics, and edges showing relationships.
     """
     try:
-        graph = build_research_graph("data/")
-        return graph
+        from research_graph import build_research_graph
+        import os
+        
+        pdf_dir = "data/"
+        
+        pdf_files = request.pdf_files if request else None
+        
+        # If specific PDFs are provided, filter them
+        if pdf_files and len(pdf_files) > 0:
+            # Create a temporary directory with only selected PDFs
+            import tempfile
+            import shutil
+            
+            temp_dir = tempfile.mkdtemp()
+            try:
+                for pdf_file in pdf_files:
+                    src_path = os.path.join(pdf_dir, pdf_file)
+                    if os.path.exists(src_path):
+                        shutil.copy2(src_path, os.path.join(temp_dir, pdf_file))
+                
+                graph = build_research_graph(temp_dir)
+                # Add metadata about which PDFs were used
+                if "metadata" in graph:
+                    graph["metadata"]["pdf_files_used"] = pdf_files
+                return graph
+            finally:
+                shutil.rmtree(temp_dir)
+        else:
+            # Use all PDFs
+            graph = build_research_graph(pdf_dir)
+            if "metadata" in graph:
+                pdf_files = [f for f in os.listdir(pdf_dir) if f.lower().endswith(".pdf")]
+                graph["metadata"]["pdf_files_used"] = pdf_files
+            return graph
     except Exception as e:
         return {"error": f"Error building research graph: {str(e)}"}
 
@@ -552,15 +600,79 @@ async def build_graph():
 async def get_graph():
     """Get the current research graph."""
     try:
+        from research_graph import get_research_graph
         graph = get_research_graph()
         return graph
     except Exception as e:
         return {"error": f"Error loading research graph: {str(e)}"}
 
+@app.get("/research-graph/list")
+async def list_graphs():
+    """List all available research graphs with their associated papers."""
+    import os
+    import json
+    
+    graph_dir = "data/research_graphs"
+    graphs = []
+    
+    if os.path.exists(graph_dir):
+        graph_files = [f for f in os.listdir(graph_dir) if f.endswith(".json")]
+        
+        for graph_file in graph_files:
+            graph_path = os.path.join(graph_dir, graph_file)
+            try:
+                with open(graph_path, "r", encoding="utf-8") as f:
+                    graph_data = json.load(f)
+                    
+                    # Extract paper information
+                    papers = []
+                    if "nodes" in graph_data:
+                        for node in graph_data["nodes"]:
+                            if node.get("type") == "paper":
+                                papers.append({
+                                    "id": node.get("id"),
+                                    "title": node.get("title") or node.get("label"),
+                                    "filename": node.get("filename")
+                                })
+                    
+                    graphs.append({
+                        "filename": graph_file,
+                        "name": graph_file.replace(".json", ""),
+                        "papers": papers,
+                        "papers_count": len(papers),
+                        "topics_count": graph_data.get("metadata", {}).get("topics_count", 0),
+                        "edges_count": graph_data.get("metadata", {}).get("edges_count", 0),
+                        "created": os.path.getmtime(graph_path) if os.path.exists(graph_path) else None
+                    })
+            except Exception as e:
+                print(f"Error reading graph {graph_file}: {e}")
+                continue
+    
+    return {"graphs": graphs}
+
+@app.get("/research-graph/pdf/{filename}")
+async def get_pdf_file(filename: str):
+    """Serve a PDF file directly."""
+    import urllib.parse
+    
+    pdf_dir = "data/"
+    decoded_filename = urllib.parse.unquote(filename)
+    pdf_path = os.path.join(pdf_dir, decoded_filename)
+    
+    if not os.path.exists(pdf_path) or not decoded_filename.lower().endswith(".pdf"):
+        return {"error": "PDF not found"}
+    
+    return FileResponse(
+        pdf_path,
+        media_type="application/pdf",
+        filename=decoded_filename,
+        headers={"Content-Disposition": f"inline; filename={decoded_filename}"}
+    )
+
 @app.get("/")
 def root():
     return {
-        "message": "Agentic STEM Tutor — Math & Physics (RAG with MCP)",
+        "message": "Agentic STEM Expert — Math & Physics (RAG with MCP)",
         "architecture": {
             "central_agent": "Memory (Short/Long-term) + Planning (ReACT/CoT)",
             "specialized_agents": [

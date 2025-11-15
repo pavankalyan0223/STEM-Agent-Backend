@@ -187,11 +187,55 @@ def extract_keywords_keybert(text: str, top_n: int = 15) -> List[Tuple[str, floa
         return []
 
 
-def extract_topics_from_paper(text: str, paper_title: str) -> List[Dict[str, Any]]:
+def extract_context_lines(keyword: str, text: str, max_lines: int = 5) -> List[str]:
+    """
+    Extract context lines (sentences) where a keyword appears in the text.
+    Returns up to max_lines sentences containing the keyword.
+    """
+    keyword_clean = keyword.lower().strip()
+    text_lower = text.lower()
+    
+    # Split text into sentences (simple approach)
+    sentences = re.split(r'[.!?]+', text)
+    
+    context_lines = []
+    seen_lines = set()
+    
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if not sentence or len(sentence) < 10:
+            continue
+        
+        # Check if keyword appears in this sentence
+        words = keyword_clean.split()
+        if len(words) == 1:
+            pattern = r'\b' + re.escape(keyword_clean) + r'\b'
+            if re.search(pattern, sentence.lower()):
+                sentence_clean = ' '.join(sentence.split())
+                if sentence_clean not in seen_lines and len(sentence_clean) > 20:
+                    seen_lines.add(sentence_clean)
+                    context_lines.append(sentence_clean)
+        else:
+            # Multi-word phrase
+            phrase_pattern = r'\b' + r'\s+'.join([re.escape(w) for w in words]) + r'\b'
+            if re.search(phrase_pattern, sentence.lower()):
+                sentence_clean = ' '.join(sentence.split())
+                if sentence_clean not in seen_lines and len(sentence_clean) > 20:
+                    seen_lines.add(sentence_clean)
+                    context_lines.append(sentence_clean)
+        
+        if len(context_lines) >= max_lines:
+            break
+    
+    return context_lines
+
+
+def extract_topics_from_paper(text: str, paper_title: str, paper_id: str, paper_filename: str) -> List[Dict[str, Any]]:
     """
     Extract topics/keywords from paper using KeyBERT ONLY.
     Processes entire paper text and sections using KeyBERT's extract_keywords method.
     Validates that all keywords actually appear in the source text.
+    Also extracts context lines where keywords appear.
     """
     if kw_model is None:
         return []
@@ -220,11 +264,18 @@ def extract_topics_from_paper(text: str, paper_title: str) -> List[Dict[str, Any
                 continue
             
             if keyword_lower and keyword_lower not in seen_topics and len(keyword_lower) > 3:
+                # Extract context lines for this keyword
+                context_lines = extract_context_lines(keyword_clean, section, max_lines=3)
+                
                 seen_topics.add(keyword_lower)
                 topics.append({
                     "name": keyword_clean,
                     "score": float(score),
-                    "description": f"Extracted from section {i+1}"
+                    "description": f"Extracted from section {i+1}",
+                    "context_lines": context_lines,
+                    "paper_id": paper_id,
+                    "paper_title": paper_title,
+                    "paper_filename": paper_filename
                 })
     
     # Add top keywords from full text (already validated)
@@ -233,11 +284,18 @@ def extract_topics_from_paper(text: str, paper_title: str) -> List[Dict[str, Any
         keyword_lower = keyword_clean.lower().strip()
         
         if keyword_lower not in seen_topics:
+            # Extract context lines for this keyword from full text
+            context_lines = extract_context_lines(keyword_clean, text, max_lines=5)
+            
             seen_topics.add(keyword_lower)
             topics.append({
                 "name": keyword_clean,
                 "score": float(score),
-                "description": f"Main keyword from {paper_title}"
+                "description": f"Main keyword from {paper_title}",
+                "context_lines": context_lines,
+                "paper_id": paper_id,
+                "paper_title": paper_title,
+                "paper_filename": paper_filename
             })
     
     return topics
@@ -301,6 +359,7 @@ def build_research_graph(pdf_dir: str = "data/") -> Dict[str, Any]:
     # Process each paper
     papers = []
     all_topics = []
+    paper_texts = {}  # Store full text for each paper for context analysis
     
     for idx, pdf_file in enumerate(pdf_files):
         pdf_path = os.path.join(pdf_dir, pdf_file)
@@ -314,10 +373,14 @@ def build_research_graph(pdf_dir: str = "data/") -> Dict[str, Any]:
             
             # Extract metadata
             metadata = extract_paper_metadata(text, pdf_file)
+            paper_id = f"paper_{idx}"
             
-            # Extract topics using KeyBERT
+            # Store paper text for later analysis
+            paper_texts[paper_id] = text
+            
+            # Extract topics using KeyBERT with context lines
             print(f"  🔍 Extracting topics with KeyBERT...")
-            topics = extract_topics_from_paper(text, metadata['title'])
+            topics = extract_topics_from_paper(text, metadata['title'], paper_id, pdf_file)
             
             # Get keywords for paper
             keywords_with_scores = extract_keywords_keybert(text, top_n=15)
@@ -325,7 +388,7 @@ def build_research_graph(pdf_dir: str = "data/") -> Dict[str, Any]:
             
             # Create paper node
             paper_node = {
-                "id": f"paper_{idx}",
+                "id": paper_id,
                 "type": "paper",
                 "label": metadata['title'],
                 "title": metadata['title'],
@@ -359,6 +422,7 @@ def build_research_graph(pdf_dir: str = "data/") -> Dict[str, Any]:
     topic_name_to_id = {}  # Map normalized topic name to canonical topic_id
     topic_id_to_name = {}  # Map topic_id to topic name
     topic_embeddings = {}  # Store embeddings for topics
+    topic_contexts = {}  # Store context lines for each topic per paper
     
     for paper_idx, topics in enumerate(all_topics):
         paper_id = f"paper_{paper_idx}"
@@ -374,6 +438,16 @@ def build_research_graph(pdf_dir: str = "data/") -> Dict[str, Any]:
                 # Add paper to existing topic
                 if paper_id not in topic_nodes[topic_id]["papers"]:
                     topic_nodes[topic_id]["papers"].append(paper_id)
+                
+                # Add context lines for this paper
+                if topic_id not in topic_contexts:
+                    topic_contexts[topic_id] = []
+                topic_contexts[topic_id].append({
+                    "paper_id": paper_id,
+                    "paper_title": topic.get('paper_title', ''),
+                    "paper_filename": topic.get('paper_filename', ''),
+                    "context_lines": topic.get('context_lines', [])
+                })
             else:
                 # Create new topic node
                 topic_id = f"topic_{len(topic_nodes)}_{topic_name_normalized.replace(' ', '_').replace('-', '_')}"
@@ -391,6 +465,14 @@ def build_research_graph(pdf_dir: str = "data/") -> Dict[str, Any]:
                 }
                 G.add_node(topic_id, **topic_nodes[topic_id], node_type="topic")
                 
+                # Store context lines for this topic
+                topic_contexts[topic_id] = [{
+                    "paper_id": paper_id,
+                    "paper_title": topic.get('paper_title', ''),
+                    "paper_filename": topic.get('paper_filename', ''),
+                    "context_lines": topic.get('context_lines', [])
+                }]
+                
                 # Create embedding for this topic (only once per unique topic)
                 if embedder:
                     topic_embedding = embedder.encode(topic_name)
@@ -399,6 +481,13 @@ def build_research_graph(pdf_dir: str = "data/") -> Dict[str, Any]:
             # Create paper->topic edge
             if not G.has_edge(paper_id, topic_id):
                 G.add_edge(paper_id, topic_id, type="contains_topic", weight=1.0)
+    
+    # Add context information to topic nodes
+    for topic_id, contexts in topic_contexts.items():
+        if topic_id in topic_nodes:
+            topic_nodes[topic_id]["contexts"] = contexts
+            # Update node in graph
+            G.nodes[topic_id]["contexts"] = contexts
     
     # Find similar topics using embeddings and name matching
     print(f"\n🔗 Finding topic similarities using embeddings...")
@@ -454,6 +543,89 @@ def build_research_graph(pdf_dir: str = "data/") -> Dict[str, Any]:
     if len(similarity_edges) > 0:
         print(f"     Average similarity: {np.mean([e['weight'] for e in similarity_edges]):.3f}")
     
+    # Analyze paper relationships based on keyword contexts
+    print(f"\n🔗 Analyzing paper relationships based on keyword contexts...")
+    paper_relationships = []
+    paper_embeddings = {}
+    
+    # Create embeddings for paper contexts (combine all context lines from shared keywords)
+    for paper_id in [p['id'] for p in papers]:
+        paper_contexts = []
+        for topic_id, contexts in topic_contexts.items():
+            for ctx in contexts:
+                if ctx['paper_id'] == paper_id:
+                    paper_contexts.extend(ctx['context_lines'])
+        
+        # Combine contexts and create embedding
+        if paper_contexts and embedder:
+            combined_context = ' '.join(paper_contexts[:10])  # Use up to 10 context lines
+            if len(combined_context) > 50:  # Only if we have enough context
+                paper_embeddings[paper_id] = embedder.encode(combined_context)
+    
+    # Compare papers using context embeddings
+    paper_ids = list(paper_embeddings.keys())
+    relationship_threshold = 0.5  # Threshold for paper similarity
+    
+    print(f"  Comparing {len(paper_ids)} papers...")
+    
+    for i, paper_id1 in enumerate(paper_ids):
+        emb1 = paper_embeddings[paper_id1]
+        
+        for paper_id2 in paper_ids[i+1:]:
+            emb2 = paper_embeddings[paper_id2]
+            
+            # Calculate cosine similarity
+            similarity = np.dot(emb1, emb2) / (np.linalg.norm(emb1) * np.linalg.norm(emb2))
+            
+            # Also check shared keywords
+            paper1_topics = set()
+            paper2_topics = set()
+            
+            for topic_id, contexts in topic_contexts.items():
+                paper_ids_in_topic = [ctx['paper_id'] for ctx in contexts]
+                if paper_id1 in paper_ids_in_topic:
+                    paper1_topics.add(topic_id)
+                if paper_id2 in paper_ids_in_topic:
+                    paper2_topics.add(topic_id)
+            
+            shared_topics = paper1_topics.intersection(paper2_topics)
+            shared_topics_count = len(shared_topics)
+            
+            # Determine if papers are related
+            # Papers are related if they share keywords AND have similar contexts
+            is_related = False
+            relationship_strength = 0.0
+            
+            if shared_topics_count > 0:
+                # Calculate relationship strength based on shared topics and context similarity
+                topic_weight = min(shared_topics_count / 5.0, 1.0)  # Normalize by max 5 shared topics
+                context_weight = max(0, similarity)  # Use similarity if positive
+                relationship_strength = (topic_weight * 0.6 + context_weight * 0.4)
+                
+                # Papers are related if they share at least 2 topics OR have high context similarity
+                if shared_topics_count >= 2 or similarity >= relationship_threshold:
+                    is_related = True
+            
+            if is_related and not G.has_edge(paper_id1, paper_id2):
+                G.add_edge(paper_id1, paper_id2, 
+                          type="related_paper", 
+                          weight=float(relationship_strength),
+                          shared_topics_count=shared_topics_count,
+                          context_similarity=float(similarity))
+                paper_relationships.append({
+                    "source": paper_id1,
+                    "target": paper_id2,
+                    "type": "related_paper",
+                    "weight": float(relationship_strength),
+                    "shared_topics_count": shared_topics_count,
+                    "context_similarity": float(similarity)
+                })
+    
+    print(f"  ✅ Found {len(paper_relationships)} paper relationships")
+    if len(paper_relationships) > 0:
+        avg_strength = np.mean([r['weight'] for r in paper_relationships])
+        print(f"     Average relationship strength: {avg_strength:.3f}")
+    
     # Convert NetworkX graph to JSON format
     nodes = []
     edges = []
@@ -466,12 +638,17 @@ def build_research_graph(pdf_dir: str = "data/") -> Dict[str, Any]:
     
     # Add edges
     for source, target, edge_data in G.edges(data=True):
-        edges.append({
+        edge_dict = {
             "source": source,
             "target": target,
             "type": edge_data.get("type", "related"),
             "weight": edge_data.get("weight", 1.0)
-        })
+        }
+        # Add additional metadata for paper-paper relationships
+        if edge_data.get("type") == "related_paper":
+            edge_dict["shared_topics_count"] = edge_data.get("shared_topics_count", 0)
+            edge_dict["context_similarity"] = edge_data.get("context_similarity", 0.0)
+        edges.append(edge_dict)
     
     graph = {
         "nodes": nodes,
@@ -481,7 +658,8 @@ def build_research_graph(pdf_dir: str = "data/") -> Dict[str, Any]:
             "topics_count": len(topic_nodes),
             "edges_count": len(edges),
             "paper_topic_edges": sum(1 for e in edges if e["type"] == "contains_topic"),
-            "topic_topic_edges": len(similarity_edges)
+            "topic_topic_edges": len(similarity_edges),
+            "paper_paper_edges": len(paper_relationships)
         }
     }
     
