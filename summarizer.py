@@ -2,7 +2,7 @@ import os
 import json
 import requests
 from PyPDF2 import PdfReader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from config import OLLAMA_URL, MODEL_NAME, HTTP_TIMEOUT
 
 SUMMARY_DIR = "data/summaries"

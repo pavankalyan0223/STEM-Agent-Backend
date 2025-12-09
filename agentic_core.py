@@ -122,7 +122,7 @@ class Planning:
     def plan(self, query: str, available_agents: List[str], memory_context: str) -> Dict[str, Any]:
         """
         Generate a plan for executing the query.
-        Always uses both local data agent and MCP (which handles web search).
+        Always uses both local data agent and Helper Agents (which handles web search).
         
         Args:
             query: User query
@@ -140,14 +140,14 @@ class Planning:
             return {"steps": [], "reasoning": "Unknown planning mode"}
     
     def _react_plan(self, query: str, available_agents: List[str], memory_context: str) -> Dict[str, Any]:
-        """ReACT planning: Reasoning and Acting. Always uses both local data and MCP (web search)."""
+        """ReACT planning: Reasoning and Acting. Always uses both local data and Helper Agents (web search)."""
         steps = []
         reasoning = []
         
         # Step 1: Think about what information is needed
         reasoning.append(f"Query: {query}")
         reasoning.append(f"Available agents: {', '.join(available_agents)}")
-        reasoning.append("→ MCP handles web search, always using both local data and MCP")
+        reasoning.append("→ Helper Agents handles web search, always using both local data and Helper Agents")
         
         # Step 2: Always activate both agents
         # Local data agent for document retrieval
@@ -158,13 +158,13 @@ class Planning:
         })
         reasoning.append("→ Activating Local Data Agent for document retrieval")
         
-        # Search engine agent (MCP handles web search)
+        # Search engine agent (Helper Agents handles web search)
         steps.append({
             "agent": "search_engine_agent",
             "action": "search_web",
-            "reason": "MCP handles web search for comprehensive results"
+            "reason": "Helper Agents handles web search for comprehensive results"
         })
-        reasoning.append("→ Activating Search Engine Agent (via MCP) for web search")
+        reasoning.append("→ Activating Search Engine Agent (via Helper Agents) for web search")
         
         # Step 3: Plan synthesis
         steps.append({
@@ -181,13 +181,13 @@ class Planning:
         }
     
     def _cot_plan(self, query: str, available_agents: List[str], memory_context: str) -> Dict[str, Any]:
-        """Chain of Thought planning. Always uses both local data and MCP (web search)."""
+        """Chain of Thought planning. Always uses both local data and Helper Agents (web search)."""
         reasoning = []
         steps = []
         
         reasoning.append("=== Chain of Thought Planning ===")
         reasoning.append(f"Step 1: Understanding the query: {query}")
-        reasoning.append("→ MCP handles web search, always using both local data and MCP")
+        reasoning.append("→ Helper Agents handles web search, always using both local data and Helper Agents")
         
         # Break down the query
         reasoning.append("Step 2: Breaking down the query into components:")
@@ -197,7 +197,7 @@ class Planning:
                 reasoning.append(f"  {i}. {part.strip()}")
         
         reasoning.append("Step 3: Determining required information sources:")
-        reasoning.append("  Required sources: local_documents, web_search (via MCP)")
+        reasoning.append("  Required sources: local_documents, web_search (via Helper Agents)")
         
         # Always use both agents
         steps.append({
@@ -209,7 +209,7 @@ class Planning:
         steps.append({
             "agent": "search_engine_agent",
             "action": "search_web",
-            "reason": "MCP handles web search for comprehensive results"
+            "reason": "Helper Agents handles web search for comprehensive results"
         })
         
         reasoning.append("Step 4: Planning execution sequence")
@@ -240,7 +240,7 @@ class CentralAgent:
     def process_query(self, query: str, mode: str = "math") -> Dict[str, Any]:
         """
         Process a query through the agentic system.
-        MCP handles web search, so we always use both local data and MCP.
+        Helper Agents handles web search, so we always use both local data and Helper Agents.
         
         Args:
             query: User query
@@ -255,7 +255,7 @@ class CentralAgent:
         # Get memory context
         memory_context = self.memory.get_context()
         
-        # Generate plan (always use both local data and MCP for web search)
+        # Generate plan (always use both local data and Helper Agents for web search)
         plan = self.planning.plan(query, self.available_agents, memory_context)
         
         return {

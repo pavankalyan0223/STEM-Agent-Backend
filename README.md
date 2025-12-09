@@ -1,4 +1,4 @@
-# Agentic STEM Tutor — Math & Physics (RAG with MCP)
+# Agentic STEM Tutor — Math & Physics (RAG with Helper Agents)
 
 A smart tutoring system for math and physics that actually remembers what you talked about and can pull information from your documents and the web. Think of it as a tutor that gets smarter the more you use it.
 
@@ -54,9 +54,9 @@ Build interactive knowledge graphs from research papers:
   - **Linked Topics**: Shows only topics that are connected to other topics (topic-to-topic relationships)
   - **Difference**: Shows only topics that are linked to topics from different papers (excludes connections where both topics are from the same paper)
 
-### MCP Integration (Optional)
+### Helper Agents Integration (Optional)
 
-If you're into Model Context Protocol, you can connect custom MCP servers to enhance how the system processes information. It's optional though - everything works fine without it.
+If you're using Helper Agents, you can connect custom Helper Agents servers to enhance how the system processes information. It's optional though - everything works fine without it.
 
 ### Session Management
 
@@ -262,10 +262,10 @@ The graph building process:
 - `GET /summaries` - List available summaries
 - `GET /summary/{name}` - Get a specific summary
 
-### MCP Configuration
+### Helper Agents Configuration
 
-- `POST /configure_mcp` - Set up an MCP server connection
-- `GET /mcp_status` - Check if MCP is connected
+- `POST /configure_helperagents` - Set up a Helper Agents server connection
+- `GET /helperagents_status` - Check if Helper Agents is connected
 
 ## Project Structure
 
@@ -279,7 +279,7 @@ Agent/
 ├── generation.py          # Takes all the results and makes a final answer
 ├── research_graph.py      # Research graph builder with Grobid, KeyBERT, Sentence-BERT
 ├── rag_setup.py           # Sets up the document search database
-├── mcp_client.py          # Handles MCP server connections
+├── helperagents_client.py          # Handles Helper Agents server connections
 ├── session_manager.py     # Manages conversation sessions
 ├── summarizer.py          # Creates summaries of PDFs
 ├── config.py              # Configuration settings
@@ -321,7 +321,7 @@ Agent/
 - SymPy - For doing actual math calculations
 - Pint - Handles physics units
 - Requests - Makes HTTP calls
-- MCP SDK - For Model Context Protocol integration
+- MCP SDK - For Helper Agents integration (uses MCP protocol)
 - NumPy - Numerical computations
 - scikit-learn - Machine learning utilities
 
@@ -357,7 +357,7 @@ Let me walk you through what happens when you ask a question:
 4. **Agents do their thing**:
    - Local Data Agent searches your PDFs using semantic search
    - Search Engine Agent hits the web if needed
-   - Both can process results through MCP if you have it set up
+   - Both can process results through Helper Agents if you have it set up
 
 5. **Everything gets combined** - The Generation module takes all the results, adds memory context, and creates a comprehensive answer
 
@@ -417,14 +417,14 @@ The memory system is what makes this different from regular chatbots:
 
 - **Context Retrieval**: Every time you ask a question, the system pulls relevant context from both short-term and long-term memory to give you better answers.
 
-## MCP Integration
+## Helper Agents Integration
 
-MCP (Model Context Protocol) is optional but powerful. If you set it up:
+Helper Agents is optional but powerful. If you set it up:
 
-1. Configure your MCP server via `/configure_mcp`
+1. Configure your Helper Agents server via `/configure_helperagents`
 2. The system can enhance context between retrieving information and generating answers
-3. Both the Local Data Agent and Search Engine Agent can use MCP processing
-4. If you don't set it up, everything still works fine - it just won't use MCP
+3. Both the Local Data Agent and Search Engine Agent can use Helper Agents processing
+4. If you don't set it up, everything still works fine - it just won't use Helper Agents
 
 ## Example Questions
 

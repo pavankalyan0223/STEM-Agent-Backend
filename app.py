@@ -1,5 +1,5 @@
 from fastapi import FastAPI, UploadFile, File
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel, Field
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
@@ -8,12 +8,13 @@ import glob
 import json
 import os
 from typing import List, Optional, Dict
+import asyncio
 
 from config import OLLAMA_URL, MODEL_NAME, HTTP_TIMEOUT
 from session_manager import load_sessions, save_sessions, list_sessions, get_session, delete_session
 from summarizer import summarize_all_pdfs, SUMMARY_DIR
 from rag_setup import index_pdfs
-from mcp_client import initialize_mcp_client, get_mcp_client
+from helperagents_client import initialize_helperagents_client, get_helperagents_client
 from research_graph import build_research_graph, get_research_graph
 
 # Agentic architecture imports
@@ -35,7 +36,7 @@ async def lifespan(app: FastAPI):
     pass
 
 app = FastAPI(
-    title="Agentic STEM Expert — Math & Physics (RAG with MCP)",
+    title="Agentic STEM Expert — Math & Physics (RAG with Helper Agents)",
     lifespan=lifespan
 )
 
@@ -186,6 +187,107 @@ async def ask(payload: AskPayload):
         }
     }
 
+@app.post("/ask/stream")
+async def ask_stream(payload: AskPayload):
+    """
+    Streaming version of /ask endpoint.
+    Returns Server-Sent Events (SSE) stream of response tokens.
+    """
+    session_id = payload.session_id
+    
+    # Check if it's a casual greeting - skip agent processing
+    if is_casual_greeting(payload.question):
+        greeting_responses = {
+            "math": "Hello! I'm your friendly math expert. I'm here to help you with mathematics - whether it's algebra, calculus, geometry, or any other math topic. What would you like to learn today?",
+            "physics": "Hello! I'm your friendly physics expert. I'm here to help you understand physics concepts - from mechanics and thermodynamics to electromagnetism and quantum physics. What would you like to explore?"
+        }
+        answer = greeting_responses.get(payload.mode, greeting_responses["math"])
+        
+        # Update session store
+        if session_id not in session_store:
+            system_prompt = (
+                f"You are a friendly and highly knowledgeable {payload.mode} expert. "
+                "You use an agentic system with memory, planning, and specialized agents."
+            )
+            session_store[session_id] = [{"role": "system", "content": system_prompt}]
+        
+        session_store[session_id].append({"role": "user", "content": payload.question})
+        session_store[session_id].append({"role": "assistant", "content": answer})
+        save_sessions(session_store)
+        
+        # Stream the greeting response character by character for consistency
+        async def stream_greeting():
+            for char in answer:
+                yield f"data: {json.dumps({'content': char, 'done': False})}\n\n"
+            yield f"data: {json.dumps({'content': '', 'done': True})}\n\n"
+        
+        return StreamingResponse(stream_greeting(), media_type="text/event-stream")
+    
+    # Get or create central agent for this session
+    if session_id not in agent_store:
+        planning_mode = PlanningMode.REACT if payload.planning_mode == "react" else PlanningMode.COT
+        agent_store[session_id] = CentralAgent(session_id, planning_mode)
+    
+    central_agent = agent_store[session_id]
+    
+    # Step 1: Central Agent processes query and creates plan
+    agent_result = central_agent.process_query(payload.question, payload.mode)
+    plan = agent_result["plan"]
+    memory_context = agent_result["memory_context"]
+    
+    # Step 2: Execute plan using specialized agents
+    execution_results = await orchestrator.execute_plan(plan, payload.question)
+    agent_results = execution_results["agent_results"]
+    
+    # Step 3: Stream final answer using Generation component
+    conversation_history = get_session(session_store, session_id)
+    
+    # Collect full answer for saving to session
+    full_answer = ""
+    
+    async def stream_response():
+        nonlocal full_answer
+        try:
+            # Stream from generator - iterate synchronously but yield async
+            for chunk in generator.generate_answer_stream(
+                query=payload.question,
+                agent_results=agent_results,
+                memory_context=memory_context,
+                mode=payload.mode,
+                conversation_history=conversation_history
+            ):
+                full_answer += chunk
+                yield f"data: {json.dumps({'content': chunk, 'done': False})}\n\n"
+                # Small delay to prevent overwhelming the client
+                await asyncio.sleep(0.001)
+            
+            # Step 4: Add answer to memory and session (after streaming completes)
+            if full_answer:
+                central_agent.add_to_memory(
+                    f"Q: {payload.question}\nA: {full_answer}",
+                    is_important=True
+                )
+                
+                # Update session store
+                if session_id not in session_store:
+                    system_prompt = (
+                        f"You are a friendly and highly knowledgeable {payload.mode} tutor. "
+                        "You use an agentic system with memory, planning, and specialized agents."
+                    )
+                    session_store[session_id] = [{"role": "system", "content": system_prompt}]
+                
+                session_store[session_id].append({"role": "user", "content": payload.question})
+                session_store[session_id].append({"role": "assistant", "content": full_answer})
+                save_sessions(session_store)
+            
+            # Send final done signal
+            yield f"data: {json.dumps({'content': '', 'done': True})}\n\n"
+        except Exception as e:
+            error_msg = f"Error: {str(e)}"
+            yield f"data: {json.dumps({'content': error_msg, 'done': True, 'error': True})}\n\n"
+    
+    return StreamingResponse(stream_response(), media_type="text/event-stream")
+
 @app.get("/sessions")
 def get_all_sessions():
     return {"sessions": list_sessions(session_store)}
@@ -303,7 +405,7 @@ def ask_doc(payload: AskDocPayload):
 @app.post("/hybrid_search")
 async def hybrid_search(payload: dict):
     """
-    Agentic hybrid search: Uses Local Data Agent and Search Engine Agent via MCP.
+    Agentic hybrid search: Uses Local Data Agent and Search Engine Agent via Helper Agents.
     """
     query = payload.get("query", "")
     if not query.strip():
@@ -317,20 +419,20 @@ async def hybrid_search(payload: dict):
         "query": query,
         "local_data_agent": local_data_result,
         "search_engine_agent": search_result,
-        "mcp_enhanced": local_data_result.get("mcp_enhanced", False) or search_result.get("processed_summary") is not None
+        "helperagents_enhanced": local_data_result.get("helperagents_enhanced", False) or search_result.get("processed_summary") is not None
     }
 
-@app.post("/configure_mcp")
-async def configure_mcp(payload: dict):
-    """Configure the MCP server connection."""
+@app.post("/configure_helperagents")
+async def configure_helperagents(payload: dict):
+    """Configure the Helper Agents server connection."""
     server_command = payload.get("server_command")
     server_args = payload.get("server_args", [])
     
     if not server_command:
         return {"error": "server_command is required"}
     
-    initialize_mcp_client(server_command, server_args)
-    client = get_mcp_client()
+    initialize_helperagents_client(server_command, server_args)
+    client = get_helperagents_client()
     
     if client:
         connected = await client.connect()
@@ -341,17 +443,17 @@ async def configure_mcp(payload: dict):
             "server_args": server_args
         }
     else:
-        return {"error": "Failed to initialize MCP client"}
+        return {"error": "Failed to initialize Helper Agents client"}
 
-@app.get("/mcp_status")
-async def mcp_status():
-    """Get the current MCP client status."""
-    client = get_mcp_client()
+@app.get("/helperagents_status")
+async def helperagents_status():
+    """Get the current Helper Agents client status."""
+    client = get_helperagents_client()
     if not client:
         return {
             "available": False,
             "status": "not_configured",
-            "message": "MCP client not initialized. Use /configure_mcp to set it up."
+            "message": "Helper Agents client not initialized. Use /configure_helperagents to set it up."
         }
     
     return {
@@ -705,16 +807,16 @@ async def get_pdf_file(filename: str):
 @app.get("/")
 def root():
     return {
-        "message": "Agentic STEM Expert — Math & Physics (RAG with MCP)",
+        "message": "Agentic STEM Expert — Math & Physics (RAG with Helper Agents)",
         "architecture": {
             "central_agent": "Memory (Short/Long-term) + Planning (ReACT/CoT)",
             "specialized_agents": [
-                "Local Data Agent (RAG + MCP)",
-                "Search Engine Agent (Web Search + MCP)"
+                "Local Data Agent (RAG + Helper Agents)",
+                "Search Engine Agent (Web Search + Helper Agents)"
             ],
             "generation": "Synthesis of all agent results",
             "endpoints": {
-                "/ask": "Main agentic query endpoint (always uses both local documents and MCP for web search)",
+                "/ask": "Main agentic query endpoint (always uses both local documents and Helper Agents for web search)",
                 "/hybrid_search": "Agentic search using specialized agents",
                 "/agent/{session_id}/memory": "View agent memory",
                 "/agent/{session_id}/status": "View agent status",
@@ -722,7 +824,7 @@ def root():
             },
             "search_strategy": {
                 "local_documents": "Always used via Local Data Agent",
-                "web_search": "Handled by MCP server (falls back to DuckDuckGo if MCP not configured)"
+                "web_search": "Handled by Helper Agents server (falls back to DuckDuckGo if Helper Agents not configured)"
             }
         }
     }

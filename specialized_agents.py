@@ -1,13 +1,13 @@
 """
 Specialized Agents Module
-Implements Agent 1 (Local Data) and Agent 2 (Search Engine) with MCP server integration.
+Implements Agent 1 (Local Data) and Agent 2 (Search Engine) with Helper Agents server integration.
 """
 from typing import Dict, List, Optional, Any
 import requests
 import urllib.parse
 import asyncio
 from rag_setup import query_rag
-from mcp_client import process_with_mcp, get_mcp_client
+from helperagents_client import process_with_helperagents, get_helperagents_client
 
 
 class LocalDataAgent:
@@ -15,7 +15,7 @@ class LocalDataAgent:
     
     def __init__(self, agent_id: str = "local_data_agent"):
         self.agent_id = agent_id
-        self.mcp_client = get_mcp_client()
+        self.helperagents_client = get_helperagents_client()
     
     async def retrieve_local_context(self, query: str, top_k: int = 3) -> Dict[str, Any]:
         """
@@ -32,18 +32,18 @@ class LocalDataAgent:
             # Step 1: Query RAG system
             local_context = query_rag(query, top_k=top_k)
             
-            # Step 2: Process through MCP server if available
-            mcp_result = await process_with_mcp(query, local_context)
-            processed_context = mcp_result.get("processed_context", local_context)
-            mcp_metadata = mcp_result.get("mcp_metadata", {})
+            # Step 2: Process through Helper Agents server if available
+            helperagents_result = await process_with_helperagents(query, local_context)
+            processed_context = helperagents_result.get("processed_context", local_context)
+            helperagents_metadata = helperagents_result.get("helperagents_metadata", {})
             
             return {
                 "agent": self.agent_id,
                 "status": "success",
                 "raw_context": local_context,
                 "processed_context": processed_context,
-                "mcp_enhanced": mcp_result.get("enhanced", False),
-                "mcp_metadata": mcp_metadata,
+                "helperagents_enhanced": helperagents_result.get("enhanced", False),
+                "helperagents_metadata": helperagents_metadata,
                 "source": "local_documents",
                 "results_count": top_k
             }
@@ -86,16 +86,16 @@ class LocalDataAgent:
 
 
 class SearchEngineAgent:
-    """Agent 2: Handles web search functionality via MCP."""
+    """Agent 2: Handles web search functionality via Helper Agents."""
     
     def __init__(self, agent_id: str = "search_engine_agent"):
         self.agent_id = agent_id
-        self.mcp_client = get_mcp_client()
+        self.helperagents_client = get_helperagents_client()
     
     async def search_web(self, query: str, max_results: int = 5) -> Dict[str, Any]:
         """
-        Search the web for information using MCP server.
-        MCP handles web search, so we delegate to MCP tools.
+        Search the web for information using Helper Agents server.
+        Helper Agents handles web search, so we delegate to Helper Agents tools.
         
         Args:
             query: Search query
@@ -104,11 +104,11 @@ class SearchEngineAgent:
         Returns:
             Dictionary with search results
         """
-        # Use MCP for web search if available
-        if self.mcp_client and self.mcp_client.available and self.mcp_client.session:
+        # Use Helper Agents for web search if available
+        if self.helperagents_client and self.helperagents_client.available and self.helperagents_client.session:
             try:
-                # Get available MCP tools
-                tools = await self.mcp_client.session.list_tools()
+                # Get available Helper Agents tools
+                tools = await self.helperagents_client.session.list_tools()
                 
                 # Look for web search tool
                 web_search_tool = None
@@ -120,40 +120,40 @@ class SearchEngineAgent:
                             break
                 
                 if web_search_tool:
-                    # Use MCP tool for web search
+                    # Use Helper Agents tool for web search
                     try:
-                        result = await self.mcp_client.session.call_tool(
+                        result = await self.helperagents_client.session.call_tool(
                             web_search_tool.name,
                             arguments={"query": query, "max_results": max_results}
                         )
                         
-                        # Process MCP result
+                        # Process Helper Agents result
                         if result.content:
-                            # Extract results from MCP response
-                            # MCP might return different formats, so we handle various cases
+                            # Extract results from Helper Agents response
+                            # Helper Agents might return different formats, so we handle various cases
                             content_text = result.content[0].text if result.content else ""
                             
                             return {
                                 "agent": self.agent_id,
                                 "status": "success",
                                 "query": query,
-                                "results": [],  # MCP handles formatting
+                                "results": [],  # Helper Agents handles formatting
                                 "abstract": content_text,
                                 "abstract_url": None,
                                 "processed_summary": content_text,
                                 "results_count": 1,
                                 "source": "web_search",
-                                "mcp_tool": web_search_tool.name
+                                "helperagents_tool": web_search_tool.name
                             }
                     except Exception as e:
-                        print(f"MCP web search tool error: {e}")
+                        print(f"Helper Agents web search tool error: {e}")
                         # Fall through to fallback
                 
             except Exception as e:
-                print(f"MCP web search error: {e}")
+                print(f"Helper Agents web search error: {e}")
                 # Fall through to fallback
         
-        # Fallback: Use direct DuckDuckGo search if MCP not available or fails
+        # Fallback: Use direct DuckDuckGo search if Helper Agents not available or fails
         try:
             try:
                 from ddgs import DDGS
@@ -195,15 +195,15 @@ class SearchEngineAgent:
                     "error": "No search results found"
                 }
             
-            # Process through MCP if available (even if MCP doesn't have web search tool)
+            # Process through Helper Agents if available (even if Helper Agents doesn't have web search tool)
             processed_summary = None
-            if web_results and self.mcp_client:
+            if web_results and self.helperagents_client:
                 try:
                     results_summary = "\n".join([f"{r['title']}: {r['snippet']}" for r in web_results])
-                    mcp_result = await process_with_mcp(query, results_summary)
-                    processed_summary = mcp_result.get("processed_context", results_summary)
+                    helperagents_result = await process_with_helperagents(query, results_summary)
+                    processed_summary = helperagents_result.get("processed_context", results_summary)
                 except Exception as e:
-                    print(f"MCP processing error: {e}")
+                    print(f"Helper Agents processing error: {e}")
             
             return {
                 "agent": self.agent_id,
@@ -221,7 +221,7 @@ class SearchEngineAgent:
             return {
                 "agent": self.agent_id,
                 "status": "error",
-                "error": "Web search not available. Configure MCP server or install ddgs package.",
+                "error": "Web search not available. Configure Helper Agents server or install ddgs package.",
                 "query": query,
                 "source": "web_search"
             }

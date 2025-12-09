@@ -1,11 +1,11 @@
 """
-MCP (Model Context Protocol) Client Module
-Handles communication with MCP servers to enhance context between text retrieval and web search.
+Helper Agents Client Module
+Handles communication with helper agent servers to enhance context between text retrieval and web search.
 """
 from typing import Optional, Dict, Any
 
 try:
-    # Try different possible import paths for MCP SDK
+    # Try different possible import paths for MCP SDK (used for helper agents)
     try:
         from mcp import ClientSession, StdioServerParameters
         from mcp.client.stdio import stdio_client
@@ -13,31 +13,31 @@ try:
         # Alternative import path
         from mcp_sdk import ClientSession, StdioServerParameters
         from mcp_sdk.client.stdio import stdio_client
-    MCP_AVAILABLE = True
+    HELPERAGENTS_AVAILABLE = True
 except ImportError:
-    MCP_AVAILABLE = False
-    print("Warning: MCP SDK not installed. Install with: pip install mcp")
-    print("Note: MCP functionality will be disabled. The system will work without MCP processing.")
+    HELPERAGENTS_AVAILABLE = False
+    print("Warning: Helper Agents SDK not installed. Install with: pip install mcp")
+    print("Note: Helper Agents functionality will be disabled. The system will work without helper agents processing.")
 
 
-class MCPClient:
-    """Client for interacting with MCP servers."""
+class HelperAgentsClient:
+    """Client for interacting with helper agent servers."""
     
     def __init__(self, server_command: Optional[str] = None, server_args: Optional[list] = None):
         """
-        Initialize MCP client.
+        Initialize Helper Agents client.
         
         Args:
-            server_command: Command to run the MCP server (e.g., "python", "node")
-            server_args: Arguments for the server command (e.g., ["-m", "mcp_server"])
+            server_command: Command to run the helper agent server (e.g., "python", "node")
+            server_args: Arguments for the server command (e.g., ["-m", "helper_agent_server"])
         """
         self.server_command = server_command
         self.server_args = server_args or []
         self.session: Optional[ClientSession] = None
-        self.available = MCP_AVAILABLE
+        self.available = HELPERAGENTS_AVAILABLE
     
     async def connect(self):
-        """Connect to the MCP server."""
+        """Connect to the helper agent server."""
         if not self.available:
             return False
         
@@ -52,15 +52,15 @@ class MCPClient:
                 return True
             else:
                 # If no server command specified, return False
-                # User can configure their own MCP server connection
+                # User can configure their own helper agent server connection
                 return False
         except Exception as e:
-            print(f"MCP connection error: {e}")
+            print(f"Helper Agents connection error: {e}")
             return False
     
     async def process_context(self, query: str, retrieved_context: str) -> Dict[str, Any]:
         """
-        Process retrieved context through MCP server before web search.
+        Process retrieved context through helper agent server before web search.
         
         Args:
             query: The original search query
@@ -70,21 +70,21 @@ class MCPClient:
             Dictionary with processed context and metadata
         """
         if not self.available or not self.session:
-            # If MCP is not available, return original context
+            # If helper agents are not available, return original context
             return {
                 "processed_context": retrieved_context,
                 "enhanced": False,
-                "mcp_metadata": {}
+                "helperagents_metadata": {}
             }
         
         try:
-            # Call MCP tools/resources to enhance context
-            # This is a placeholder - adjust based on your MCP server's available tools
+            # Call helper agent tools/resources to enhance context
+            # This is a placeholder - adjust based on your helper agent server's available tools
             tools = await self.session.list_tools()
             
             # Example: Use a context enhancement tool if available
             enhanced_context = retrieved_context
-            mcp_metadata = {
+            helperagents_metadata = {
                 "tools_available": len(tools.tools) if tools else 0,
                 "query": query
             }
@@ -103,59 +103,59 @@ class MCPClient:
                             )
                             if result.content:
                                 enhanced_context = result.content[0].text if result.content else retrieved_context
-                                mcp_metadata["tool_used"] = tool.name
-                                mcp_metadata["enhanced"] = True
+                                helperagents_metadata["tool_used"] = tool.name
+                                helperagents_metadata["enhanced"] = True
                                 break
                         except Exception as e:
-                            print(f"Error calling MCP tool {tool.name}: {e}")
+                            print(f"Error calling helper agent tool {tool.name}: {e}")
             
             return {
                 "processed_context": enhanced_context,
-                "enhanced": mcp_metadata.get("enhanced", False),
-                "mcp_metadata": mcp_metadata
+                "enhanced": helperagents_metadata.get("enhanced", False),
+                "helperagents_metadata": helperagents_metadata
             }
             
         except Exception as e:
-            print(f"MCP processing error: {e}")
+            print(f"Helper Agents processing error: {e}")
             return {
                 "processed_context": retrieved_context,
                 "enhanced": False,
-                "mcp_metadata": {"error": str(e)}
+                "helperagents_metadata": {"error": str(e)}
             }
     
     async def close(self):
-        """Close the MCP session."""
+        """Close the helper agent session."""
         if self.session:
             try:
                 await self.session.close()
             except Exception as e:
-                print(f"Error closing MCP session: {e}")
+                print(f"Error closing helper agent session: {e}")
 
 
-# Global MCP client instance (can be configured)
-_mcp_client: Optional[MCPClient] = None
+# Global Helper Agents client instance (can be configured)
+_helperagents_client: Optional[HelperAgentsClient] = None
 
 
-def get_mcp_client() -> Optional[MCPClient]:
-    """Get the global MCP client instance."""
-    return _mcp_client
+def get_helperagents_client() -> Optional[HelperAgentsClient]:
+    """Get the global Helper Agents client instance."""
+    return _helperagents_client
 
 
-def initialize_mcp_client(server_command: Optional[str] = None, server_args: Optional[list] = None):
+def initialize_helperagents_client(server_command: Optional[str] = None, server_args: Optional[list] = None):
     """
-    Initialize the global MCP client.
+    Initialize the global Helper Agents client.
     
     Args:
-        server_command: Command to run the MCP server
+        server_command: Command to run the helper agent server
         server_args: Arguments for the server command
     """
-    global _mcp_client
-    _mcp_client = MCPClient(server_command, server_args)
+    global _helperagents_client
+    _helperagents_client = HelperAgentsClient(server_command, server_args)
 
 
-async def process_with_mcp(query: str, retrieved_context: str) -> Dict[str, Any]:
+async def process_with_helperagents(query: str, retrieved_context: str) -> Dict[str, Any]:
     """
-    Convenience function to process context through MCP.
+    Convenience function to process context through helper agents.
     
     Args:
         query: The search query
@@ -164,12 +164,12 @@ async def process_with_mcp(query: str, retrieved_context: str) -> Dict[str, Any]
     Returns:
         Processed context dictionary
     """
-    client = get_mcp_client()
+    client = get_helperagents_client()
     if not client:
         return {
             "processed_context": retrieved_context,
             "enhanced": False,
-            "mcp_metadata": {"status": "no_client"}
+            "helperagents_metadata": {"status": "no_client"}
         }
     
     # Ensure client is connected
