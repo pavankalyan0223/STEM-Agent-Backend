@@ -15,7 +15,7 @@ import re
 import requests
 from typing import Dict, List, Any, Set, Tuple, Optional
 from PyPDF2 import PdfReader  # Fallback if Grobid unavailable
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 # Import config for Ollama
 try:
